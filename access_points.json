@@ -1,0 +1,2302 @@
+[
+  {
+    "ap_id": "AP-01",
+    "switch_id": "Switch-01",
+    "location": {
+      "building": "Main Venue",
+      "floor": 3,
+      "section": "Center"
+    },
+    "hardware": {
+      "model": "Ubiquiti UAP-AC-HD",
+      "firmware": "v2.4.1",
+      "uptime_hours": 4979
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 31,
+        "signal_strength": -33,
+        "connected_clients": 49,
+        "throughput_mbps": 11.2,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 53,
+        "signal_strength": -26,
+        "connected_clients": 8,
+        "throughput_mbps": 46.5,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 48,
+        "signal_strength": -33,
+        "connected_clients": 33,
+        "throughput_mbps": 49.9,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.41.25",
+      "mac_address": "00:1B:44:58:91:82",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-02",
+    "switch_id": "Switch-01",
+    "location": {
+      "building": "Main Venue",
+      "floor": 1,
+      "section": "Center"
+    },
+    "hardware": {
+      "model": "Aruba AP-515",
+      "firmware": "v2.4.1",
+      "uptime_hours": 981
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 47,
+        "signal_strength": -28,
+        "connected_clients": 37,
+        "throughput_mbps": 19.8,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 40,
+        "signal_strength": -44,
+        "connected_clients": 2,
+        "throughput_mbps": 91.8,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 21,
+        "signal_strength": -29,
+        "connected_clients": 5,
+        "throughput_mbps": 35.6,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.34.86",
+      "mac_address": "00:1B:44:27:38:87",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-03",
+    "switch_id": "Switch-05",
+    "location": {
+      "building": "Main Venue",
+      "floor": 2,
+      "section": "South"
+    },
+    "hardware": {
+      "model": "Ubiquiti UAP-AC-HD",
+      "firmware": "v2.4.1",
+      "uptime_hours": 1409
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 30,
+        "signal_strength": -27,
+        "connected_clients": 13,
+        "throughput_mbps": 29.9,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 43,
+        "signal_strength": -33,
+        "connected_clients": 36,
+        "throughput_mbps": 41.1,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 20,
+        "signal_strength": -39,
+        "connected_clients": 48,
+        "throughput_mbps": 11.8,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.36.150",
+      "mac_address": "00:1B:44:42:49:42",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-04",
+    "switch_id": "Switch-04",
+    "location": {
+      "building": "Main Venue",
+      "floor": 3,
+      "section": "South"
+    },
+    "hardware": {
+      "model": "Ubiquiti UAP-AC-HD",
+      "firmware": "v2.4.1",
+      "uptime_hours": 6631
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 44,
+        "signal_strength": -25,
+        "connected_clients": 30,
+        "throughput_mbps": 57.2,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 33,
+        "signal_strength": -36,
+        "connected_clients": 15,
+        "throughput_mbps": 60.9,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 47,
+        "signal_strength": -40,
+        "connected_clients": 7,
+        "throughput_mbps": 21.9,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.19.198",
+      "mac_address": "00:1B:44:53:17:19",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-05",
+    "switch_id": "Switch-15",
+    "location": {
+      "building": "Main Venue",
+      "floor": 1,
+      "section": "West"
+    },
+    "hardware": {
+      "model": "Ubiquiti UAP-AC-HD",
+      "firmware": "v2.4.1",
+      "uptime_hours": 1988
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 48,
+        "signal_strength": -33,
+        "connected_clients": 16,
+        "throughput_mbps": 82.6,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 48,
+        "signal_strength": -44,
+        "connected_clients": 5,
+        "throughput_mbps": 72.1,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 51,
+        "signal_strength": -31,
+        "connected_clients": 29,
+        "throughput_mbps": 73.8,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.23.163",
+      "mac_address": "00:1B:44:89:24:56",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-06",
+    "switch_id": "Switch-07",
+    "location": {
+      "building": "Main Venue",
+      "floor": 1,
+      "section": "South"
+    },
+    "hardware": {
+      "model": "Cisco WAP581",
+      "firmware": "v2.4.1",
+      "uptime_hours": 4483
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 48,
+        "signal_strength": -42,
+        "connected_clients": 7,
+        "throughput_mbps": 81.9,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 25,
+        "signal_strength": -26,
+        "connected_clients": 19,
+        "throughput_mbps": 54.3,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 52,
+        "signal_strength": -41,
+        "connected_clients": 47,
+        "throughput_mbps": 30.7,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.48.25",
+      "mac_address": "00:1B:44:44:76:12",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-07",
+    "switch_id": "Switch-11",
+    "location": {
+      "building": "Main Venue",
+      "floor": 1,
+      "section": "North"
+    },
+    "hardware": {
+      "model": "Cisco WAP581",
+      "firmware": "v2.4.1",
+      "uptime_hours": 6458
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 52,
+        "signal_strength": -41,
+        "connected_clients": 50,
+        "throughput_mbps": 34.6,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 52,
+        "signal_strength": -39,
+        "connected_clients": 50,
+        "throughput_mbps": 67.9,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 55,
+        "signal_strength": -40,
+        "connected_clients": 35,
+        "throughput_mbps": 55.2,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.26.28",
+      "mac_address": "00:1B:44:87:68:58",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-08",
+    "switch_id": "Switch-04",
+    "location": {
+      "building": "Main Venue",
+      "floor": 1,
+      "section": "East"
+    },
+    "hardware": {
+      "model": "Aruba AP-515",
+      "firmware": "v2.4.1",
+      "uptime_hours": 1141
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 55,
+        "signal_strength": -25,
+        "connected_clients": 48,
+        "throughput_mbps": 18.7,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 39,
+        "signal_strength": -35,
+        "connected_clients": 26,
+        "throughput_mbps": 94.4,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 36,
+        "signal_strength": -42,
+        "connected_clients": 14,
+        "throughput_mbps": 67.7,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.25.94",
+      "mac_address": "00:1B:44:73:43:76",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-09",
+    "switch_id": "Switch-04",
+    "location": {
+      "building": "Main Venue",
+      "floor": 3,
+      "section": "North"
+    },
+    "hardware": {
+      "model": "Ubiquiti UAP-AC-HD",
+      "firmware": "v2.4.1",
+      "uptime_hours": 5104
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 33,
+        "signal_strength": -26,
+        "connected_clients": 45,
+        "throughput_mbps": 15.4,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 26,
+        "signal_strength": -28,
+        "connected_clients": 17,
+        "throughput_mbps": 32.2,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 23,
+        "signal_strength": -41,
+        "connected_clients": 50,
+        "throughput_mbps": 31.5,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.11.178",
+      "mac_address": "00:1B:44:31:95:14",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-10",
+    "switch_id": "Switch-20",
+    "location": {
+      "building": "Main Venue",
+      "floor": 3,
+      "section": "North"
+    },
+    "hardware": {
+      "model": "Aruba AP-515",
+      "firmware": "v2.4.1",
+      "uptime_hours": 3594
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 59,
+        "signal_strength": -30,
+        "connected_clients": 12,
+        "throughput_mbps": 57.9,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 20,
+        "signal_strength": -28,
+        "connected_clients": 32,
+        "throughput_mbps": 47.0,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 52,
+        "signal_strength": -42,
+        "connected_clients": 23,
+        "throughput_mbps": 68.0,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.40.13",
+      "mac_address": "00:1B:44:72:56:27",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-11",
+    "switch_id": "Switch-14",
+    "location": {
+      "building": "Main Venue",
+      "floor": 3,
+      "section": "Center"
+    },
+    "hardware": {
+      "model": "Aruba AP-515",
+      "firmware": "v2.4.1",
+      "uptime_hours": 6355
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 36,
+        "signal_strength": -26,
+        "connected_clients": 32,
+        "throughput_mbps": 58.6,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 30,
+        "signal_strength": -34,
+        "connected_clients": 26,
+        "throughput_mbps": 30.7,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 56,
+        "signal_strength": -27,
+        "connected_clients": 41,
+        "throughput_mbps": 46.5,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.18.212",
+      "mac_address": "00:1B:44:80:39:55",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-12",
+    "switch_id": "Switch-03",
+    "location": {
+      "building": "Main Venue",
+      "floor": 1,
+      "section": "East"
+    },
+    "hardware": {
+      "model": "Ubiquiti UAP-AC-HD",
+      "firmware": "v2.4.1",
+      "uptime_hours": 7085
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 30,
+        "signal_strength": -42,
+        "connected_clients": 28,
+        "throughput_mbps": 30.2,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 60,
+        "signal_strength": -31,
+        "connected_clients": 42,
+        "throughput_mbps": 59.3,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 31,
+        "signal_strength": -35,
+        "connected_clients": 20,
+        "throughput_mbps": 90.9,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.18.207",
+      "mac_address": "00:1B:44:47:67:13",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-13",
+    "switch_id": "Switch-06",
+    "location": {
+      "building": "Main Venue",
+      "floor": 3,
+      "section": "South"
+    },
+    "hardware": {
+      "model": "Ubiquiti UAP-AC-HD",
+      "firmware": "v2.4.1",
+      "uptime_hours": 6162
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 60,
+        "signal_strength": -28,
+        "connected_clients": 29,
+        "throughput_mbps": 82.7,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 59,
+        "signal_strength": -33,
+        "connected_clients": 6,
+        "throughput_mbps": 58.1,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 52,
+        "signal_strength": -37,
+        "connected_clients": 20,
+        "throughput_mbps": 89.6,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.18.16",
+      "mac_address": "00:1B:44:59:68:63",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-14",
+    "switch_id": "Switch-04",
+    "location": {
+      "building": "Main Venue",
+      "floor": 1,
+      "section": "East"
+    },
+    "hardware": {
+      "model": "Cisco WAP581",
+      "firmware": "v2.4.1",
+      "uptime_hours": 2968
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 31,
+        "signal_strength": -43,
+        "connected_clients": 16,
+        "throughput_mbps": 14.2,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 57,
+        "signal_strength": -36,
+        "connected_clients": 11,
+        "throughput_mbps": 37.0,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 47,
+        "signal_strength": -41,
+        "connected_clients": 42,
+        "throughput_mbps": 67.8,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.20.28",
+      "mac_address": "00:1B:44:73:63:58",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-15",
+    "switch_id": "Switch-10",
+    "location": {
+      "building": "Main Venue",
+      "floor": 2,
+      "section": "North"
+    },
+    "hardware": {
+      "model": "Aruba AP-515",
+      "firmware": "v2.4.1",
+      "uptime_hours": 7350
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 54,
+        "signal_strength": -37,
+        "connected_clients": 12,
+        "throughput_mbps": 30.6,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 52,
+        "signal_strength": -27,
+        "connected_clients": 6,
+        "throughput_mbps": 43.8,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 31,
+        "signal_strength": -35,
+        "connected_clients": 26,
+        "throughput_mbps": 85.8,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.28.104",
+      "mac_address": "00:1B:44:35:47:39",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-16",
+    "switch_id": "Switch-19",
+    "location": {
+      "building": "Main Venue",
+      "floor": 3,
+      "section": "North"
+    },
+    "hardware": {
+      "model": "Aruba AP-515",
+      "firmware": "v2.4.1",
+      "uptime_hours": 8351
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 52,
+        "signal_strength": -44,
+        "connected_clients": 7,
+        "throughput_mbps": 48.9,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 57,
+        "signal_strength": -27,
+        "connected_clients": 11,
+        "throughput_mbps": 90.8,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 60,
+        "signal_strength": -29,
+        "connected_clients": 5,
+        "throughput_mbps": 63.2,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.16.28",
+      "mac_address": "00:1B:44:64:26:88",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-17",
+    "switch_id": "Switch-04",
+    "location": {
+      "building": "Main Venue",
+      "floor": 3,
+      "section": "West"
+    },
+    "hardware": {
+      "model": "Cisco WAP581",
+      "firmware": "v2.4.1",
+      "uptime_hours": 845
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 30,
+        "signal_strength": -42,
+        "connected_clients": 23,
+        "throughput_mbps": 64.3,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 27,
+        "signal_strength": -37,
+        "connected_clients": 40,
+        "throughput_mbps": 64.8,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 30,
+        "signal_strength": -30,
+        "connected_clients": 41,
+        "throughput_mbps": 76.1,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.40.102",
+      "mac_address": "00:1B:44:62:12:26",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-18",
+    "switch_id": "Switch-07",
+    "location": {
+      "building": "Main Venue",
+      "floor": 3,
+      "section": "East"
+    },
+    "hardware": {
+      "model": "Cisco WAP581",
+      "firmware": "v2.4.1",
+      "uptime_hours": 6348
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 44,
+        "signal_strength": -41,
+        "connected_clients": 1,
+        "throughput_mbps": 60.7,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 35,
+        "signal_strength": -37,
+        "connected_clients": 26,
+        "throughput_mbps": 38.8,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 45,
+        "signal_strength": -29,
+        "connected_clients": 2,
+        "throughput_mbps": 29.6,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.26.197",
+      "mac_address": "00:1B:44:93:95:18",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-19",
+    "switch_id": "Switch-05",
+    "location": {
+      "building": "Main Venue",
+      "floor": 1,
+      "section": "West"
+    },
+    "hardware": {
+      "model": "Cisco WAP581",
+      "firmware": "v2.4.1",
+      "uptime_hours": 8563
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 33,
+        "signal_strength": -38,
+        "connected_clients": 21,
+        "throughput_mbps": 71.8,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 22,
+        "signal_strength": -32,
+        "connected_clients": 8,
+        "throughput_mbps": 55.1,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 33,
+        "signal_strength": -45,
+        "connected_clients": 46,
+        "throughput_mbps": 16.2,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.41.70",
+      "mac_address": "00:1B:44:68:90:41",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-20",
+    "switch_id": "Switch-05",
+    "location": {
+      "building": "Main Venue",
+      "floor": 1,
+      "section": "West"
+    },
+    "hardware": {
+      "model": "Aruba AP-515",
+      "firmware": "v2.4.1",
+      "uptime_hours": 5805
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 39,
+        "signal_strength": -33,
+        "connected_clients": 1,
+        "throughput_mbps": 55.7,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 31,
+        "signal_strength": -25,
+        "connected_clients": 45,
+        "throughput_mbps": 52.2,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 44,
+        "signal_strength": -38,
+        "connected_clients": 0,
+        "throughput_mbps": 13.9,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.38.213",
+      "mac_address": "00:1B:44:23:12:60",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-21",
+    "switch_id": "Switch-02",
+    "location": {
+      "building": "Main Venue",
+      "floor": 2,
+      "section": "South"
+    },
+    "hardware": {
+      "model": "Aruba AP-515",
+      "firmware": "v2.4.1",
+      "uptime_hours": 7918
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 28,
+        "signal_strength": -31,
+        "connected_clients": 25,
+        "throughput_mbps": 41.5,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 31,
+        "signal_strength": -25,
+        "connected_clients": 24,
+        "throughput_mbps": 68.2,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 40,
+        "signal_strength": -28,
+        "connected_clients": 27,
+        "throughput_mbps": 87.2,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.34.7",
+      "mac_address": "00:1B:44:86:11:39",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-22",
+    "switch_id": "Switch-12",
+    "location": {
+      "building": "Main Venue",
+      "floor": 1,
+      "section": "Center"
+    },
+    "hardware": {
+      "model": "Cisco WAP581",
+      "firmware": "v2.4.1",
+      "uptime_hours": 4346
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 26,
+        "signal_strength": -32,
+        "connected_clients": 14,
+        "throughput_mbps": 17.7,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 28,
+        "signal_strength": -29,
+        "connected_clients": 13,
+        "throughput_mbps": 58.1,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 37,
+        "signal_strength": -28,
+        "connected_clients": 13,
+        "throughput_mbps": 30.7,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.41.230",
+      "mac_address": "00:1B:44:85:85:75",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-23",
+    "switch_id": "Switch-06",
+    "location": {
+      "building": "Main Venue",
+      "floor": 2,
+      "section": "East"
+    },
+    "hardware": {
+      "model": "Aruba AP-515",
+      "firmware": "v2.4.1",
+      "uptime_hours": 4923
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 38,
+        "signal_strength": -44,
+        "connected_clients": 40,
+        "throughput_mbps": 90.4,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 37,
+        "signal_strength": -29,
+        "connected_clients": 14,
+        "throughput_mbps": 15.7,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 47,
+        "signal_strength": -39,
+        "connected_clients": 7,
+        "throughput_mbps": 84.5,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.50.166",
+      "mac_address": "00:1B:44:43:79:42",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-24",
+    "switch_id": "Switch-02",
+    "location": {
+      "building": "Main Venue",
+      "floor": 2,
+      "section": "North"
+    },
+    "hardware": {
+      "model": "Aruba AP-515",
+      "firmware": "v2.4.1",
+      "uptime_hours": 3534
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 54,
+        "signal_strength": -38,
+        "connected_clients": 17,
+        "throughput_mbps": 79.2,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 41,
+        "signal_strength": -38,
+        "connected_clients": 42,
+        "throughput_mbps": 53.2,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 35,
+        "signal_strength": -34,
+        "connected_clients": 34,
+        "throughput_mbps": 14.7,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.43.139",
+      "mac_address": "00:1B:44:68:23:94",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-25",
+    "switch_id": "Switch-01",
+    "location": {
+      "building": "Main Venue",
+      "floor": 1,
+      "section": "Center"
+    },
+    "hardware": {
+      "model": "Aruba AP-515",
+      "firmware": "v2.4.1",
+      "uptime_hours": 516
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 49,
+        "signal_strength": -35,
+        "connected_clients": 40,
+        "throughput_mbps": 53.4,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 31,
+        "signal_strength": -27,
+        "connected_clients": 32,
+        "throughput_mbps": 58.1,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 57,
+        "signal_strength": -35,
+        "connected_clients": 48,
+        "throughput_mbps": 90.5,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.49.123",
+      "mac_address": "00:1B:44:70:49:97",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-26",
+    "switch_id": "Switch-06",
+    "location": {
+      "building": "Main Venue",
+      "floor": 3,
+      "section": "West"
+    },
+    "hardware": {
+      "model": "Aruba AP-515",
+      "firmware": "v2.4.1",
+      "uptime_hours": 8236
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 47,
+        "signal_strength": -37,
+        "connected_clients": 23,
+        "throughput_mbps": 15.0,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 55,
+        "signal_strength": -27,
+        "connected_clients": 23,
+        "throughput_mbps": 37.1,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 25,
+        "signal_strength": -37,
+        "connected_clients": 43,
+        "throughput_mbps": 21.1,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.23.233",
+      "mac_address": "00:1B:44:99:98:60",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-27",
+    "switch_id": "Switch-04",
+    "location": {
+      "building": "Main Venue",
+      "floor": 1,
+      "section": "South"
+    },
+    "hardware": {
+      "model": "Ubiquiti UAP-AC-HD",
+      "firmware": "v2.4.1",
+      "uptime_hours": 6528
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 54,
+        "signal_strength": -26,
+        "connected_clients": 50,
+        "throughput_mbps": 63.2,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 23,
+        "signal_strength": -32,
+        "connected_clients": 2,
+        "throughput_mbps": 17.3,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 28,
+        "signal_strength": -30,
+        "connected_clients": 11,
+        "throughput_mbps": 87.9,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.50.47",
+      "mac_address": "00:1B:44:52:75:38",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-28",
+    "switch_id": "Switch-06",
+    "location": {
+      "building": "Main Venue",
+      "floor": 1,
+      "section": "West"
+    },
+    "hardware": {
+      "model": "Cisco WAP581",
+      "firmware": "v2.4.1",
+      "uptime_hours": 3587
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 31,
+        "signal_strength": -43,
+        "connected_clients": 33,
+        "throughput_mbps": 18.6,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 35,
+        "signal_strength": -40,
+        "connected_clients": 26,
+        "throughput_mbps": 66.4,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 47,
+        "signal_strength": -30,
+        "connected_clients": 9,
+        "throughput_mbps": 20.6,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.38.168",
+      "mac_address": "00:1B:44:77:62:97",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-29",
+    "switch_id": "Switch-19",
+    "location": {
+      "building": "Main Venue",
+      "floor": 2,
+      "section": "North"
+    },
+    "hardware": {
+      "model": "Aruba AP-515",
+      "firmware": "v2.4.1",
+      "uptime_hours": 3687
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 31,
+        "signal_strength": -39,
+        "connected_clients": 24,
+        "throughput_mbps": 22.3,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 26,
+        "signal_strength": -25,
+        "connected_clients": 5,
+        "throughput_mbps": 34.8,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 49,
+        "signal_strength": -43,
+        "connected_clients": 44,
+        "throughput_mbps": 37.5,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.33.137",
+      "mac_address": "00:1B:44:26:11:37",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-30",
+    "switch_id": "Switch-12",
+    "location": {
+      "building": "Main Venue",
+      "floor": 2,
+      "section": "Center"
+    },
+    "hardware": {
+      "model": "Aruba AP-515",
+      "firmware": "v2.4.1",
+      "uptime_hours": 6193
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 25,
+        "signal_strength": -32,
+        "connected_clients": 42,
+        "throughput_mbps": 20.0,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 21,
+        "signal_strength": -38,
+        "connected_clients": 47,
+        "throughput_mbps": 73.7,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 30,
+        "signal_strength": -36,
+        "connected_clients": 41,
+        "throughput_mbps": 76.8,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.22.122",
+      "mac_address": "00:1B:44:38:53:35",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-31",
+    "switch_id": "Switch-16",
+    "location": {
+      "building": "Main Venue",
+      "floor": 3,
+      "section": "West"
+    },
+    "hardware": {
+      "model": "Ubiquiti UAP-AC-HD",
+      "firmware": "v2.4.1",
+      "uptime_hours": 3742
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 49,
+        "signal_strength": -45,
+        "connected_clients": 33,
+        "throughput_mbps": 13.7,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 28,
+        "signal_strength": -40,
+        "connected_clients": 39,
+        "throughput_mbps": 35.7,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 37,
+        "signal_strength": -43,
+        "connected_clients": 3,
+        "throughput_mbps": 88.8,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.50.213",
+      "mac_address": "00:1B:44:63:71:25",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-32",
+    "switch_id": "Switch-13",
+    "location": {
+      "building": "Main Venue",
+      "floor": 1,
+      "section": "East"
+    },
+    "hardware": {
+      "model": "Aruba AP-515",
+      "firmware": "v2.4.1",
+      "uptime_hours": 4186
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 31,
+        "signal_strength": -34,
+        "connected_clients": 28,
+        "throughput_mbps": 60.4,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 37,
+        "signal_strength": -43,
+        "connected_clients": 50,
+        "throughput_mbps": 50.6,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 22,
+        "signal_strength": -31,
+        "connected_clients": 16,
+        "throughput_mbps": 65.0,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.27.127",
+      "mac_address": "00:1B:44:74:88:20",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-33",
+    "switch_id": "Switch-11",
+    "location": {
+      "building": "Main Venue",
+      "floor": 3,
+      "section": "East"
+    },
+    "hardware": {
+      "model": "Aruba AP-515",
+      "firmware": "v2.4.1",
+      "uptime_hours": 6336
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 34,
+        "signal_strength": -26,
+        "connected_clients": 18,
+        "throughput_mbps": 52.8,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 39,
+        "signal_strength": -43,
+        "connected_clients": 35,
+        "throughput_mbps": 61.4,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 36,
+        "signal_strength": -37,
+        "connected_clients": 14,
+        "throughput_mbps": 63.6,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.44.241",
+      "mac_address": "00:1B:44:45:10:57",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-34",
+    "switch_id": "Switch-08",
+    "location": {
+      "building": "Main Venue",
+      "floor": 2,
+      "section": "East"
+    },
+    "hardware": {
+      "model": "Ubiquiti UAP-AC-HD",
+      "firmware": "v2.4.1",
+      "uptime_hours": 3134
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 22,
+        "signal_strength": -39,
+        "connected_clients": 7,
+        "throughput_mbps": 77.2,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 35,
+        "signal_strength": -39,
+        "connected_clients": 8,
+        "throughput_mbps": 90.8,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 35,
+        "signal_strength": -41,
+        "connected_clients": 10,
+        "throughput_mbps": 94.6,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.22.36",
+      "mac_address": "00:1B:44:76:34:56",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-35",
+    "switch_id": "Switch-16",
+    "location": {
+      "building": "Main Venue",
+      "floor": 3,
+      "section": "North"
+    },
+    "hardware": {
+      "model": "Cisco WAP581",
+      "firmware": "v2.4.1",
+      "uptime_hours": 1225
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 20,
+        "signal_strength": -41,
+        "connected_clients": 34,
+        "throughput_mbps": 58.6,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 22,
+        "signal_strength": -31,
+        "connected_clients": 4,
+        "throughput_mbps": 39.4,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 38,
+        "signal_strength": -26,
+        "connected_clients": 44,
+        "throughput_mbps": 18.3,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.41.96",
+      "mac_address": "00:1B:44:64:22:59",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-36",
+    "switch_id": "Switch-05",
+    "location": {
+      "building": "Main Venue",
+      "floor": 1,
+      "section": "South"
+    },
+    "hardware": {
+      "model": "Cisco WAP581",
+      "firmware": "v2.4.1",
+      "uptime_hours": 5186
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 45,
+        "signal_strength": -26,
+        "connected_clients": 48,
+        "throughput_mbps": 12.1,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 37,
+        "signal_strength": -40,
+        "connected_clients": 0,
+        "throughput_mbps": 36.9,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 31,
+        "signal_strength": -42,
+        "connected_clients": 30,
+        "throughput_mbps": 35.0,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.46.210",
+      "mac_address": "00:1B:44:26:17:68",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-37",
+    "switch_id": "Switch-17",
+    "location": {
+      "building": "Main Venue",
+      "floor": 3,
+      "section": "North"
+    },
+    "hardware": {
+      "model": "Ubiquiti UAP-AC-HD",
+      "firmware": "v2.4.1",
+      "uptime_hours": 1853
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 57,
+        "signal_strength": -29,
+        "connected_clients": 1,
+        "throughput_mbps": 14.0,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 49,
+        "signal_strength": -30,
+        "connected_clients": 7,
+        "throughput_mbps": 12.7,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 55,
+        "signal_strength": -33,
+        "connected_clients": 23,
+        "throughput_mbps": 33.3,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.24.193",
+      "mac_address": "00:1B:44:75:65:68",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-38",
+    "switch_id": "Switch-15",
+    "location": {
+      "building": "Main Venue",
+      "floor": 3,
+      "section": "West"
+    },
+    "hardware": {
+      "model": "Aruba AP-515",
+      "firmware": "v2.4.1",
+      "uptime_hours": 4172
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 30,
+        "signal_strength": -39,
+        "connected_clients": 19,
+        "throughput_mbps": 17.1,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 36,
+        "signal_strength": -35,
+        "connected_clients": 25,
+        "throughput_mbps": 86.2,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 58,
+        "signal_strength": -27,
+        "connected_clients": 35,
+        "throughput_mbps": 41.6,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.26.126",
+      "mac_address": "00:1B:44:64:18:80",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-39",
+    "switch_id": "Switch-17",
+    "location": {
+      "building": "Main Venue",
+      "floor": 3,
+      "section": "South"
+    },
+    "hardware": {
+      "model": "Ubiquiti UAP-AC-HD",
+      "firmware": "v2.4.1",
+      "uptime_hours": 7142
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 43,
+        "signal_strength": -41,
+        "connected_clients": 36,
+        "throughput_mbps": 30.5,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 49,
+        "signal_strength": -29,
+        "connected_clients": 31,
+        "throughput_mbps": 72.9,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 26,
+        "signal_strength": -44,
+        "connected_clients": 1,
+        "throughput_mbps": 18.7,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.43.100",
+      "mac_address": "00:1B:44:96:35:94",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-40",
+    "switch_id": "Switch-07",
+    "location": {
+      "building": "Main Venue",
+      "floor": 1,
+      "section": "East"
+    },
+    "hardware": {
+      "model": "Aruba AP-515",
+      "firmware": "v2.4.1",
+      "uptime_hours": 4803
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 44,
+        "signal_strength": -36,
+        "connected_clients": 7,
+        "throughput_mbps": 90.8,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 33,
+        "signal_strength": -31,
+        "connected_clients": 11,
+        "throughput_mbps": 77.2,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 30,
+        "signal_strength": -31,
+        "connected_clients": 24,
+        "throughput_mbps": 38.7,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.19.112",
+      "mac_address": "00:1B:44:11:95:36",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-41",
+    "switch_id": "Switch-10",
+    "location": {
+      "building": "Main Venue",
+      "floor": 2,
+      "section": "West"
+    },
+    "hardware": {
+      "model": "Cisco WAP581",
+      "firmware": "v2.4.1",
+      "uptime_hours": 3932
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 36,
+        "signal_strength": -36,
+        "connected_clients": 25,
+        "throughput_mbps": 85.9,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 37,
+        "signal_strength": -38,
+        "connected_clients": 3,
+        "throughput_mbps": 70.8,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 33,
+        "signal_strength": -25,
+        "connected_clients": 23,
+        "throughput_mbps": 78.6,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.14.254",
+      "mac_address": "00:1B:44:55:75:32",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-42",
+    "switch_id": "Switch-10",
+    "location": {
+      "building": "Main Venue",
+      "floor": 3,
+      "section": "North"
+    },
+    "hardware": {
+      "model": "Ubiquiti UAP-AC-HD",
+      "firmware": "v2.4.1",
+      "uptime_hours": 7663
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 24,
+        "signal_strength": -36,
+        "connected_clients": 12,
+        "throughput_mbps": 94.6,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 41,
+        "signal_strength": -34,
+        "connected_clients": 14,
+        "throughput_mbps": 87.6,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 46,
+        "signal_strength": -27,
+        "connected_clients": 40,
+        "throughput_mbps": 66.5,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.15.190",
+      "mac_address": "00:1B:44:33:85:98",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-43",
+    "switch_id": "Switch-12",
+    "location": {
+      "building": "Main Venue",
+      "floor": 2,
+      "section": "West"
+    },
+    "hardware": {
+      "model": "Ubiquiti UAP-AC-HD",
+      "firmware": "v2.4.1",
+      "uptime_hours": 1341
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 35,
+        "signal_strength": -28,
+        "connected_clients": 36,
+        "throughput_mbps": 31.5,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 34,
+        "signal_strength": -28,
+        "connected_clients": 4,
+        "throughput_mbps": 19.4,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 34,
+        "signal_strength": -44,
+        "connected_clients": 18,
+        "throughput_mbps": 91.4,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.27.83",
+      "mac_address": "00:1B:44:13:21:33",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-44",
+    "switch_id": "Switch-09",
+    "location": {
+      "building": "Main Venue",
+      "floor": 1,
+      "section": "East"
+    },
+    "hardware": {
+      "model": "Cisco WAP581",
+      "firmware": "v2.4.1",
+      "uptime_hours": 5948
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 42,
+        "signal_strength": -30,
+        "connected_clients": 38,
+        "throughput_mbps": 82.7,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 48,
+        "signal_strength": -41,
+        "connected_clients": 30,
+        "throughput_mbps": 49.6,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 27,
+        "signal_strength": -31,
+        "connected_clients": 36,
+        "throughput_mbps": 88.4,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.17.80",
+      "mac_address": "00:1B:44:51:93:72",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-45",
+    "switch_id": "Switch-19",
+    "location": {
+      "building": "Main Venue",
+      "floor": 3,
+      "section": "North"
+    },
+    "hardware": {
+      "model": "Aruba AP-515",
+      "firmware": "v2.4.1",
+      "uptime_hours": 3384
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 33,
+        "signal_strength": -29,
+        "connected_clients": 5,
+        "throughput_mbps": 21.8,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 25,
+        "signal_strength": -32,
+        "connected_clients": 32,
+        "throughput_mbps": 37.8,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 27,
+        "signal_strength": -32,
+        "connected_clients": 25,
+        "throughput_mbps": 82.7,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.15.43",
+      "mac_address": "00:1B:44:42:89:81",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-46",
+    "switch_id": "Switch-19",
+    "location": {
+      "building": "Main Venue",
+      "floor": 1,
+      "section": "East"
+    },
+    "hardware": {
+      "model": "Cisco WAP581",
+      "firmware": "v2.4.1",
+      "uptime_hours": 8197
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 59,
+        "signal_strength": -42,
+        "connected_clients": 34,
+        "throughput_mbps": 13.2,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 33,
+        "signal_strength": -32,
+        "connected_clients": 29,
+        "throughput_mbps": 60.2,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 35,
+        "signal_strength": -35,
+        "connected_clients": 49,
+        "throughput_mbps": 54.0,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.50.72",
+      "mac_address": "00:1B:44:42:42:40",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-47",
+    "switch_id": "Switch-04",
+    "location": {
+      "building": "Main Venue",
+      "floor": 2,
+      "section": "East"
+    },
+    "hardware": {
+      "model": "Aruba AP-515",
+      "firmware": "v2.4.1",
+      "uptime_hours": 4589
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 41,
+        "signal_strength": -43,
+        "connected_clients": 49,
+        "throughput_mbps": 22.5,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 42,
+        "signal_strength": -40,
+        "connected_clients": 5,
+        "throughput_mbps": 55.2,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 34,
+        "signal_strength": -44,
+        "connected_clients": 40,
+        "throughput_mbps": 74.3,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.19.142",
+      "mac_address": "00:1B:44:35:19:58",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-48",
+    "switch_id": "Switch-06",
+    "location": {
+      "building": "Main Venue",
+      "floor": 2,
+      "section": "East"
+    },
+    "hardware": {
+      "model": "Cisco WAP581",
+      "firmware": "v2.4.1",
+      "uptime_hours": 7125
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 29,
+        "signal_strength": -30,
+        "connected_clients": 24,
+        "throughput_mbps": 54.4,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 46,
+        "signal_strength": -33,
+        "connected_clients": 3,
+        "throughput_mbps": 89.8,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 36,
+        "signal_strength": -34,
+        "connected_clients": 35,
+        "throughput_mbps": 49.5,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.17.52",
+      "mac_address": "00:1B:44:45:15:31",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-49",
+    "switch_id": "Switch-10",
+    "location": {
+      "building": "Main Venue",
+      "floor": 2,
+      "section": "East"
+    },
+    "hardware": {
+      "model": "Ubiquiti UAP-AC-HD",
+      "firmware": "v2.4.1",
+      "uptime_hours": 6123
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 46,
+        "signal_strength": -29,
+        "connected_clients": 17,
+        "throughput_mbps": 50.4,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 21,
+        "signal_strength": -28,
+        "connected_clients": 21,
+        "throughput_mbps": 24.7,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 60,
+        "signal_strength": -35,
+        "connected_clients": 27,
+        "throughput_mbps": 23.2,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.10.48",
+      "mac_address": "00:1B:44:86:74:75",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  },
+  {
+    "ap_id": "AP-50",
+    "switch_id": "Switch-09",
+    "location": {
+      "building": "Main Venue",
+      "floor": 2,
+      "section": "South"
+    },
+    "hardware": {
+      "model": "Aruba AP-515",
+      "firmware": "v2.4.1",
+      "uptime_hours": 6018
+    },
+    "zones": {
+      "FanWiFi": {
+        "status": "healthy",
+        "latency_ms": 28,
+        "signal_strength": -34,
+        "connected_clients": 0,
+        "throughput_mbps": 73.3,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "VisitorWiFi": {
+        "status": "healthy",
+        "latency_ms": 37,
+        "signal_strength": -35,
+        "connected_clients": 31,
+        "throughput_mbps": 74.3,
+        "last_updated": "2025-07-29T12:00:00Z"
+      },
+      "Backstage": {
+        "status": "healthy",
+        "latency_ms": 31,
+        "signal_strength": -34,
+        "connected_clients": 17,
+        "throughput_mbps": 31.8,
+        "last_updated": "2025-07-29T12:00:00Z"
+      }
+    },
+    "management": {
+      "ip_address": "192.168.24.209",
+      "mac_address": "00:1B:44:89:92:73",
+      "ssh_enabled": true,
+      "snmp_community": "public"
+    }
+  }
+]

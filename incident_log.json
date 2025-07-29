@@ -1,0 +1,369 @@
+[
+  {
+    "id": "6ee8ac1e-cf7e-4547-b34c-f0f5f94269fe",
+    "timestamp": "2025-07-29T14:28:33.712524",
+    "ap_id": "AP-01",
+    "zone": "FanWiFi",
+    "issue_type": "network_connectivity",
+    "status": "down",
+    "previous_status": "healthy",
+    "switch_id": "Switch-01",
+    "location": {
+      "building": "Main Venue",
+      "floor": 3,
+      "section": "Center"
+    },
+    "resolved": true,
+    "resolution_timestamp": "2025-07-29T14:28:33.719044"
+  },
+  {
+    "id": "a4363bce-bfd1-4fd7-89fd-fd9310371474",
+    "timestamp": "2025-07-29T14:29:10.449495",
+    "ap_id": "AP-01",
+    "zone": "FanWiFi",
+    "issue_type": "network_connectivity",
+    "status": "down",
+    "previous_status": "healthy",
+    "switch_id": "Switch-01",
+    "location": {
+      "building": "Main Venue",
+      "floor": 3,
+      "section": "Center"
+    },
+    "resolved": true,
+    "resolution_timestamp": "2025-07-29T14:29:10.454230"
+  },
+  {
+    "id": "e4d54dd5-e86d-426f-ba0d-e536de7c7e6b",
+    "timestamp": "2025-07-29T14:30:52.061283",
+    "ap_id": "AP-04",
+    "zone": "FanWiFi",
+    "issue_type": "network_connectivity",
+    "status": "down",
+    "previous_status": "healthy",
+    "switch_id": "Switch-04",
+    "location": {
+      "building": "Main Venue",
+      "floor": 3,
+      "section": "South"
+    },
+    "resolved": true,
+    "resolution_timestamp": "2025-07-29T14:30:52.074140"
+  },
+  {
+    "id": "9b429a3d-2597-4a87-9d90-7cc210fb4466",
+    "timestamp": "2025-07-29T14:30:52.065351",
+    "ap_id": "AP-12",
+    "zone": "VisitorWiFi",
+    "issue_type": "hardware_malfunction",
+    "status": "down",
+    "previous_status": "healthy",
+    "switch_id": "Switch-03",
+    "location": {
+      "building": "Main Venue",
+      "floor": 1,
+      "section": "East"
+    },
+    "resolved": true,
+    "resolution_timestamp": "2025-07-29T14:30:52.078282"
+  },
+  {
+    "id": "abf9fcec-72c5-4760-be6a-8b70688324e4",
+    "timestamp": "2025-07-29T14:30:52.069698",
+    "ap_id": "AP-25",
+    "zone": "Backstage",
+    "issue_type": "power_failure",
+    "status": "down",
+    "previous_status": "healthy",
+    "switch_id": "Switch-01",
+    "location": {
+      "building": "Main Venue",
+      "floor": 1,
+      "section": "Center"
+    },
+    "resolved": true,
+    "resolution_timestamp": "2025-07-29T14:30:52.082131"
+  },
+  {
+    "id": "2310876c-f6e1-49df-918e-f8165018bda3",
+    "timestamp": "2025-07-29T14:35:05.693164",
+    "ap_id": "AP-01",
+    "zone": "FanWiFi",
+    "issue_type": "network_connectivity",
+    "status": "down",
+    "previous_status": "healthy",
+    "switch_id": "Switch-01",
+    "location": {
+      "building": "Main Venue",
+      "floor": 3,
+      "section": "Center"
+    },
+    "resolved": true,
+    "resolution_timestamp": "2025-07-29T14:35:05.697895"
+  },
+  {
+    "id": "4e207dc2-0c88-40f8-8fd8-c18ef2f330a9",
+    "timestamp": "2025-07-29T14:35:49.214606",
+    "ap_id": "AP-15",
+    "zone": "FanWiFi",
+    "issue_type": "network_connectivity",
+    "status": "down",
+    "previous_status": "healthy",
+    "switch_id": "Switch-10",
+    "location": {
+      "building": "Main Venue",
+      "floor": 2,
+      "section": "North"
+    },
+    "resolved": true,
+    "resolution_timestamp": "2025-07-29T14:35:49.219728"
+  },
+  {
+    "id": "1c578bdc-0fa7-4e79-8208-bcb6528274c9",
+    "timestamp": "2025-07-29T14:36:49.078000",
+    "ap_id": "AP-07",
+    "zone": "VisitorWiFi",
+    "issue_type": "power_failure",
+    "status": "down",
+    "previous_status": "healthy",
+    "switch_id": "Switch-11",
+    "location": {
+      "building": "Main Venue",
+      "floor": 1,
+      "section": "North"
+    },
+    "resolved": true,
+    "resolution_timestamp": "2025-07-29T14:36:49.082871"
+  },
+  {
+    "id": "51c0ae8e-a8e8-4346-bf39-a9ec487cb53f",
+    "timestamp": "2025-07-29T14:45:45.265086",
+    "ap_id": "AP-15",
+    "zone": "Backstage",
+    "issue_type": "power_failure",
+    "status": "down",
+    "previous_status": "healthy",
+    "switch_id": "Switch-05",
+    "location": {
+      "floor": 2,
+      "section": "East",
+      "building": "Main Arena",
+      "coordinates": {
+        "x": 200,
+        "y": 65
+      }
+    },
+    "resolved": true,
+    "resolution_timestamp": "2025-07-29T14:45:54.288809"
+  },
+  {
+    "id": "e0a3de41-15d9-4a88-b4b2-b890134bba84",
+    "timestamp": "2025-07-29T14:45:47.270594",
+    "ap_id": "AP-08",
+    "zone": "FanWiFi",
+    "issue_type": "network_connectivity",
+    "status": "down",
+    "previous_status": "healthy",
+    "switch_id": "Switch-03",
+    "location": {
+      "floor": 1,
+      "section": "West",
+      "building": "Main Arena",
+      "coordinates": {
+        "x": 290,
+        "y": 25
+      }
+    },
+    "resolved": true,
+    "resolution_timestamp": "2025-07-29T14:45:55.299549"
+  },
+  {
+    "id": "ede711fb-6593-4ab0-8903-e8173d28a58e",
+    "timestamp": "2025-07-29T14:45:49.279345",
+    "ap_id": "AP-32",
+    "zone": "VisitorWiFi",
+    "issue_type": "hardware_malfunction",
+    "status": "down",
+    "previous_status": "healthy",
+    "switch_id": "Switch-11",
+    "location": {
+      "floor": 3,
+      "section": "West",
+      "building": "Main Arena",
+      "coordinates": {
+        "x": 110,
+        "y": 145
+      }
+    },
+    "resolved": true,
+    "resolution_timestamp": "2025-07-29T14:45:56.307944"
+  },
+  {
+    "id": "6b553063-9c7f-4a30-bc75-6e98ae8d8dc8",
+    "timestamp": "2025-07-29T14:47:06.812409",
+    "ap_id": "AP-25",
+    "zone": "FanWiFi",
+    "issue_type": "high_latency",
+    "status": "down",
+    "previous_status": "healthy",
+    "switch_id": "Switch-09",
+    "location": {
+      "floor": 3,
+      "section": "North",
+      "building": "Main Arena",
+      "coordinates": {
+        "x": 200,
+        "y": 105
+      }
+    },
+    "resolved": false,
+    "resolution_timestamp": null
+  },
+  {
+    "id": "d60133b6-2669-4490-8582-2cd2d1e9c14e",
+    "timestamp": "2025-07-29T14:50:55.769210",
+    "ap_id": "AP-25",
+    "zone": "FanWiFi",
+    "issue_type": "high_latency",
+    "status": "down",
+    "previous_status": "down",
+    "switch_id": "Switch-09",
+    "location": {
+      "floor": 3,
+      "section": "North",
+      "building": "Main Arena",
+      "coordinates": {
+        "x": 200,
+        "y": 105
+      }
+    },
+    "resolved": false,
+    "resolution_timestamp": null
+  },
+  {
+    "id": "6958c125-8d6a-4677-a0c5-e0c12a557429",
+    "timestamp": "2025-07-29T14:52:39.673994",
+    "ap_id": "AP-42",
+    "zone": "Backstage",
+    "issue_type": "power_failure",
+    "status": "down",
+    "previous_status": "healthy",
+    "switch_id": "Switch-14",
+    "location": {
+      "floor": 4,
+      "section": "South",
+      "building": "Main Arena",
+      "coordinates": {
+        "x": 110,
+        "y": 185
+      }
+    },
+    "resolved": false,
+    "resolution_timestamp": null
+  },
+  {
+    "id": "18e3ce2b-bdcc-424c-b235-30a23603c200",
+    "timestamp": "2025-07-29T14:53:04.537846",
+    "ap_id": "AP-33",
+    "zone": "FanWiFi",
+    "issue_type": "network_connectivity",
+    "status": "down",
+    "previous_status": "down",
+    "switch_id": "Switch-11",
+    "location": {
+      "floor": 3,
+      "section": "North",
+      "building": "Main Arena",
+      "coordinates": {
+        "x": 140,
+        "y": 145
+      }
+    },
+    "resolved": false,
+    "resolution_timestamp": null
+  },
+  {
+    "id": "1de67608-0a72-4666-a9a0-b69049ed1400",
+    "timestamp": "2025-07-29T14:56:05.384601",
+    "ap_id": "AP-07",
+    "zone": "VisitorWiFi",
+    "issue_type": "hardware_malfunction",
+    "status": "down",
+    "previous_status": "healthy",
+    "switch_id": "Switch-03",
+    "location": {
+      "floor": 1,
+      "section": "East",
+      "building": "Main Arena",
+      "coordinates": {
+        "x": 260,
+        "y": 25
+      }
+    },
+    "resolved": false,
+    "resolution_timestamp": null
+  },
+  {
+    "id": "550324de-db25-4b35-854c-31f443b182fd",
+    "timestamp": "2025-07-29T14:56:14.999296",
+    "ap_id": "AP-07",
+    "zone": "VisitorWiFi",
+    "issue_type": "hardware_malfunction",
+    "status": "down",
+    "previous_status": "down",
+    "switch_id": "Switch-03",
+    "location": {
+      "floor": 1,
+      "section": "East",
+      "building": "Main Arena",
+      "coordinates": {
+        "x": 260,
+        "y": 25
+      }
+    },
+    "resolved": false,
+    "resolution_timestamp": null
+  },
+  {
+    "id": "e4a67837-455f-4de3-bb40-224e9cedbc2b",
+    "timestamp": "2025-07-29T14:57:55.391614",
+    "ap_id": "AP-25",
+    "zone": "FanWiFi",
+    "issue_type": "high_latency",
+    "status": "down",
+    "previous_status": "down",
+    "switch_id": "Switch-09",
+    "location": {
+      "floor": 3,
+      "section": "North",
+      "building": "Main Arena",
+      "coordinates": {
+        "x": 200,
+        "y": 105
+      }
+    },
+    "resolved": false,
+    "resolution_timestamp": null
+  },
+  {
+    "id": "2311d92d-e56a-4fc0-a2c9-790c57cc0098",
+    "timestamp": "2025-07-29T15:06:23.735466",
+    "ap_id": "AP-15",
+    "zone": "FanWiFi",
+    "issue_type": "network_connectivity",
+    "status": "down",
+    "previous_status": "down",
+    "switch_id": "Switch-05",
+    "location": {
+      "floor": 2,
+      "section": "East",
+      "building": "Main Arena",
+      "coordinates": {
+        "x": 200,
+        "y": 65
+      }
+    },
+    "resolved": false,
+    "resolution_timestamp": null
+  }
+]

@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiveOpsLab Network Operations Center</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #0f1419 0%, #1a2332 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            overflow-x: auto;
+        }
+
+        /* Executive Header */
+        .executive-header {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+            padding: 20px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .company-branding {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .company-logo {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #00d4ff, #0099cc);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .company-info h1 {
+            font-size: 1.8em;
+            font-weight: 600;
+            color: #00d4ff;
+            margin-bottom: 4px;
+        }
+
+        .company-info .subtitle {
+            font-size: 0.9em;
+            color: #8892b0;
+            font-weight: 400;
+        }
+
+        .status-time {
+            text-align: right;
+            font-size: 0.9em;
+            color: #8892b0;
+        }
+
+        .live-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            color: #00ff88;
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: #00ff88;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        /* Executive Summary Cards */
+        .executive-summary {
+            padding: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .summary-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            padding: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .summary-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--accent-color, #00d4ff);
+        }
+
+        .summary-card.health { --accent-color: #00ff88; }
+        .summary-card.warning { --accent-color: #ffa500; }
+        .summary-card.critical { --accent-color: #ff4757; }
+        .summary-card.performance { --accent-color: #7c4dff; }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .card-title {
+            font-size: 0.95em;
+            color: #8892b0;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .card-icon {
+            font-size: 1.5em;
+            opacity: 0.7;
+        }
+
+        .card-value {
+            font-size: 2.8em;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 8px;
+            color: var(--accent-color, #ffffff);
+        }
+
+        .card-subtitle {
+            font-size: 0.85em;
+            color: #8892b0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .trend-indicator {
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.75em;
+            font-weight: 600;
+        }
+
+        .trend-up { background: rgba(0, 255, 136, 0.2); color: #00ff88; }
+        .trend-down { background: rgba(255, 71, 87, 0.2); color: #ff4757; }
+        .trend-stable { background: rgba(139, 139, 139, 0.2); color: #8b8b8b; }
+
+        /* Zone Health Overview */
+        .zone-overview {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .zone-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .zone-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .zone-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .zone-stat {
+            text-align: center;
+            padding: 15px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .zone-stat-title {
+            font-size: 0.9em;
+            color: #8892b0;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .zone-stat-value {
+            font-size: 1.8em;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .zone-stat-subtitle {
+            font-size: 0.8em;
+            color: #8892b0;
+        }
+
+        /* Enhanced Network Grid */
+        .network-section {
+            margin-bottom: 30px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .view-controls {
+            display: flex;
+            gap: 10px;
+        }
+
+        .control-btn {
+            padding: 8px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.85em;
+        }
+
+        .control-btn:hover, .control-btn.active {
+            background: rgba(0, 212, 255, 0.2);
+            border-color: #00d4ff;
+        }
+
+        .network-grid {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            gap: 12px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .ap-tile {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 15px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            min-height: 120px;
+        }
+
+        .ap-tile:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: #00d4ff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.15);
+        }
+
+        .ap-id {
+            font-weight: 600;
+            font-size: 0.85em;
+            margin-bottom: 10px;
+            color: #00d4ff;
+            text-align: center;
+        }
+
+        .ap-location {
+            font-size: 0.7em;
+            color: #8892b0;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .zones {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 8px;
+        }
+
+        .dot {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            position: relative;
+            transition: all 0.3s ease;
+            cursor: help;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .dot.healthy { 
+            background: linear-gradient(135deg, #00ff88, #00cc6a);
+            box-shadow: 0 0 12px rgba(0, 255, 136, 0.4);
+        }
+        
+        .dot.warning { 
+            background: linear-gradient(135deg, #ffa500, #ff8c00);
+            box-shadow: 0 0 12px rgba(255, 165, 0, 0.4);
+        }
+        
+        .dot.down { 
+            background: linear-gradient(135deg, #ff4757, #ff3742);
+            box-shadow: 0 0 12px rgba(255, 71, 87, 0.4);
+        }
+
+        .dot:hover {
+            transform: scale(1.2);
+            border-color: #ffffff;
+        }
+
+        .zone-labels {
+            display: flex;
+            gap: 6px;
+            font-size: 0.65em;
+            color: #8892b0;
+        }
+
+        .zone-label {
+            text-align: center;
+            min-width: 18px;
+            font-weight: 500;
+        }
+
+        /* Enhanced Tooltip */
+        .tooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
+            color: white;
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            z-index: 1000;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            min-width: 220px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .tooltip.show {
+            opacity: 1;
+        }
+
+        .tooltip-header {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #00d4ff;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 5px;
+        }
+
+        .tooltip-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4px;
+        }
+
+        .tooltip-label {
+            color: #8892b0;
+        }
+
+        .tooltip-value {
+            font-weight: 500;
+        }
+
+        /* Status Indicators */
+        .status-healthy { color: #00ff88; }
+        .status-warning { color: #ffa500; }
+        .status-down { color: #ff4757; }
+
+        /* Refresh Indicator */
+        .refresh-indicator {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 25px;
+            padding: 8px 15px;
+            font-size: 0.8em;
+            color: #00d4ff;
+            backdrop-filter: blur(10px);
+        }
+
+        .refresh-indicator.updating {
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .network-grid {
+                grid-template-columns: repeat(8, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .network-grid {
+                grid-template-columns: repeat(5, 1fr);
+            }
+            
+            .summary-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .executive-header {
+                padding: 15px 20px;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .zone-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #00d4ff;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Incidents Panel */
+        .incidents-panel {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            width: 380px;
+            max-height: 70vh;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 16px;
+            overflow: hidden;
+            z-index: 1002;
+            transform: translateX(400px);
+            transition: transform 0.3s ease;
+        }
+
+        .incidents-panel.show {
+            transform: translateX(0);
+        }
+
+        .incidents-header {
+            background: rgba(0, 212, 255, 0.1);
+            padding: 15px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .incidents-title {
+            font-weight: 600;
+            color: #00d4ff;
+            font-size: 1.1em;
+        }
+
+        .incidents-close {
+            background: none;
+            border: none;
+            color: #8892b0;
+            font-size: 1.2em;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .incidents-close:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+        }
+
+        .incidents-body {
+            max-height: 60vh;
+            overflow-y: auto;
+            padding: 0;
+        }
+
+        .incident-item {
+            padding: 15px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: background 0.3s ease;
+        }
+
+        .incident-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .incident-item.active {
+            border-left: 4px solid #ff4757;
+        }
+
+        .incident-item.resolved {
+            border-left: 4px solid #00ff88;
+            opacity: 0.7;
+        }
+
+        .incident-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+
+        .incident-id {
+            font-weight: 600;
+            color: #00d4ff;
+            font-size: 0.9em;
+        }
+
+        .incident-status {
+            padding: 3px 8px;
+            border-radius: 8px;
+            font-size: 0.75em;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .incident-status.active {
+            background: rgba(255, 71, 87, 0.2);
+            color: #ff4757;
+        }
+
+        .incident-status.resolved {
+            background: rgba(0, 255, 136, 0.2);
+            color: #00ff88;
+        }
+
+        .incident-ap {
+            font-weight: 500;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .incident-cause {
+            color: #8892b0;
+            font-size: 0.85em;
+            margin-bottom: 8px;
+        }
+
+        .incident-eta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8em;
+            color: #ffa500;
+        }
+
+        .incident-eta.resolved {
+            color: #00ff88;
+        }
+
+        .healing-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.75em;
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.1);
+            padding: 3px 8px;
+            border-radius: 10px;
+            margin-top: 5px;
+        }
+
+        .pulse-healing {
+            width: 6px;
+            height: 6px;
+            background: #00ff88;
+            border-radius: 50%;
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Incidents Toggle Button */
+        .incidents-toggle {
+            position: fixed;
+            top: 120px;
+            right: 20px;
+            background: rgba(0, 212, 255, 0.2);
+            border: 1px solid #00d4ff;
+            color: #00d4ff;
+            padding: 12px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1001;
+            backdrop-filter: blur(10px);
+        }
+
+        .incidents-toggle:hover {
+            background: rgba(0, 212, 255, 0.3);
+            transform: scale(1.05);
+        }
+
+        .incidents-toggle .badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #ff4757;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: 0.7em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- Executive Header -->
+    <div class="executive-header">
+        <div class="header-content">
+            <div class="company-branding">
+                <div class="company-logo">LO</div>
+                <div class="company-info">
+                    <h1>LiveOpsLab Network Operations Center</h1>
+                    <div class="subtitle">Real-time Infrastructure Monitoring & Management</div>
+                </div>
+            </div>
+            <div class="status-time">
+                <div class="live-indicator">
+                    <div class="pulse-dot"></div>
+                    LIVE
+                </div>
+                <div id="current-time">Loading...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Executive Summary -->
+    <div class="executive-summary">
+        <div class="summary-grid">
+            <div class="summary-card health">
+                <div class="card-header">
+                    <div class="card-title">Network Health</div>
+                    <div class="card-icon">🌐</div>
+                </div>
+                <div class="card-value" id="health-percentage">--</div>
+                <div class="card-subtitle">
+                    <span>Overall system status</span>
+                    <span class="trend-indicator trend-stable" id="health-trend">Stable</span>
+                </div>
+            </div>
+
+            <div class="summary-card warning">
+                <div class="card-header">
+                    <div class="card-title">Active Issues</div>
+                    <div class="card-icon">⚠️</div>
+                </div>
+                <div class="card-value" id="active-issues">--</div>
+                <div class="card-subtitle">
+                    <span>Requiring attention</span>
+                    <span class="trend-indicator trend-down" id="issues-trend">-2 vs yesterday</span>
+                </div>
+            </div>
+
+            <div class="summary-card critical">
+                <div class="card-header">
+                    <div class="card-title">Critical Alerts</div>
+                    <div class="card-icon">🚨</div>
+                </div>
+                <div class="card-value" id="critical-alerts">--</div>
+                <div class="card-subtitle">
+                    <span>Immediate action needed</span>
+                    <span class="trend-indicator trend-up" id="critical-trend">+1 last hour</span>
+                </div>
+            </div>
+
+            <div class="summary-card performance">
+                <div class="card-header">
+                    <div class="card-title">Avg Response</div>
+                    <div class="card-icon">⚡</div>
+                </div>
+                <div class="card-value" id="avg-latency">--</div>
+                <div class="card-subtitle">
+                    <span>Network latency (ms)</span>
+                    <span class="trend-indicator trend-up" id="latency-trend">+5ms</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Zone Overview -->
+        <div class="zone-overview">
+            <div class="zone-header">
+                <div class="zone-title">🏟️ Zone Performance Overview</div>
+                <div class="refresh-indicator" id="refresh-indicator">
+                    Last updated: Never
+                </div>
+            </div>
+            <div class="zone-stats">
+                <div class="zone-stat">
+                    <div class="zone-stat-title">🏟️ FanWiFi</div>
+                    <div class="zone-stat-value" id="fanwifi-health">--</div>
+                    <div class="zone-stat-subtitle" id="fanwifi-status">Checking status...</div>
+                </div>
+                <div class="zone-stat">
+                    <div class="zone-stat-title">👥 VisitorWiFi</div>
+                    <div class="zone-stat-value" id="visitor-health">--</div>
+                    <div class="zone-stat-subtitle" id="visitor-status">Checking status...</div>
+                </div>
+                <div class="zone-stat">
+                    <div class="zone-stat-title">🎭 Backstage</div>
+                    <div class="zone-stat-value" id="backstage-health">--</div>
+                    <div class="zone-stat-subtitle" id="backstage-status">Checking status...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Network Grid Section -->
+        <div class="network-section">
+            <div class="section-header">
+                <div class="section-title">📡 Access Point Status Grid</div>
+                <div class="view-controls">
+                    <button class="control-btn active" data-view="all">All APs</button>
+                    <button class="control-btn" data-view="issues">Issues Only</button>
+                    <button class="control-btn" data-view="critical">Critical</button>
+                </div>
+            </div>
+            <div class="network-grid" id="network-grid">
+                <!-- AP tiles will be generated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Enhanced Tooltip -->
+    <div class="tooltip" id="tooltip">
+        <div class="tooltip-header" id="tooltip-header"></div>
+        <div id="tooltip-content"></div>
+    </div>
+
+    <!-- Incidents Toggle Button -->
+    <button class="incidents-toggle" id="incidents-toggle">
+        🚨
+        <span class="badge" id="incidents-badge">0</span>
+    </button>
+
+    <!-- Incidents Panel -->
+    <div class="incidents-panel" id="incidents-panel">
+        <div class="incidents-header">
+            <div class="incidents-title">🚨 Active Incidents & Root Causes</div>
+            <button class="incidents-close" id="incidents-close">×</button>
+        </div>
+        <div class="incidents-body" id="incidents-body">
+            <div style="padding: 20px; text-align: center; color: #8892b0;">
+                No incidents detected
+            </div>
+        </div>
+    </div>
+
+    <script>
+        class EnhancedNetworkDashboard {
+            constructor() {
+                this.networkData = null;
+                this.refreshInterval = null;
+                this.tooltip = document.getElementById('tooltip');
+                this.currentView = 'all';
+                this.incidentsPanel = document.getElementById('incidents-panel');
+                this.incidentsVisible = false;
+                this.activeIncidents = [];
+                this.init();
+            }
+
+            init() {
+                this.updateCurrentTime();
+                this.generateAPGrid();
+                this.startAutoRefresh();
+                this.loadNetworkData();
+                this.setupViewControls();
+                this.setupIncidentsPanel();
+                this.startTimeUpdate();
+            }
+
+            updateCurrentTime() {
+                const now = new Date();
+                const timeString = now.toLocaleString('en-US', {
+                    weekday: 'short',
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit'
+                });
+                document.getElementById('current-time').textContent = timeString;
+            }
+
+            startTimeUpdate() {
+                setInterval(() => this.updateCurrentTime(), 1000);
+            }
+
+            setupIncidentsPanel() {
+                const toggle = document.getElementById('incidents-toggle');
+                const close = document.getElementById('incidents-close');
+                
+                toggle.addEventListener('click', () => this.toggleIncidentsPanel());
+                close.addEventListener('click', () => this.hideIncidentsPanel());
+            }
+
+            toggleIncidentsPanel() {
+                if (this.incidentsVisible) {
+                    this.hideIncidentsPanel();
+                } else {
+                    this.showIncidentsPanel();
+                }
+            }
+
+            showIncidentsPanel() {
+                this.incidentsPanel.classList.add('show');
+                this.incidentsVisible = true;
+            }
+
+            hideIncidentsPanel() {
+                this.incidentsPanel.classList.remove('show');
+                this.incidentsVisible = false;
+            }
+
+            updateIncidentsPanel() {
+                if (!this.networkData) return;
+
+                const incidents = [];
+                
+                // Collect all incidents from access points
+                this.networkData.access_points.forEach(ap => {
+                    Object.keys(ap.zones).forEach(zoneName => {
+                        const zone = ap.zones[zoneName];
+                        if (zone.incident_id && zone.root_cause) {
+                            incidents.push({
+                                id: zone.incident_id,
+                                ap_id: ap.ap_id,
+                                zone: zoneName,
+                                status: zone.status,
+                                root_cause: zone.root_cause,
+                                healing_eta: zone.healing_eta,
+                                description: this.getIncidentDescription(zone.root_cause, ap.ap_id, zoneName)
+                            });
+                        }
+                    });
+                });
+
+                this.activeIncidents = incidents;
+                
+                // Update badge count
+                const badge = document.getElementById('incidents-badge');
+                badge.textContent = incidents.length;
+                badge.style.display = incidents.length > 0 ? 'flex' : 'none';
+
+                // Update incidents body
+                const body = document.getElementById('incidents-body');
+                
+                if (incidents.length === 0) {
+                    body.innerHTML = `
+                        <div style="padding: 20px; text-align: center; color: #8892b0;">
+                            ✅ No active incidents detected<br>
+                            <small>All systems operating normally</small>
+                        </div>
+                    `;
+                } else {
+                    body.innerHTML = incidents.map(incident => this.createIncidentHTML(incident)).join('');
+                }
+            }
+
+            getIncidentDescription(rootCause, apId, zone) {
+                const descriptions = {
+                    "Power fluctuation": `Power supply instability detected on ${apId} affecting ${zone} network`,
+                    "Network congestion": `High traffic volume causing packet loss in ${zone} on ${apId}`,
+                    "Hardware failure": `Radio module malfunction detected on ${apId} for ${zone} service`,
+                    "Configuration error": `Invalid VLAN configuration blocking ${zone} traffic on ${apId}`,
+                    "ISP connectivity": `Upstream connectivity loss affecting ${apId} ${zone} gateway`,
+                    "Firmware bug": `Known firmware issue causing ${zone} service interruption on ${apId}`,
+                    "Temperature spike": `Overheating detected on ${apId}, throttling ${zone} performance`,
+                    "Cable disconnection": `Physical cable issue detected between ${apId} and core switch`,
+                    "Authentication server": `RADIUS authentication timeout affecting ${zone} users on ${apId}`,
+                    "DHCP pool exhaustion": `No available IP addresses for new ${zone} clients on ${apId}`
+                };
+                
+                return descriptions[rootCause] || `${rootCause} affecting ${apId} ${zone}`;
+            }
+
+            createIncidentHTML(incident) {
+                const isActive = incident.status !== 'healthy';
+                const statusClass = isActive ? 'active' : 'resolved';
+                const statusText = isActive ? 'ACTIVE' : 'RESOLVED';
+                
+                let etaText = '';
+                if (incident.healing_eta && isActive) {
+                    const eta = new Date(incident.healing_eta);
+                    const now = new Date();
+                    const diffMinutes = Math.ceil((eta - now) / (1000 * 60));
+                    
+                    if (diffMinutes > 0) {
+                        etaText = `
+                            <div class="incident-eta">
+                                ⏱️ Auto-heal ETA: ${diffMinutes}m
+                            </div>
+                            <div class="healing-indicator">
+                                <div class="pulse-healing"></div>
+                                Self-healing in progress...
+                            </div>
+                        `;
+                    } else {
+                        etaText = `
+                            <div class="healing-indicator">
+                                <div class="pulse-healing"></div>
+                                Healing now...
+                            </div>
+                        `;
+                    }
+                }
+
+                return `
+                    <div class="incident-item ${statusClass}">
+                        <div class="incident-header">
+                            <div class="incident-id">${incident.id}</div>
+                            <div class="incident-status ${statusClass}">${statusText}</div>
+                        </div>
+                        <div class="incident-ap">${incident.ap_id} - ${incident.zone}</div>
+                        <div class="incident-cause">🔍 ${incident.root_cause}</div>
+                        <div style="font-size: 0.8em; color: #8892b0; margin-bottom: 8px;">
+                            ${incident.description}
+                        </div>
+                        ${etaText}
+                    </div>
+                `;
+            }
+
+            setupViewControls() {
+                const buttons = document.querySelectorAll('.control-btn');
+                buttons.forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        buttons.forEach(b => b.classList.remove('active'));
+                        e.target.classList.add('active');
+                        this.currentView = e.target.dataset.view;
+                        this.filterAPGrid();
+                    });
+                });
+            }
+
+            generateAPGrid() {
+                const grid = document.getElementById('network-grid');
+                grid.innerHTML = '';
+
+                for (let i = 1; i <= 50; i++) {
+                    const apId = `AP-${i.toString().padStart(2, '0')}`;
+                    const tile = this.createEnhancedAPTile(apId);
+                    grid.appendChild(tile);
+                }
+            }
+
+            createEnhancedAPTile(apId) {
+                const tile = document.createElement('div');
+                tile.className = 'ap-tile';
+                tile.dataset.apId = apId;
+                
+                const floor = Math.floor(((parseInt(apId.slice(3)) - 1) / 12)) + 1;
+                const section = ['North', 'South', 'East', 'West'][((parseInt(apId.slice(3)) - 1) % 4)];
+                
+                tile.innerHTML = `
+                    <div class="ap-id">${apId}</div>
+                    <div class="ap-location">Floor ${floor} - ${section}</div>
+                    <div class="zones">
+                        <div class="dot down" data-zone="FanWiFi" data-ap="${apId}"></div>
+                        <div class="dot down" data-zone="VisitorWiFi" data-ap="${apId}"></div>
+                        <div class="dot down" data-zone="Backstage" data-ap="${apId}"></div>
+                    </div>
+                    <div class="zone-labels">
+                        <div class="zone-label">Fan</div>
+                        <div class="zone-label">Visit</div>
+                        <div class="zone-label">Back</div>
+                    </div>
+                `;
+
+                const dots = tile.querySelectorAll('.dot');
+                dots.forEach(dot => {
+                    dot.addEventListener('mouseenter', (e) => this.showEnhancedTooltip(e));
+                    dot.addEventListener('mouseleave', () => this.hideTooltip());
+                    dot.addEventListener('mousemove', (e) => this.updateTooltipPosition(e));
+                });
+
+                return tile;
+            }
+
+            async loadNetworkData() {
+                const refreshIndicator = document.getElementById('refresh-indicator');
+                refreshIndicator.classList.add('updating');
+                
+                try {
+                    const response = await fetch('network_topology.json');
+                    if (response.ok) {
+                        this.networkData = await response.json();
+                        this.updateAPStatus();
+                        this.updateExecutiveSummary();
+                        this.updateZoneOverview();
+                        this.updateIncidentsPanel();
+                        refreshIndicator.textContent = `Last updated: ${new Date().toLocaleTimeString()}`;
+                    } else {
+                        throw new Error('Network topology file not found');
+                    }
+                } catch (error) {
+                    console.warn('Network topology not found, generating mock data:', error);
+                    this.generateExecutiveMockData();
+                    refreshIndicator.textContent = `Mock data: ${new Date().toLocaleTimeString()}`;
+                    this.updateIncidentsPanel();
+                }
+                
+                refreshIndicator.classList.remove('updating');
+            }
+
+            generateExecutiveMockData() {
+                const zones = ['FanWiFi', 'VisitorWiFi', 'Backstage'];
+                const access_points = [];
+
+                for (let i = 1; i <= 50; i++) {
+                    const apId = `AP-${i.toString().padStart(2, '0')}`;
+                    const switchId = `Switch-${(Math.floor((i-1)/3) + 1).toString().padStart(2, '0')}`;
+                    
+                    const ap = {
+                        ap_id: apId,
+                        switch_id: switchId,
+                        location: {
+                            floor: Math.floor((i-1)/12) + 1,
+                            section: ['North', 'South', 'East', 'West'][(i-1) % 4]
+                        },
+                        hardware: {
+                            model: ['Cisco Catalyst 9130AXI', 'Aruba AP-535', 'Ubiquiti UniFi 6 Enterprise'][i % 3],
+                            uptime_hours: Math.floor(Math.random() * 8760)
+                        },
+                        zones: {}
+                    };
+
+                    zones.forEach(zone => {
+                        const hasIssue = Math.random() < 0.12; // 12% chance of issues
+                        const isCritical = hasIssue && Math.random() < 0.3; // 30% of issues are critical
+                        
+                        const latency = hasIssue ? 
+                            (isCritical ? Math.floor(Math.random() * 200) + 150 : Math.floor(Math.random() * 100) + 50) :
+                            Math.floor(Math.random() * 40) + 10;
+
+                        ap.zones[zone] = {
+                            status: isCritical ? 'down' : (hasIssue ? 'warning' : 'healthy'),
+                            latency_ms: latency,
+                            connected_clients: hasIssue ? (isCritical ? 0 : Math.floor(Math.random() * 10)) : Math.floor(Math.random() * 30),
+                            throughput_mbps: hasIssue ? (isCritical ? 0 : Math.round(Math.random() * 20 + 5)) : Math.round(Math.random() * 85.5 + 10.5),
+                            last_updated: new Date().toISOString()
+                        };
+                    });
+
+                    access_points.push(ap);
+                }
+
+                this.networkData = { access_points };
+                this.updateAPStatus();
+                this.updateExecutiveSummary();
+                this.updateZoneOverview();
+                this.updateIncidentsPanel();
+            }
+
+            updateExecutiveSummary() {
+                if (!this.networkData) return;
+
+                let totalZones = 0;
+                let healthyZones = 0;
+                let warningZones = 0;
+                let downZones = 0;
+                let totalLatency = 0;
+                let latencyCount = 0;
+
+                this.networkData.access_points.forEach(ap => {
+                    Object.values(ap.zones).forEach(zone => {
+                        totalZones++;
+                        totalLatency += zone.latency_ms;
+                        latencyCount++;
+                        
+                        if (zone.status === 'healthy') healthyZones++;
+                        else if (zone.status === 'warning') warningZones++;
+                        else downZones++;
+                    });
+                });
+
+                const healthPercentage = Math.round((healthyZones / totalZones) * 100);
+                const avgLatency = Math.round(totalLatency / latencyCount);
+
+                document.getElementById('health-percentage').textContent = `${healthPercentage}%`;
+                document.getElementById('active-issues').textContent = warningZones + downZones;
+                document.getElementById('critical-alerts').textContent = downZones;
+                document.getElementById('avg-latency').textContent = `${avgLatency}ms`;
+
+                // Update trend indicators based on health
+                const healthTrend = document.getElementById('health-trend');
+                if (healthPercentage >= 90) {
+                    healthTrend.className = 'trend-indicator trend-up';
+                    healthTrend.textContent = 'Excellent';
+                } else if (healthPercentage >= 80) {
+                    healthTrend.className = 'trend-indicator trend-stable';
+                    healthTrend.textContent = 'Good';
+                } else {
+                    healthTrend.className = 'trend-indicator trend-down';
+                    healthTrend.textContent = 'Needs Attention';
+                }
+            }
+
+            updateZoneOverview() {
+                if (!this.networkData) return;
+
+                const zones = ['FanWiFi', 'VisitorWiFi', 'Backstage'];
+                const zoneIds = ['fanwifi', 'visitor', 'backstage'];
+
+                zones.forEach((zone, index) => {
+                    let total = 0;
+                    let healthy = 0;
+                    
+                    this.networkData.access_points.forEach(ap => {
+                        if (ap.zones[zone]) {
+                            total++;
+                            if (ap.zones[zone].status === 'healthy') healthy++;
+                        }
+                    });
+
+                    const healthPercentage = total > 0 ? Math.round((healthy / total) * 100) : 0;
+                    const healthElement = document.getElementById(`${zoneIds[index]}-health`);
+                    const statusElement = document.getElementById(`${zoneIds[index]}-status`);
+
+                    healthElement.textContent = `${healthPercentage}%`;
+                    healthElement.className = `zone-stat-value ${
+                        healthPercentage >= 90 ? 'status-healthy' :
+                        healthPercentage >= 70 ? 'status-warning' : 'status-down'
+                    }`;
+
+                    statusElement.textContent = `${healthy}/${total} access points healthy`;
+                });
+            }
+
+            updateAPStatus() {
+                if (!this.networkData || !this.networkData.access_points) return;
+
+                this.networkData.access_points.forEach(ap => {
+                    const apTile = document.querySelector(`[data-ap-id="${ap.ap_id}"]`);
+                    if (!apTile) return;
+
+                    let hasIssues = false;
+                    let hasCritical = false;
+
+                    Object.keys(ap.zones).forEach(zoneName => {
+                        const zone = ap.zones[zoneName];
+                        const dot = apTile.querySelector(`[data-zone="${zoneName}"]`);
+                        if (dot) {
+                            dot.classList.remove('healthy', 'warning', 'down');
+                            
+                            let status = zone.status;
+                            if (status === 'healthy' && zone.latency_ms > 50) {
+                                status = 'warning';
+                            }
+                            
+                            dot.classList.add(status);
+                            
+                            if (status !== 'healthy') hasIssues = true;
+                            if (status === 'down') hasCritical = true;
+                            
+                            // Store zone data for tooltip
+                            dot.dataset.latency = zone.latency_ms;
+                            dot.dataset.clients = zone.connected_clients;
+                            dot.dataset.throughput = zone.throughput_mbps;
+                            dot.dataset.updated = zone.last_updated;
+                        }
+                    });
+
+                    // Update tile appearance based on status
+                    apTile.dataset.hasIssues = hasIssues;
+                    apTile.dataset.hasCritical = hasCritical;
+                });
+
+                this.filterAPGrid();
+            }
+
+            filterAPGrid() {
+                const tiles = document.querySelectorAll('.ap-tile');
+                
+                tiles.forEach(tile => {
+                    const hasIssues = tile.dataset.hasIssues === 'true';
+                    const hasCritical = tile.dataset.hasCritical === 'true';
+                    
+                    let show = true;
+                    
+                    switch (this.currentView) {
+                        case 'issues':
+                            show = hasIssues;
+                            break;
+                        case 'critical':
+                            show = hasCritical;
+                            break;
+                        case 'all':
+                        default:
+                            show = true;
+                            break;
+                    }
+                    
+                    tile.style.display = show ? 'flex' : 'none';
+                });
+            }
+
+            showEnhancedTooltip(event) {
+                const dot = event.target;
+                const zone = dot.dataset.zone;
+                const ap = dot.dataset.ap;
+                const latency = dot.dataset.latency || 'N/A';
+                const clients = dot.dataset.clients || '0';
+                const throughput = dot.dataset.throughput || '0';
+                const updated = dot.dataset.updated ? 
+                    new Date(dot.dataset.updated).toLocaleTimeString() : 'Never';
+
+                const status = dot.classList.contains('healthy') ? 'Healthy' :
+                             dot.classList.contains('warning') ? 'Warning' : 'Down';
+
+                const tooltipHeader = document.getElementById('tooltip-header');
+                const tooltipContent = document.getElementById('tooltip-content');
+
+                tooltipHeader.textContent = `${ap} - ${zone}`;
+                
+                let tooltipHTML = `
+                    <div class="tooltip-row">
+                        <span class="tooltip-label">Status:</span>
+                        <span class="tooltip-value status-${status.toLowerCase()}">${status}</span>
+                    </div>
+                    <div class="tooltip-row">
+                        <span class="tooltip-label">Latency:</span>
+                        <span class="tooltip-value">${latency}ms</span>
+                    </div>
+                    <div class="tooltip-row">
+                        <span class="tooltip-label">Clients:</span>
+                        <span class="tooltip-value">${clients} connected</span>
+                    </div>
+                    <div class="tooltip-row">
+                        <span class="tooltip-label">Throughput:</span>
+                        <span class="tooltip-value">${throughput} Mbps</span>
+                    </div>
+                `;
+
+                // Add root cause information if available
+                if (this.networkData) {
+                    const apData = this.networkData.access_points.find(a => a.ap_id === ap);
+                    if (apData && apData.zones[zone]) {
+                        const zoneData = apData.zones[zone];
+                        if (zoneData.root_cause) {
+                            tooltipHTML += `
+                                <div style="border-top: 1px solid rgba(255,255,255,0.1); margin: 8px 0; padding-top: 8px;">
+                                    <div class="tooltip-row">
+                                        <span class="tooltip-label">🔍 Root Cause:</span>
+                                        <span class="tooltip-value" style="color: #ff4757;">${zoneData.root_cause}</span>
+                                    </div>
+                            `;
+                            
+                            if (zoneData.incident_id) {
+                                tooltipHTML += `
+                                    <div class="tooltip-row">
+                                        <span class="tooltip-label">Incident ID:</span>
+                                        <span class="tooltip-value">${zoneData.incident_id}</span>
+                                    </div>
+                                `;
+                            }
+                            
+                            if (zoneData.healing_eta) {
+                                const eta = new Date(zoneData.healing_eta);
+                                const now = new Date();
+                                const diffMinutes = Math.ceil((eta - now) / (1000 * 60));
+                                
+                                if (diffMinutes > 0) {
+                                    tooltipHTML += `
+                                        <div class="tooltip-row">
+                                            <span class="tooltip-label">🩹 Auto-heal ETA:</span>
+                                            <span class="tooltip-value" style="color: #00ff88;">${diffMinutes}m</span>
+                                        </div>
+                                    `;
+                                } else {
+                                    tooltipHTML += `
+                                        <div class="tooltip-row">
+                                            <span class="tooltip-label">🩹 Status:</span>
+                                            <span class="tooltip-value" style="color: #00ff88;">Healing now...</span>
+                                        </div>
+                                    `;
+                                }
+                            }
+                            
+                            tooltipHTML += `</div>`;
+                        }
+                    }
+                }
+
+                tooltipHTML += `
+                    <div class="tooltip-row">
+                        <span class="tooltip-label">Updated:</span>
+                        <span class="tooltip-value">${updated}</span>
+                    </div>
+                `;
+
+                tooltipContent.innerHTML = tooltipHTML;
+
+                this.tooltip.classList.add('show');
+                this.updateTooltipPosition(event);
+            }
+
+            hideTooltip() {
+                this.tooltip.classList.remove('show');
+            }
+
+            updateTooltipPosition(event) {
+                const tooltip = this.tooltip;
+                const rect = tooltip.getBoundingClientRect();
+                
+                let left = event.pageX + 15;
+                let top = event.pageY - 10;
+
+                if (left + rect.width > window.innerWidth) {
+                    left = event.pageX - rect.width - 15;
+                }
+                if (top - rect.height < 0) {
+                    top = event.pageY + 20;
+                }
+
+                tooltip.style.left = left + 'px';
+                tooltip.style.top = top + 'px';
+            }
+
+            startAutoRefresh() {
+                this.refreshInterval = setInterval(() => {
+                    this.loadNetworkData();
+                }, 5000); // Refresh every 5 seconds for demo
+            }
+
+            stopAutoRefresh() {
+                if (this.refreshInterval) {
+                    clearInterval(this.refreshInterval);
+                    this.refreshInterval = null;
+                }
+            }
+        }
+
+        // Initialize enhanced dashboard when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            new EnhancedNetworkDashboard();
+        });
+
+        // Clean up on page unload
+        window.addEventListener('beforeunload', () => {
+            if (window.dashboard) {
+                window.dashboard.stopAutoRefresh();
+            }
+        });
+    </script>
+</body>
+</html>

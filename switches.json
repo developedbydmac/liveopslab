@@ -1,0 +1,571 @@
+{
+  "Switch-01": {
+    "switch_id": "Switch-01",
+    "model": "HP ProCurve 2920",
+    "port_count": 48,
+    "uplink_ports": 4,
+    "management_ip": "192.168.1.101",
+    "location": {
+      "rack": "Rack-09",
+      "position": "U41"
+    },
+    "connected_aps": [
+      {
+        "ap_id": "AP-01",
+        "port": "GigabitEthernet0/1",
+        "status": "up"
+      },
+      {
+        "ap_id": "AP-02",
+        "port": "GigabitEthernet0/2",
+        "status": "up"
+      },
+      {
+        "ap_id": "AP-25",
+        "port": "GigabitEthernet0/3",
+        "status": "up"
+      }
+    ],
+    "status": "operational",
+    "cpu_usage": 23,
+    "memory_usage": 50
+  },
+  "Switch-02": {
+    "switch_id": "Switch-02",
+    "model": "Cisco Catalyst 2960",
+    "port_count": 24,
+    "uplink_ports": 4,
+    "management_ip": "192.168.1.102",
+    "location": {
+      "rack": "Rack-02",
+      "position": "U30"
+    },
+    "connected_aps": [
+      {
+        "ap_id": "AP-21",
+        "port": "GigabitEthernet0/1",
+        "status": "up"
+      },
+      {
+        "ap_id": "AP-24",
+        "port": "GigabitEthernet0/2",
+        "status": "up"
+      }
+    ],
+    "status": "operational",
+    "cpu_usage": 22,
+    "memory_usage": 38
+  },
+  "Switch-03": {
+    "switch_id": "Switch-03",
+    "model": "Cisco Catalyst 2960",
+    "port_count": 48,
+    "uplink_ports": 4,
+    "management_ip": "192.168.1.103",
+    "location": {
+      "rack": "Rack-02",
+      "position": "U36"
+    },
+    "connected_aps": [
+      {
+        "ap_id": "AP-12",
+        "port": "GigabitEthernet0/1",
+        "status": "up"
+      }
+    ],
+    "status": "operational",
+    "cpu_usage": 18,
+    "memory_usage": 55
+  },
+  "Switch-04": {
+    "switch_id": "Switch-04",
+    "model": "Juniper EX2300",
+    "port_count": 48,
+    "uplink_ports": 4,
+    "management_ip": "192.168.1.104",
+    "location": {
+      "rack": "Rack-05",
+      "position": "U23"
+    },
+    "connected_aps": [
+      {
+        "ap_id": "AP-04",
+        "port": "GigabitEthernet0/1",
+        "status": "up"
+      },
+      {
+        "ap_id": "AP-08",
+        "port": "GigabitEthernet0/2",
+        "status": "up"
+      },
+      {
+        "ap_id": "AP-09",
+        "port": "GigabitEthernet0/3",
+        "status": "up"
+      },
+      {
+        "ap_id": "AP-14",
+        "port": "GigabitEthernet0/4",
+        "status": "up"
+      },
+      {
+        "ap_id": "AP-17",
+        "port": "GigabitEthernet0/5",
+        "status": "up"
+      },
+      {
+        "ap_id": "AP-27",
+        "port": "GigabitEthernet0/6",
+        "status": "up"
+      },
+      {
+        "ap_id": "AP-47",
+        "port": "GigabitEthernet0/7",
+        "status": "up"
+      }
+    ],
+    "status": "operational",
+    "cpu_usage": 8,
+    "memory_usage": 62
+  },
+  "Switch-05": {
+    "switch_id": "Switch-05",
+    "model": "HP ProCurve 2920",
+    "port_count": 48,
+    "uplink_ports": 4,
+    "management_ip": "192.168.1.105",
+    "location": {
+      "rack": "Rack-03",
+      "position": "U35"
+    },
+    "connected_aps": [
+      {
+        "ap_id": "AP-03",
+        "port": "GigabitEthernet0/1",
+        "status": "up"
+      },
+      {
+        "ap_id": "AP-19",
+        "port": "GigabitEthernet0/2",
+        "status": "up"
+      },
+      {
+        "ap_id": "AP-20",
+        "port": "GigabitEthernet0/3",
+        "status": "up"
+      },
+      {
+        "ap_id": "AP-36",
+        "port": "GigabitEthernet0/4",
+        "status": "up"
+      }
+    ],
+    "status": "operational",
+    "cpu_usage": 25,
+    "memory_usage": 67
+  },
+  "Switch-06": {
+    "switch_id": "Switch-06",
+    "model": "HP ProCurve 2920",
+    "port_count": 48,
+    "uplink_ports": 4,
+    "management_ip": "192.168.1.106",
+    "location": {
+      "rack": "Rack-10",
+      "position": "U3"
+    },
+    "connected_aps": [
+      {
+        "ap_id": "AP-13",
+        "port": "GigabitEthernet0/1",
+        "status": "up"
+      },
+      {
+        "ap_id": "AP-23",
+        "port": "GigabitEthernet0/2",
+        "status": "up"
+      },
+      {
+        "ap_id": "AP-26",
+        "port": "GigabitEthernet0/3",
+        "status": "up"
+      },
+      {
+        "ap_id": "AP-28",
+        "port": "GigabitEthernet0/4",
+        "status": "up"
+      },
+      {
+        "ap_id": "AP-48",
+        "port": "GigabitEthernet0/5",
+        "status": "up"
+      }
+    ],
+    "status": "operational",
+    "cpu_usage": 6,
+    "memory_usage": 30
+  },
+  "Switch-07": {
+    "switch_id": "Switch-07",
+    "model": "Cisco Catalyst 2960",
+    "port_count": 48,
+    "uplink_ports": 4,
+    "management_ip": "192.168.1.107",
+    "location": {
+      "rack": "Rack-04",
+      "position": "U19"
+    },
+    "connected_aps": [
+      {
+        "ap_id": "AP-06",
+        "port": "GigabitEthernet0/1",
+        "status": "up"
+      },
+      {
+        "ap_id": "AP-18",
+        "port": "GigabitEthernet0/2",
+        "status": "up"
+      },
+      {
+        "ap_id": "AP-40",
+        "port": "GigabitEthernet0/3",
+        "status": "up"
+      }
+    ],
+    "status": "operational",
+    "cpu_usage": 19,
+    "memory_usage": 60
+  },
+  "Switch-08": {
+    "switch_id": "Switch-08",
+    "model": "Cisco Catalyst 2960",
+    "port_count": 24,
+    "uplink_ports": 4,
+    "management_ip": "192.168.1.108",
+    "location": {
+      "rack": "Rack-01",
+      "position": "U27"
+    },
+    "connected_aps": [
+      {
+        "ap_id": "AP-34",
+        "port": "GigabitEthernet0/1",
+        "status": "up"
+      }
+    ],
+    "status": "operational",
+    "cpu_usage": 19,
+    "memory_usage": 42
+  },
+  "Switch-09": {
+    "switch_id": "Switch-09",
+    "model": "HP ProCurve 2920",
+    "port_count": 24,
+    "uplink_ports": 4,
+    "management_ip": "192.168.1.109",
+    "location": {
+      "rack": "Rack-07",
+      "position": "U6"
+    },
+    "connected_aps": [
+      {
+        "ap_id": "AP-44",
+        "port": "GigabitEthernet0/1",
+        "status": "up"
+      },
+      {
+        "ap_id": "AP-50",
+        "port": "GigabitEthernet0/2",
+        "status": "up"
+      }
+    ],
+    "status": "operational",
+    "cpu_usage": 5,
+    "memory_usage": 46
+  },
+  "Switch-10": {
+    "switch_id": "Switch-10",
+    "model": "Juniper EX2300",
+    "port_count": 48,
+    "uplink_ports": 4,
+    "management_ip": "192.168.1.110",
+    "location": {
+      "rack": "Rack-10",
+      "position": "U8"
+    },
+    "connected_aps": [
+      {
+        "ap_id": "AP-15",
+        "port": "GigabitEthernet0/1",
+        "status": "up"
+      },
+      {
+        "ap_id": "AP-41",
+        "port": "GigabitEthernet0/2",
+        "status": "up"
+      },
+      {
+        "ap_id": "AP-42",
+        "port": "GigabitEthernet0/3",
+        "status": "up"
+      },
+      {
+        "ap_id": "AP-49",
+        "port": "GigabitEthernet0/4",
+        "status": "up"
+      }
+    ],
+    "status": "operational",
+    "cpu_usage": 12,
+    "memory_usage": 38
+  },
+  "Switch-11": {
+    "switch_id": "Switch-11",
+    "model": "HP ProCurve 2920",
+    "port_count": 48,
+    "uplink_ports": 4,
+    "management_ip": "192.168.1.111",
+    "location": {
+      "rack": "Rack-08",
+      "position": "U18"
+    },
+    "connected_aps": [
+      {
+        "ap_id": "AP-07",
+        "port": "GigabitEthernet0/1",
+        "status": "up"
+      },
+      {
+        "ap_id": "AP-33",
+        "port": "GigabitEthernet0/2",
+        "status": "up"
+      }
+    ],
+    "status": "operational",
+    "cpu_usage": 14,
+    "memory_usage": 56
+  },
+  "Switch-12": {
+    "switch_id": "Switch-12",
+    "model": "Cisco Catalyst 2960",
+    "port_count": 48,
+    "uplink_ports": 4,
+    "management_ip": "192.168.1.112",
+    "location": {
+      "rack": "Rack-09",
+      "position": "U8"
+    },
+    "connected_aps": [
+      {
+        "ap_id": "AP-22",
+        "port": "GigabitEthernet0/1",
+        "status": "up"
+      },
+      {
+        "ap_id": "AP-30",
+        "port": "GigabitEthernet0/2",
+        "status": "up"
+      },
+      {
+        "ap_id": "AP-43",
+        "port": "GigabitEthernet0/3",
+        "status": "up"
+      }
+    ],
+    "status": "operational",
+    "cpu_usage": 20,
+    "memory_usage": 54
+  },
+  "Switch-13": {
+    "switch_id": "Switch-13",
+    "model": "HP ProCurve 2920",
+    "port_count": 24,
+    "uplink_ports": 4,
+    "management_ip": "192.168.1.113",
+    "location": {
+      "rack": "Rack-04",
+      "position": "U38"
+    },
+    "connected_aps": [
+      {
+        "ap_id": "AP-32",
+        "port": "GigabitEthernet0/1",
+        "status": "up"
+      }
+    ],
+    "status": "operational",
+    "cpu_usage": 24,
+    "memory_usage": 38
+  },
+  "Switch-14": {
+    "switch_id": "Switch-14",
+    "model": "Juniper EX2300",
+    "port_count": 48,
+    "uplink_ports": 4,
+    "management_ip": "192.168.1.114",
+    "location": {
+      "rack": "Rack-10",
+      "position": "U33"
+    },
+    "connected_aps": [
+      {
+        "ap_id": "AP-11",
+        "port": "GigabitEthernet0/1",
+        "status": "up"
+      }
+    ],
+    "status": "operational",
+    "cpu_usage": 8,
+    "memory_usage": 53
+  },
+  "Switch-15": {
+    "switch_id": "Switch-15",
+    "model": "Cisco Catalyst 2960",
+    "port_count": 48,
+    "uplink_ports": 4,
+    "management_ip": "192.168.1.115",
+    "location": {
+      "rack": "Rack-07",
+      "position": "U13"
+    },
+    "connected_aps": [
+      {
+        "ap_id": "AP-05",
+        "port": "GigabitEthernet0/1",
+        "status": "up"
+      },
+      {
+        "ap_id": "AP-38",
+        "port": "GigabitEthernet0/2",
+        "status": "up"
+      }
+    ],
+    "status": "operational",
+    "cpu_usage": 7,
+    "memory_usage": 65
+  },
+  "Switch-16": {
+    "switch_id": "Switch-16",
+    "model": "Cisco Catalyst 2960",
+    "port_count": 48,
+    "uplink_ports": 4,
+    "management_ip": "192.168.1.116",
+    "location": {
+      "rack": "Rack-01",
+      "position": "U13"
+    },
+    "connected_aps": [
+      {
+        "ap_id": "AP-31",
+        "port": "GigabitEthernet0/1",
+        "status": "up"
+      },
+      {
+        "ap_id": "AP-35",
+        "port": "GigabitEthernet0/2",
+        "status": "up"
+      }
+    ],
+    "status": "operational",
+    "cpu_usage": 6,
+    "memory_usage": 57
+  },
+  "Switch-17": {
+    "switch_id": "Switch-17",
+    "model": "HP ProCurve 2920",
+    "port_count": 48,
+    "uplink_ports": 4,
+    "management_ip": "192.168.1.117",
+    "location": {
+      "rack": "Rack-08",
+      "position": "U25"
+    },
+    "connected_aps": [
+      {
+        "ap_id": "AP-37",
+        "port": "GigabitEthernet0/1",
+        "status": "up"
+      },
+      {
+        "ap_id": "AP-39",
+        "port": "GigabitEthernet0/2",
+        "status": "up"
+      }
+    ],
+    "status": "operational",
+    "cpu_usage": 17,
+    "memory_usage": 49
+  },
+  "Switch-18": {
+    "switch_id": "Switch-18",
+    "model": "HP ProCurve 2920",
+    "port_count": 48,
+    "uplink_ports": 4,
+    "management_ip": "192.168.1.118",
+    "location": {
+      "rack": "Rack-03",
+      "position": "U32"
+    },
+    "connected_aps": [],
+    "status": "operational",
+    "cpu_usage": 10,
+    "memory_usage": 51
+  },
+  "Switch-19": {
+    "switch_id": "Switch-19",
+    "model": "Cisco Catalyst 2960",
+    "port_count": 24,
+    "uplink_ports": 4,
+    "management_ip": "192.168.1.119",
+    "location": {
+      "rack": "Rack-03",
+      "position": "U32"
+    },
+    "connected_aps": [
+      {
+        "ap_id": "AP-16",
+        "port": "GigabitEthernet0/1",
+        "status": "up"
+      },
+      {
+        "ap_id": "AP-29",
+        "port": "GigabitEthernet0/2",
+        "status": "up"
+      },
+      {
+        "ap_id": "AP-45",
+        "port": "GigabitEthernet0/3",
+        "status": "up"
+      },
+      {
+        "ap_id": "AP-46",
+        "port": "GigabitEthernet0/4",
+        "status": "up"
+      }
+    ],
+    "status": "operational",
+    "cpu_usage": 18,
+    "memory_usage": 70
+  },
+  "Switch-20": {
+    "switch_id": "Switch-20",
+    "model": "Cisco Catalyst 2960",
+    "port_count": 24,
+    "uplink_ports": 4,
+    "management_ip": "192.168.1.120",
+    "location": {
+      "rack": "Rack-07",
+      "position": "U24"
+    },
+    "connected_aps": [
+      {
+        "ap_id": "AP-10",
+        "port": "GigabitEthernet0/1",
+        "status": "up"
+      }
+    ],
+    "status": "operational",
+    "cpu_usage": 10,
+    "memory_usage": 55
+  }
+}

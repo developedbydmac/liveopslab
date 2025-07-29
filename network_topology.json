@@ -1,0 +1,2439 @@
+{
+  "access_points": [
+    {
+      "ap_id": "AP-01",
+      "switch_id": "Switch-01",
+      "location": {
+        "floor": 1,
+        "section": "North"
+      },
+      "hardware": {
+        "model": "Aruba AP-535",
+        "uptime_hours": 1393,
+        "temperature_c": 55,
+        "cpu_usage": 27
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 13,
+          "connected_clients": 7,
+          "throughput_mbps": 84.2,
+          "last_updated": "2025-07-29T15:32:03.239467",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 18,
+          "connected_clients": 26,
+          "throughput_mbps": 74.0,
+          "last_updated": "2025-07-29T15:32:03.239474",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 22,
+          "connected_clients": 15,
+          "throughput_mbps": 68.2,
+          "last_updated": "2025-07-29T15:32:03.239478",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-02",
+      "switch_id": "Switch-01",
+      "location": {
+        "floor": 1,
+        "section": "South"
+      },
+      "hardware": {
+        "model": "Ubiquiti UniFi 6 Enterprise",
+        "uptime_hours": 3726,
+        "temperature_c": 35,
+        "cpu_usage": 14
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 11,
+          "connected_clients": 5,
+          "throughput_mbps": 65.4,
+          "last_updated": "2025-07-29T15:32:03.239482",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 15,
+          "connected_clients": 7,
+          "throughput_mbps": 56.6,
+          "last_updated": "2025-07-29T15:32:03.239485",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 13,
+          "connected_clients": 29,
+          "throughput_mbps": 66.5,
+          "last_updated": "2025-07-29T15:32:03.239488",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-03",
+      "switch_id": "Switch-01",
+      "location": {
+        "floor": 1,
+        "section": "East"
+      },
+      "hardware": {
+        "model": "Cisco Catalyst 9130AXI",
+        "uptime_hours": 7538,
+        "temperature_c": 41,
+        "cpu_usage": 11
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 5,
+          "connected_clients": 5,
+          "throughput_mbps": 62.5,
+          "last_updated": "2025-07-29T15:32:03.239492",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 24,
+          "connected_clients": 25,
+          "throughput_mbps": 65.5,
+          "last_updated": "2025-07-29T15:32:03.239495",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 29,
+          "connected_clients": 24,
+          "throughput_mbps": 70.6,
+          "last_updated": "2025-07-29T15:32:03.239498",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-04",
+      "switch_id": "Switch-02",
+      "location": {
+        "floor": 1,
+        "section": "West"
+      },
+      "hardware": {
+        "model": "Aruba AP-535",
+        "uptime_hours": 7720,
+        "temperature_c": 39,
+        "cpu_usage": 21
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 14,
+          "connected_clients": 23,
+          "throughput_mbps": 64.5,
+          "last_updated": "2025-07-29T15:32:03.239501",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 11,
+          "connected_clients": 10,
+          "throughput_mbps": 50.5,
+          "last_updated": "2025-07-29T15:32:03.239504",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 14,
+          "connected_clients": 21,
+          "throughput_mbps": 51.0,
+          "last_updated": "2025-07-29T15:32:03.239507",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-05",
+      "switch_id": "Switch-02",
+      "location": {
+        "floor": 1,
+        "section": "North"
+      },
+      "hardware": {
+        "model": "Ubiquiti UniFi 6 Enterprise",
+        "uptime_hours": 7515,
+        "temperature_c": 47,
+        "cpu_usage": 13
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 22,
+          "connected_clients": 28,
+          "throughput_mbps": 70.4,
+          "last_updated": "2025-07-29T15:32:03.239510",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 22,
+          "connected_clients": 19,
+          "throughput_mbps": 54.9,
+          "last_updated": "2025-07-29T15:32:03.239512",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 28,
+          "connected_clients": 24,
+          "throughput_mbps": 64.4,
+          "last_updated": "2025-07-29T15:32:03.239515",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-06",
+      "switch_id": "Switch-02",
+      "location": {
+        "floor": 1,
+        "section": "South"
+      },
+      "hardware": {
+        "model": "Cisco Catalyst 9130AXI",
+        "uptime_hours": 4262,
+        "temperature_c": 39,
+        "cpu_usage": 22
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 16,
+          "connected_clients": 18,
+          "throughput_mbps": 72.9,
+          "last_updated": "2025-07-29T15:32:03.239518",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 5,
+          "connected_clients": 20,
+          "throughput_mbps": 76.3,
+          "last_updated": "2025-07-29T15:32:03.239521",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 27,
+          "connected_clients": 14,
+          "throughput_mbps": 92.5,
+          "last_updated": "2025-07-29T15:32:03.239524",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-07",
+      "switch_id": "Switch-03",
+      "location": {
+        "floor": 1,
+        "section": "East"
+      },
+      "hardware": {
+        "model": "Aruba AP-535",
+        "uptime_hours": 4307,
+        "temperature_c": 49,
+        "cpu_usage": 23
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 22,
+          "connected_clients": 14,
+          "throughput_mbps": 71.8,
+          "last_updated": "2025-07-29T15:32:03.239527",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 26,
+          "connected_clients": 22,
+          "throughput_mbps": 61.5,
+          "last_updated": "2025-07-29T15:32:03.239530",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 9,
+          "connected_clients": 29,
+          "throughput_mbps": 75.5,
+          "last_updated": "2025-07-29T15:32:03.239533",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-08",
+      "switch_id": "Switch-03",
+      "location": {
+        "floor": 1,
+        "section": "West"
+      },
+      "hardware": {
+        "model": "Ubiquiti UniFi 6 Enterprise",
+        "uptime_hours": 6887,
+        "temperature_c": 36,
+        "cpu_usage": 22
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 11,
+          "connected_clients": 26,
+          "throughput_mbps": 63.2,
+          "last_updated": "2025-07-29T15:32:03.239537",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 25,
+          "connected_clients": 8,
+          "throughput_mbps": 69.5,
+          "last_updated": "2025-07-29T15:32:03.239539",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 14,
+          "connected_clients": 5,
+          "throughput_mbps": 80.5,
+          "last_updated": "2025-07-29T15:32:03.239542",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-09",
+      "switch_id": "Switch-03",
+      "location": {
+        "floor": 1,
+        "section": "North"
+      },
+      "hardware": {
+        "model": "Cisco Catalyst 9130AXI",
+        "uptime_hours": 7467,
+        "temperature_c": 49,
+        "cpu_usage": 30
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 12,
+          "connected_clients": 13,
+          "throughput_mbps": 60.3,
+          "last_updated": "2025-07-29T15:32:03.239546",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 28,
+          "connected_clients": 14,
+          "throughput_mbps": 81.1,
+          "last_updated": "2025-07-29T15:32:03.239549",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 30,
+          "connected_clients": 22,
+          "throughput_mbps": 87.3,
+          "last_updated": "2025-07-29T15:32:03.239552",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-10",
+      "switch_id": "Switch-04",
+      "location": {
+        "floor": 1,
+        "section": "South"
+      },
+      "hardware": {
+        "model": "Aruba AP-535",
+        "uptime_hours": 3440,
+        "temperature_c": 52,
+        "cpu_usage": 28
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 20,
+          "connected_clients": 22,
+          "throughput_mbps": 63.9,
+          "last_updated": "2025-07-29T15:32:03.239555",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 8,
+          "connected_clients": 26,
+          "throughput_mbps": 90.6,
+          "last_updated": "2025-07-29T15:32:03.239558",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 21,
+          "connected_clients": 6,
+          "throughput_mbps": 91.7,
+          "last_updated": "2025-07-29T15:32:03.239561",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-11",
+      "switch_id": "Switch-04",
+      "location": {
+        "floor": 1,
+        "section": "East"
+      },
+      "hardware": {
+        "model": "Ubiquiti UniFi 6 Enterprise",
+        "uptime_hours": 7462,
+        "temperature_c": 48,
+        "cpu_usage": 14
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 10,
+          "connected_clients": 28,
+          "throughput_mbps": 75.1,
+          "last_updated": "2025-07-29T15:32:03.239564",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 20,
+          "connected_clients": 27,
+          "throughput_mbps": 94.3,
+          "last_updated": "2025-07-29T15:32:03.239567",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 15,
+          "connected_clients": 6,
+          "throughput_mbps": 77.2,
+          "last_updated": "2025-07-29T15:32:03.239570",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-12",
+      "switch_id": "Switch-04",
+      "location": {
+        "floor": 1,
+        "section": "West"
+      },
+      "hardware": {
+        "model": "Cisco Catalyst 9130AXI",
+        "uptime_hours": 6713,
+        "temperature_c": 52,
+        "cpu_usage": 27
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 23,
+          "connected_clients": 15,
+          "throughput_mbps": 63.3,
+          "last_updated": "2025-07-29T15:32:03.239573",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 19,
+          "connected_clients": 10,
+          "throughput_mbps": 69.1,
+          "last_updated": "2025-07-29T15:32:03.239576",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 20,
+          "connected_clients": 16,
+          "throughput_mbps": 70.9,
+          "last_updated": "2025-07-29T15:32:03.239579",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-13",
+      "switch_id": "Switch-05",
+      "location": {
+        "floor": 2,
+        "section": "North"
+      },
+      "hardware": {
+        "model": "Aruba AP-535",
+        "uptime_hours": 4703,
+        "temperature_c": 55,
+        "cpu_usage": 29
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 14,
+          "connected_clients": 14,
+          "throughput_mbps": 76.8,
+          "last_updated": "2025-07-29T15:32:03.239582",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 9,
+          "connected_clients": 8,
+          "throughput_mbps": 92.2,
+          "last_updated": "2025-07-29T15:32:03.239585",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 19,
+          "connected_clients": 17,
+          "throughput_mbps": 76.7,
+          "last_updated": "2025-07-29T15:32:03.239588",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-14",
+      "switch_id": "Switch-05",
+      "location": {
+        "floor": 2,
+        "section": "South"
+      },
+      "hardware": {
+        "model": "Ubiquiti UniFi 6 Enterprise",
+        "uptime_hours": 3319,
+        "temperature_c": 43,
+        "cpu_usage": 12
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 27,
+          "connected_clients": 30,
+          "throughput_mbps": 52.0,
+          "last_updated": "2025-07-29T15:32:03.239591",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 25,
+          "connected_clients": 23,
+          "throughput_mbps": 75.1,
+          "last_updated": "2025-07-29T15:32:03.239594",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 7,
+          "connected_clients": 6,
+          "throughput_mbps": 94.2,
+          "last_updated": "2025-07-29T15:32:03.239597",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-15",
+      "switch_id": "Switch-05",
+      "location": {
+        "floor": 2,
+        "section": "East"
+      },
+      "hardware": {
+        "model": "Cisco Catalyst 9130AXI",
+        "uptime_hours": 2301,
+        "temperature_c": 44,
+        "cpu_usage": 23
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 14,
+          "connected_clients": 8,
+          "throughput_mbps": 70.8,
+          "last_updated": "2025-07-29T15:32:03.239600",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 23,
+          "connected_clients": 22,
+          "throughput_mbps": 77.2,
+          "last_updated": "2025-07-29T15:32:03.239603",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 29,
+          "connected_clients": 28,
+          "throughput_mbps": 86.6,
+          "last_updated": "2025-07-29T15:32:03.239606",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-16",
+      "switch_id": "Switch-06",
+      "location": {
+        "floor": 2,
+        "section": "West"
+      },
+      "hardware": {
+        "model": "Aruba AP-535",
+        "uptime_hours": 2799,
+        "temperature_c": 55,
+        "cpu_usage": 11
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 12,
+          "connected_clients": 17,
+          "throughput_mbps": 59.6,
+          "last_updated": "2025-07-29T15:32:03.239609",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 19,
+          "connected_clients": 17,
+          "throughput_mbps": 87.2,
+          "last_updated": "2025-07-29T15:32:03.239612",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 5,
+          "connected_clients": 17,
+          "throughput_mbps": 59.3,
+          "last_updated": "2025-07-29T15:32:03.239615",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-17",
+      "switch_id": "Switch-06",
+      "location": {
+        "floor": 2,
+        "section": "North"
+      },
+      "hardware": {
+        "model": "Ubiquiti UniFi 6 Enterprise",
+        "uptime_hours": 5603,
+        "temperature_c": 37,
+        "cpu_usage": 12
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 21,
+          "connected_clients": 16,
+          "throughput_mbps": 57.7,
+          "last_updated": "2025-07-29T15:32:03.239618",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 14,
+          "connected_clients": 22,
+          "throughput_mbps": 67.6,
+          "last_updated": "2025-07-29T15:32:03.239621",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 29,
+          "connected_clients": 9,
+          "throughput_mbps": 77.4,
+          "last_updated": "2025-07-29T15:32:03.239624",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-18",
+      "switch_id": "Switch-06",
+      "location": {
+        "floor": 2,
+        "section": "South"
+      },
+      "hardware": {
+        "model": "Cisco Catalyst 9130AXI",
+        "uptime_hours": 6492,
+        "temperature_c": 52,
+        "cpu_usage": 19
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 30,
+          "connected_clients": 25,
+          "throughput_mbps": 80.9,
+          "last_updated": "2025-07-29T15:32:03.239627",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 21,
+          "connected_clients": 5,
+          "throughput_mbps": 51.1,
+          "last_updated": "2025-07-29T15:32:03.239630",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 25,
+          "connected_clients": 15,
+          "throughput_mbps": 93.8,
+          "last_updated": "2025-07-29T15:32:03.239633",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-19",
+      "switch_id": "Switch-07",
+      "location": {
+        "floor": 2,
+        "section": "East"
+      },
+      "hardware": {
+        "model": "Aruba AP-535",
+        "uptime_hours": 6594,
+        "temperature_c": 42,
+        "cpu_usage": 30
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 7,
+          "connected_clients": 23,
+          "throughput_mbps": 94.4,
+          "last_updated": "2025-07-29T15:32:03.239637",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 24,
+          "connected_clients": 6,
+          "throughput_mbps": 54.7,
+          "last_updated": "2025-07-29T15:32:03.239640",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 18,
+          "connected_clients": 19,
+          "throughput_mbps": 78.0,
+          "last_updated": "2025-07-29T15:32:03.239643",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-20",
+      "switch_id": "Switch-07",
+      "location": {
+        "floor": 2,
+        "section": "West"
+      },
+      "hardware": {
+        "model": "Ubiquiti UniFi 6 Enterprise",
+        "uptime_hours": 488,
+        "temperature_c": 38,
+        "cpu_usage": 22
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 7,
+          "connected_clients": 27,
+          "throughput_mbps": 69.2,
+          "last_updated": "2025-07-29T15:32:03.239646",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 22,
+          "connected_clients": 17,
+          "throughput_mbps": 74.0,
+          "last_updated": "2025-07-29T15:32:03.239649",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 24,
+          "connected_clients": 8,
+          "throughput_mbps": 55.8,
+          "last_updated": "2025-07-29T15:32:03.239652",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-21",
+      "switch_id": "Switch-07",
+      "location": {
+        "floor": 2,
+        "section": "North"
+      },
+      "hardware": {
+        "model": "Cisco Catalyst 9130AXI",
+        "uptime_hours": 440,
+        "temperature_c": 49,
+        "cpu_usage": 30
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 29,
+          "connected_clients": 21,
+          "throughput_mbps": 56.0,
+          "last_updated": "2025-07-29T15:32:03.239655",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 11,
+          "connected_clients": 30,
+          "throughput_mbps": 59.5,
+          "last_updated": "2025-07-29T15:32:03.239658",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 27,
+          "connected_clients": 27,
+          "throughput_mbps": 84.3,
+          "last_updated": "2025-07-29T15:32:03.239661",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-22",
+      "switch_id": "Switch-08",
+      "location": {
+        "floor": 2,
+        "section": "South"
+      },
+      "hardware": {
+        "model": "Aruba AP-535",
+        "uptime_hours": 7242,
+        "temperature_c": 35,
+        "cpu_usage": 20
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 20,
+          "connected_clients": 24,
+          "throughput_mbps": 56.7,
+          "last_updated": "2025-07-29T15:32:03.239664",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 9,
+          "connected_clients": 18,
+          "throughput_mbps": 88.2,
+          "last_updated": "2025-07-29T15:32:03.239667",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 9,
+          "connected_clients": 19,
+          "throughput_mbps": 68.7,
+          "last_updated": "2025-07-29T15:32:03.239670",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-23",
+      "switch_id": "Switch-08",
+      "location": {
+        "floor": 2,
+        "section": "East"
+      },
+      "hardware": {
+        "model": "Ubiquiti UniFi 6 Enterprise",
+        "uptime_hours": 2516,
+        "temperature_c": 54,
+        "cpu_usage": 28
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 10,
+          "connected_clients": 16,
+          "throughput_mbps": 55.5,
+          "last_updated": "2025-07-29T15:32:03.239673",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 24,
+          "connected_clients": 15,
+          "throughput_mbps": 85.8,
+          "last_updated": "2025-07-29T15:32:03.239676",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 15,
+          "connected_clients": 29,
+          "throughput_mbps": 88.2,
+          "last_updated": "2025-07-29T15:32:03.239679",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-24",
+      "switch_id": "Switch-08",
+      "location": {
+        "floor": 2,
+        "section": "West"
+      },
+      "hardware": {
+        "model": "Cisco Catalyst 9130AXI",
+        "uptime_hours": 7015,
+        "temperature_c": 52,
+        "cpu_usage": 28
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 23,
+          "connected_clients": 17,
+          "throughput_mbps": 83.1,
+          "last_updated": "2025-07-29T15:32:03.239682",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 21,
+          "connected_clients": 11,
+          "throughput_mbps": 72.0,
+          "last_updated": "2025-07-29T15:32:03.239685",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 29,
+          "connected_clients": 27,
+          "throughput_mbps": 72.1,
+          "last_updated": "2025-07-29T15:32:03.239687",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-25",
+      "switch_id": "Switch-09",
+      "location": {
+        "floor": 3,
+        "section": "North"
+      },
+      "hardware": {
+        "model": "Aruba AP-535",
+        "uptime_hours": 3898,
+        "temperature_c": 41,
+        "cpu_usage": 11
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 16,
+          "connected_clients": 30,
+          "throughput_mbps": 61.1,
+          "last_updated": "2025-07-29T15:32:03.239690",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 16,
+          "connected_clients": 16,
+          "throughput_mbps": 75.5,
+          "last_updated": "2025-07-29T15:32:03.239693",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 13,
+          "connected_clients": 6,
+          "throughput_mbps": 65.1,
+          "last_updated": "2025-07-29T15:32:03.239696",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-26",
+      "switch_id": "Switch-09",
+      "location": {
+        "floor": 3,
+        "section": "South"
+      },
+      "hardware": {
+        "model": "Ubiquiti UniFi 6 Enterprise",
+        "uptime_hours": 4904,
+        "temperature_c": 50,
+        "cpu_usage": 13
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 21,
+          "connected_clients": 14,
+          "throughput_mbps": 62.3,
+          "last_updated": "2025-07-29T15:32:03.239699",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 23,
+          "connected_clients": 10,
+          "throughput_mbps": 53.4,
+          "last_updated": "2025-07-29T15:32:03.239702",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 14,
+          "connected_clients": 20,
+          "throughput_mbps": 72.6,
+          "last_updated": "2025-07-29T15:32:03.239705",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [
+        {
+          "incident_id": "INC-0002",
+          "ap_id": "AP-26",
+          "zone": "Backstage",
+          "root_cause": "Power fluctuation",
+          "severity": "warning",
+          "start_time": "2025-07-29 15:31:23.197195",
+          "estimated_heal_time": "2025-07-29 15:31:53.197196",
+          "auto_heal_probability": 0.8,
+          "status": "resolved",
+          "description": "Power supply instability detected on AP-26 affecting Backstage network",
+          "end_time": "2025-07-29 15:31:39.214236",
+          "resolution": "Auto-healed by system monitoring"
+        }
+      ],
+      "last_incident": "INC-0002"
+    },
+    {
+      "ap_id": "AP-27",
+      "switch_id": "Switch-09",
+      "location": {
+        "floor": 3,
+        "section": "East"
+      },
+      "hardware": {
+        "model": "Cisco Catalyst 9130AXI",
+        "uptime_hours": 8217,
+        "temperature_c": 45,
+        "cpu_usage": 12
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 12,
+          "connected_clients": 14,
+          "throughput_mbps": 61.1,
+          "last_updated": "2025-07-29T15:32:03.239708",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 29,
+          "connected_clients": 12,
+          "throughput_mbps": 83.5,
+          "last_updated": "2025-07-29T15:32:03.239711",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 30,
+          "connected_clients": 8,
+          "throughput_mbps": 73.3,
+          "last_updated": "2025-07-29T15:32:03.239714",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-28",
+      "switch_id": "Switch-10",
+      "location": {
+        "floor": 3,
+        "section": "West"
+      },
+      "hardware": {
+        "model": "Aruba AP-535",
+        "uptime_hours": 6854,
+        "temperature_c": 54,
+        "cpu_usage": 26
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 15,
+          "connected_clients": 7,
+          "throughput_mbps": 67.1,
+          "last_updated": "2025-07-29T15:32:03.239717",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 15,
+          "connected_clients": 8,
+          "throughput_mbps": 92.8,
+          "last_updated": "2025-07-29T15:32:03.239720",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 11,
+          "connected_clients": 14,
+          "throughput_mbps": 66.4,
+          "last_updated": "2025-07-29T15:32:03.239723",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-29",
+      "switch_id": "Switch-10",
+      "location": {
+        "floor": 3,
+        "section": "North"
+      },
+      "hardware": {
+        "model": "Ubiquiti UniFi 6 Enterprise",
+        "uptime_hours": 3893,
+        "temperature_c": 55,
+        "cpu_usage": 10
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 5,
+          "connected_clients": 18,
+          "throughput_mbps": 68.6,
+          "last_updated": "2025-07-29T15:32:03.239726",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 10,
+          "connected_clients": 18,
+          "throughput_mbps": 54.4,
+          "last_updated": "2025-07-29T15:32:03.239729",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 30,
+          "connected_clients": 28,
+          "throughput_mbps": 51.3,
+          "last_updated": "2025-07-29T15:32:03.239732",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-30",
+      "switch_id": "Switch-10",
+      "location": {
+        "floor": 3,
+        "section": "South"
+      },
+      "hardware": {
+        "model": "Cisco Catalyst 9130AXI",
+        "uptime_hours": 7670,
+        "temperature_c": 54,
+        "cpu_usage": 30
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 14,
+          "connected_clients": 17,
+          "throughput_mbps": 89.0,
+          "last_updated": "2025-07-29T15:32:03.239735",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 13,
+          "connected_clients": 10,
+          "throughput_mbps": 51.2,
+          "last_updated": "2025-07-29T15:32:03.239737",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 20,
+          "connected_clients": 30,
+          "throughput_mbps": 73.5,
+          "last_updated": "2025-07-29T15:32:03.239740",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-31",
+      "switch_id": "Switch-11",
+      "location": {
+        "floor": 3,
+        "section": "East"
+      },
+      "hardware": {
+        "model": "Aruba AP-535",
+        "uptime_hours": 7914,
+        "temperature_c": 43,
+        "cpu_usage": 26
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 8,
+          "connected_clients": 8,
+          "throughput_mbps": 51.2,
+          "last_updated": "2025-07-29T15:32:03.239743",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 11,
+          "connected_clients": 14,
+          "throughput_mbps": 94.6,
+          "last_updated": "2025-07-29T15:32:03.239746",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 16,
+          "connected_clients": 10,
+          "throughput_mbps": 76.8,
+          "last_updated": "2025-07-29T15:32:03.239749",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-32",
+      "switch_id": "Switch-11",
+      "location": {
+        "floor": 3,
+        "section": "West"
+      },
+      "hardware": {
+        "model": "Ubiquiti UniFi 6 Enterprise",
+        "uptime_hours": 1320,
+        "temperature_c": 40,
+        "cpu_usage": 24
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 28,
+          "connected_clients": 24,
+          "throughput_mbps": 94.2,
+          "last_updated": "2025-07-29T15:32:03.239752",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 24,
+          "connected_clients": 15,
+          "throughput_mbps": 95.0,
+          "last_updated": "2025-07-29T15:32:03.239755",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 17,
+          "connected_clients": 5,
+          "throughput_mbps": 53.1,
+          "last_updated": "2025-07-29T15:32:03.239758",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-33",
+      "switch_id": "Switch-11",
+      "location": {
+        "floor": 3,
+        "section": "North"
+      },
+      "hardware": {
+        "model": "Cisco Catalyst 9130AXI",
+        "uptime_hours": 5794,
+        "temperature_c": 50,
+        "cpu_usage": 19
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 5,
+          "connected_clients": 29,
+          "throughput_mbps": 61.7,
+          "last_updated": "2025-07-29T15:32:03.239761",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 6,
+          "connected_clients": 21,
+          "throughput_mbps": 58.1,
+          "last_updated": "2025-07-29T15:32:03.239764",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 12,
+          "connected_clients": 20,
+          "throughput_mbps": 92.8,
+          "last_updated": "2025-07-29T15:32:03.239767",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-34",
+      "switch_id": "Switch-12",
+      "location": {
+        "floor": 3,
+        "section": "South"
+      },
+      "hardware": {
+        "model": "Aruba AP-535",
+        "uptime_hours": 644,
+        "temperature_c": 42,
+        "cpu_usage": 12
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 8,
+          "connected_clients": 11,
+          "throughput_mbps": 56.8,
+          "last_updated": "2025-07-29T15:32:03.239770",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 26,
+          "connected_clients": 16,
+          "throughput_mbps": 79.4,
+          "last_updated": "2025-07-29T15:32:03.239773",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 18,
+          "connected_clients": 28,
+          "throughput_mbps": 88.3,
+          "last_updated": "2025-07-29T15:32:03.239775",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-35",
+      "switch_id": "Switch-12",
+      "location": {
+        "floor": 3,
+        "section": "East"
+      },
+      "hardware": {
+        "model": "Ubiquiti UniFi 6 Enterprise",
+        "uptime_hours": 2308,
+        "temperature_c": 36,
+        "cpu_usage": 28
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 7,
+          "connected_clients": 25,
+          "throughput_mbps": 93.0,
+          "last_updated": "2025-07-29T15:32:03.239779",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 22,
+          "connected_clients": 11,
+          "throughput_mbps": 91.2,
+          "last_updated": "2025-07-29T15:32:03.239782",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 8,
+          "connected_clients": 28,
+          "throughput_mbps": 57.1,
+          "last_updated": "2025-07-29T15:32:03.239784",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [
+        {
+          "incident_id": "INC-0001",
+          "ap_id": "AP-35",
+          "zone": "FanWiFi",
+          "root_cause": "Configuration error",
+          "severity": "warning",
+          "start_time": "2025-07-29 15:22:34.543374",
+          "estimated_heal_time": "2025-07-29 15:23:34.543375",
+          "auto_heal_probability": 0.4,
+          "status": "resolved",
+          "description": "Invalid VLAN configuration blocking FanWiFi traffic on AP-35",
+          "end_time": "2025-07-29 15:23:06.577427",
+          "resolution": "Auto-healed by system monitoring"
+        }
+      ],
+      "last_incident": "INC-0001"
+    },
+    {
+      "ap_id": "AP-36",
+      "switch_id": "Switch-12",
+      "location": {
+        "floor": 3,
+        "section": "West"
+      },
+      "hardware": {
+        "model": "Cisco Catalyst 9130AXI",
+        "uptime_hours": 7770,
+        "temperature_c": 46,
+        "cpu_usage": 10
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 17,
+          "connected_clients": 17,
+          "throughput_mbps": 88.4,
+          "last_updated": "2025-07-29T15:32:03.239787",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 18,
+          "connected_clients": 9,
+          "throughput_mbps": 65.3,
+          "last_updated": "2025-07-29T15:32:03.239790",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 5,
+          "connected_clients": 19,
+          "throughput_mbps": 90.3,
+          "last_updated": "2025-07-29T15:32:03.239793",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-37",
+      "switch_id": "Switch-13",
+      "location": {
+        "floor": 4,
+        "section": "North"
+      },
+      "hardware": {
+        "model": "Aruba AP-535",
+        "uptime_hours": 5760,
+        "temperature_c": 37,
+        "cpu_usage": 27
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 13,
+          "connected_clients": 5,
+          "throughput_mbps": 59.3,
+          "last_updated": "2025-07-29T15:32:03.239796",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 20,
+          "connected_clients": 5,
+          "throughput_mbps": 70.4,
+          "last_updated": "2025-07-29T15:32:03.239799",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 21,
+          "connected_clients": 22,
+          "throughput_mbps": 51.5,
+          "last_updated": "2025-07-29T15:32:03.239802",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-38",
+      "switch_id": "Switch-13",
+      "location": {
+        "floor": 4,
+        "section": "South"
+      },
+      "hardware": {
+        "model": "Ubiquiti UniFi 6 Enterprise",
+        "uptime_hours": 5008,
+        "temperature_c": 41,
+        "cpu_usage": 11
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 29,
+          "connected_clients": 22,
+          "throughput_mbps": 58.2,
+          "last_updated": "2025-07-29T15:32:03.239805",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 13,
+          "connected_clients": 17,
+          "throughput_mbps": 81.5,
+          "last_updated": "2025-07-29T15:32:03.239808",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 25,
+          "connected_clients": 20,
+          "throughput_mbps": 90.0,
+          "last_updated": "2025-07-29T15:32:03.239811",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-39",
+      "switch_id": "Switch-13",
+      "location": {
+        "floor": 4,
+        "section": "East"
+      },
+      "hardware": {
+        "model": "Cisco Catalyst 9130AXI",
+        "uptime_hours": 6015,
+        "temperature_c": 42,
+        "cpu_usage": 27
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 14,
+          "connected_clients": 21,
+          "throughput_mbps": 74.8,
+          "last_updated": "2025-07-29T15:32:03.239814",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 13,
+          "connected_clients": 13,
+          "throughput_mbps": 82.6,
+          "last_updated": "2025-07-29T15:32:03.239817",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 23,
+          "connected_clients": 17,
+          "throughput_mbps": 69.0,
+          "last_updated": "2025-07-29T15:32:03.239819",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-40",
+      "switch_id": "Switch-14",
+      "location": {
+        "floor": 4,
+        "section": "West"
+      },
+      "hardware": {
+        "model": "Aruba AP-535",
+        "uptime_hours": 1031,
+        "temperature_c": 49,
+        "cpu_usage": 22
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 6,
+          "connected_clients": 6,
+          "throughput_mbps": 81.2,
+          "last_updated": "2025-07-29T15:32:03.239823",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 23,
+          "connected_clients": 17,
+          "throughput_mbps": 66.5,
+          "last_updated": "2025-07-29T15:32:03.239825",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 18,
+          "connected_clients": 25,
+          "throughput_mbps": 91.1,
+          "last_updated": "2025-07-29T15:32:03.239828",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-41",
+      "switch_id": "Switch-14",
+      "location": {
+        "floor": 4,
+        "section": "North"
+      },
+      "hardware": {
+        "model": "Ubiquiti UniFi 6 Enterprise",
+        "uptime_hours": 6046,
+        "temperature_c": 47,
+        "cpu_usage": 27
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 14,
+          "connected_clients": 7,
+          "throughput_mbps": 88.7,
+          "last_updated": "2025-07-29T15:32:03.239832",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 23,
+          "connected_clients": 6,
+          "throughput_mbps": 76.0,
+          "last_updated": "2025-07-29T15:32:03.239835",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 13,
+          "connected_clients": 25,
+          "throughput_mbps": 80.7,
+          "last_updated": "2025-07-29T15:32:03.239837",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-42",
+      "switch_id": "Switch-14",
+      "location": {
+        "floor": 4,
+        "section": "South"
+      },
+      "hardware": {
+        "model": "Cisco Catalyst 9130AXI",
+        "uptime_hours": 4839,
+        "temperature_c": 42,
+        "cpu_usage": 23
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 26,
+          "connected_clients": 30,
+          "throughput_mbps": 72.7,
+          "last_updated": "2025-07-29T15:32:03.239841",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 5,
+          "connected_clients": 20,
+          "throughput_mbps": 62.4,
+          "last_updated": "2025-07-29T15:32:03.239843",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 9,
+          "connected_clients": 6,
+          "throughput_mbps": 61.3,
+          "last_updated": "2025-07-29T15:32:03.239846",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-43",
+      "switch_id": "Switch-15",
+      "location": {
+        "floor": 4,
+        "section": "East"
+      },
+      "hardware": {
+        "model": "Aruba AP-535",
+        "uptime_hours": 4642,
+        "temperature_c": 39,
+        "cpu_usage": 25
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 25,
+          "connected_clients": 10,
+          "throughput_mbps": 95.0,
+          "last_updated": "2025-07-29T15:32:03.239849",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 15,
+          "connected_clients": 7,
+          "throughput_mbps": 88.0,
+          "last_updated": "2025-07-29T15:32:03.239852",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 18,
+          "connected_clients": 13,
+          "throughput_mbps": 65.2,
+          "last_updated": "2025-07-29T15:32:03.239855",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-44",
+      "switch_id": "Switch-15",
+      "location": {
+        "floor": 4,
+        "section": "West"
+      },
+      "hardware": {
+        "model": "Ubiquiti UniFi 6 Enterprise",
+        "uptime_hours": 6269,
+        "temperature_c": 36,
+        "cpu_usage": 16
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 18,
+          "connected_clients": 21,
+          "throughput_mbps": 52.6,
+          "last_updated": "2025-07-29T15:32:03.239858",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 15,
+          "connected_clients": 21,
+          "throughput_mbps": 54.9,
+          "last_updated": "2025-07-29T15:32:03.239861",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 12,
+          "connected_clients": 22,
+          "throughput_mbps": 90.5,
+          "last_updated": "2025-07-29T15:32:03.239864",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-45",
+      "switch_id": "Switch-15",
+      "location": {
+        "floor": 4,
+        "section": "North"
+      },
+      "hardware": {
+        "model": "Cisco Catalyst 9130AXI",
+        "uptime_hours": 4092,
+        "temperature_c": 45,
+        "cpu_usage": 26
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 8,
+          "connected_clients": 23,
+          "throughput_mbps": 90.5,
+          "last_updated": "2025-07-29T15:32:03.239867",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 24,
+          "connected_clients": 25,
+          "throughput_mbps": 63.2,
+          "last_updated": "2025-07-29T15:32:03.239870",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 20,
+          "connected_clients": 27,
+          "throughput_mbps": 82.8,
+          "last_updated": "2025-07-29T15:32:03.239873",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-46",
+      "switch_id": "Switch-16",
+      "location": {
+        "floor": 4,
+        "section": "South"
+      },
+      "hardware": {
+        "model": "Aruba AP-535",
+        "uptime_hours": 3210,
+        "temperature_c": 53,
+        "cpu_usage": 13
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 21,
+          "connected_clients": 7,
+          "throughput_mbps": 70.4,
+          "last_updated": "2025-07-29T15:32:03.239876",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 17,
+          "connected_clients": 15,
+          "throughput_mbps": 77.9,
+          "last_updated": "2025-07-29T15:32:03.239879",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 11,
+          "connected_clients": 7,
+          "throughput_mbps": 63.9,
+          "last_updated": "2025-07-29T15:32:03.239881",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-47",
+      "switch_id": "Switch-16",
+      "location": {
+        "floor": 4,
+        "section": "East"
+      },
+      "hardware": {
+        "model": "Ubiquiti UniFi 6 Enterprise",
+        "uptime_hours": 2193,
+        "temperature_c": 39,
+        "cpu_usage": 21
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 16,
+          "connected_clients": 23,
+          "throughput_mbps": 60.4,
+          "last_updated": "2025-07-29T15:32:03.239884",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 17,
+          "connected_clients": 12,
+          "throughput_mbps": 89.3,
+          "last_updated": "2025-07-29T15:32:03.239887",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 13,
+          "connected_clients": 22,
+          "throughput_mbps": 84.5,
+          "last_updated": "2025-07-29T15:32:03.239890",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-48",
+      "switch_id": "Switch-16",
+      "location": {
+        "floor": 4,
+        "section": "West"
+      },
+      "hardware": {
+        "model": "Cisco Catalyst 9130AXI",
+        "uptime_hours": 5600,
+        "temperature_c": 43,
+        "cpu_usage": 30
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 21,
+          "connected_clients": 22,
+          "throughput_mbps": 66.7,
+          "last_updated": "2025-07-29T15:32:03.239893",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 5,
+          "connected_clients": 20,
+          "throughput_mbps": 84.9,
+          "last_updated": "2025-07-29T15:32:03.239896",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 8,
+          "connected_clients": 12,
+          "throughput_mbps": 52.5,
+          "last_updated": "2025-07-29T15:32:03.239899",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-49",
+      "switch_id": "Switch-17",
+      "location": {
+        "floor": 5,
+        "section": "North"
+      },
+      "hardware": {
+        "model": "Aruba AP-535",
+        "uptime_hours": 1844,
+        "temperature_c": 48,
+        "cpu_usage": 17
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 25,
+          "connected_clients": 7,
+          "throughput_mbps": 76.2,
+          "last_updated": "2025-07-29T15:32:03.239902",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 30,
+          "connected_clients": 6,
+          "throughput_mbps": 67.2,
+          "last_updated": "2025-07-29T15:32:03.239905",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 17,
+          "connected_clients": 8,
+          "throughput_mbps": 78.1,
+          "last_updated": "2025-07-29T15:32:03.239908",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    },
+    {
+      "ap_id": "AP-50",
+      "switch_id": "Switch-17",
+      "location": {
+        "floor": 5,
+        "section": "South"
+      },
+      "hardware": {
+        "model": "Ubiquiti UniFi 6 Enterprise",
+        "uptime_hours": 330,
+        "temperature_c": 35,
+        "cpu_usage": 19
+      },
+      "zones": {
+        "FanWiFi": {
+          "status": "healthy",
+          "latency_ms": 19,
+          "connected_clients": 15,
+          "throughput_mbps": 61.9,
+          "last_updated": "2025-07-29T15:32:03.239911",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "VisitorWiFi": {
+          "status": "healthy",
+          "latency_ms": 11,
+          "connected_clients": 13,
+          "throughput_mbps": 64.3,
+          "last_updated": "2025-07-29T15:32:03.239914",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        },
+        "Backstage": {
+          "status": "healthy",
+          "latency_ms": 18,
+          "connected_clients": 19,
+          "throughput_mbps": 72.7,
+          "last_updated": "2025-07-29T15:32:03.239917",
+          "root_cause": null,
+          "incident_id": null,
+          "healing_eta": null
+        }
+      },
+      "incidents": [],
+      "last_incident": null
+    }
+  ],
+  "last_updated": "2025-07-29T15:32:03.239919",
+  "simulation_active": true,
+  "active_incidents": 0,
+  "total_incidents": 2,
+  "auto_healed": 2
+}

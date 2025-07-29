@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiveOpsLab Dashboard Comparison & SaaS Roadmap</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #0f1419 0%, #1a2332 100%);
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            color: #00d4ff;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            color: #8892b0;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 8px;
+            color: #ffffff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .tab-btn:hover, .tab-btn.active {
+            background: rgba(0, 212, 255, 0.2);
+            border-color: #00d4ff;
+            transform: translateY(-2px);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Comparison Section */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .version-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .version-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--accent-color, #00d4ff);
+        }
+
+        .version-card.basic { --accent-color: #ffa500; }
+        .version-card.executive { --accent-color: #00ff88; }
+
+        .version-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .version-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            background: var(--accent-color);
+            color: #ffffff;
+        }
+
+        .version-info h3 {
+            font-size: 1.4em;
+            color: var(--accent-color);
+            margin-bottom: 5px;
+        }
+
+        .version-info p {
+            color: #8892b0;
+            font-size: 0.9em;
+        }
+
+        .feature-section {
+            margin-bottom: 25px;
+        }
+
+        .feature-section h4 {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-list li {
+            padding: 5px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 0.9em;
+            color: #ccd6f6;
+        }
+
+        .feature-list li::before {
+            content: var(--bullet, '•');
+            color: var(--accent-color);
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .strengths li { --bullet: '✅'; }
+        .limitations li { --bullet: '❌'; }
+        .use-cases li { --bullet: '🎯'; }
+
+        /* Roadmap Section */
+        .roadmap-phase {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 4px solid var(--phase-color, #00d4ff);
+        }
+
+        .phase-1 { --phase-color: #00ff88; }
+        .phase-2 { --phase-color: #ffa500; }
+        .phase-3 { --phase-color: #ff4757; }
+        .phase-4 { --phase-color: #7c4dff; }
+
+        .phase-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .phase-title {
+            font-size: 1.3em;
+            color: var(--phase-color);
+            font-weight: 600;
+        }
+
+        .phase-duration {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            color: #8892b0;
+        }
+
+        .phase-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-group {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .feature-group h5 {
+            color: #00d4ff;
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+
+        /* Pricing Section */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--tier-color, #00d4ff);
+        }
+
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--tier-color, #00d4ff);
+            border-radius: 16px 16px 0 0;
+        }
+
+        .starter { --tier-color: #ffa500; }
+        .professional { --tier-color: #00ff88; }
+        .enterprise { --tier-color: #7c4dff; }
+        .white-label { --tier-color: #ff4757; }
+
+        .tier-name {
+            font-size: 1.2em;
+            color: var(--tier-color);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .tier-price {
+            font-size: 2.5em;
+            color: #ffffff;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .tier-period {
+            color: #8892b0;
+            margin-bottom: 20px;
+        }
+
+        .tier-features {
+            text-align: left;
+            list-style: none;
+        }
+
+        .tier-features li {
+            padding: 8px 0;
+            color: #ccd6f6;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tier-features li::before {
+            content: '✓';
+            color: var(--tier-color);
+            font-weight: bold;
+        }
+
+        .tier-target {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            font-size: 0.85em;
+            color: #8892b0;
+        }
+
+        /* Demo Links */
+        .demo-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .demo-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .demo-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--demo-color, #00d4ff);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+        }
+
+        .demo-card.basic-demo { --demo-color: #ffa500; }
+        .demo-card.executive-demo { --demo-color: #00ff88; }
+
+        .demo-title {
+            font-size: 1.3em;
+            color: var(--demo-color);
+            margin-bottom: 15px;
+        }
+
+        .demo-description {
+            color: #8892b0;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+        }
+
+        .demo-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: var(--demo-color);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .demo-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: scale(1.05);
+        }
+
+        /* Architecture Diagram */
+        .architecture-diagram {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .arch-layer {
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            border-left: 4px solid var(--layer-color, #00d4ff);
+        }
+
+        .frontend-layer { --layer-color: #00ff88; }
+        .api-layer { --layer-color: #ffa500; }
+        .service-layer { --layer-color: #7c4dff; }
+        .data-layer { --layer-color: #ff4757; }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .phase-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Animation */
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>LiveOpsLab Platform Evolution</h1>
+        <p>Dashboard Comparison & SaaS Transformation Roadmap</p>
+    </div>
+
+    <div class="container">
+        <nav class="nav-tabs">
+            <button class="tab-btn active" data-tab="comparison">📊 Dashboard Comparison</button>
+            <button class="tab-btn" data-tab="demos">🎮 Live Demos</button>
+            <button class="tab-btn" data-tab="roadmap">🚀 SaaS Roadmap</button>
+            <button class="tab-btn" data-tab="pricing">💰 Pricing Strategy</button>
+            <button class="tab-btn" data-tab="architecture">🏗️ Technical Architecture</button>
+        </nav>
+
+        <!-- Dashboard Comparison Tab -->
+        <div class="tab-content active" id="comparison">
+            <div class="comparison-grid">
+                <div class="version-card basic">
+                    <div class="version-header">
+                        <div class="version-icon">🔧</div>
+                        <div class="version-info">
+                            <h3>Basic Network Dashboard</h3>
+                            <p>Technical Operations Focus</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-section">
+                        <h4>✅ Strengths</h4>
+                        <ul class="feature-list strengths">
+                            <li>Simple 10x5 grid layout for 50 APs</li>
+                            <li>Real-time color-coded status indicators</li>
+                            <li>Lightweight with minimal resource usage</li>
+                            <li>Quick deployment and easy setup</li>
+                            <li>Basic hover tooltips for device details</li>
+                            <li>Perfect for NOC operations</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-section">
+                        <h4>❌ Limitations</h4>
+                        <ul class="feature-list limitations">
+                            <li>No executive summary or KPIs</li>
+                            <li>Limited context without root cause analysis</li>
+                            <li>Basic UI not presentation-ready</li>
+                            <li>No historical incident tracking</li>
+                            <li>Poor mobile responsiveness</li>
+                            <li>Fixed 50 AP configuration</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-section">
+                        <h4>🎯 Best Use Cases</h4>
+                        <ul class="feature-list use-cases">
+                            <li>NOC operations and monitoring</li>
+                            <li>Technical teams needing quick status</li>
+                            <li>Development and testing environments</li>
+                            <li>Small networks (&lt;100 devices)</li>
+                            <li>Internal IT operations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="version-card executive">
+                    <div class="version-header">
+                        <div class="version-icon">👔</div>
+                        <div class="version-info">
+                            <h3>Executive Dashboard</h3>
+                            <p>Management & Operations Focus</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-section">
+                        <h4>✅ Strengths</h4>
+                        <ul class="feature-list strengths">
+                            <li>Executive summary with KPIs and trends</li>
+                            <li>Professional, boardroom-ready design</li>
+                            <li>Comprehensive root cause analysis</li>
+                            <li>Auto-healing tracking with ETAs</li>
+                            <li>Zone-based performance metrics</li>
+                            <li>Mobile and tablet responsive design</li>
+                            <li>Rich tooltips with detailed information</li>
+                            <li>Real-time incident management panel</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-section">
+                        <h4>❌ Current Limitations</h4>
+                        <ul class="feature-list limitations">
+                            <li>Higher resource usage for rendering</li>
+                            <li>Steeper learning curve</li>
+                            <li>Still fixed to 50 AP configuration</li>
+                            <li>No multi-tenant support yet</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-section">
+                        <h4>🎯 Best Use Cases</h4>
+                        <ul class="feature-list use-cases">
+                            <li>Executive reporting and C-level presentations</li>
+                            <li>Operations centers with complete oversight</li>
+                            <li>Client demonstrations and sales</li>
+                            <li>Large enterprise networks</li>
+                            <li>SLA management and performance tracking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Live Demos Tab -->
+        <div class="tab-content" id="demos">
+            <div class="demo-links">
+                <div class="demo-card basic-demo">
+                    <div class="demo-title">🔧 Basic Dashboard Demo</div>
+                    <div class="demo-description">
+                        Simple network monitoring with basic status indicators. Perfect for technical teams who need quick, 
+                        straightforward network status information.
+                    </div>
+                    <a href="/basic" class="demo-btn">View Basic Demo</a>
+                </div>
+
+                <div class="demo-card executive-demo">
+                    <div class="demo-title">👔 Executive Dashboard Demo</div>
+                    <div class="demo-description">
+                        Comprehensive dashboard with executive summary, root cause analysis, and auto-healing tracking. 
+                        Features live incident simulation and professional presentation design.
+                    </div>
+                    <a href="/" class="demo-btn">View Executive Demo</a>
+                </div>
+            </div>
+
+            <div style="background: rgba(255, 255, 255, 0.05); padding: 30px; border-radius: 16px; margin-top: 30px;">
+                <h3 style="color: #00d4ff; margin-bottom: 20px;">🎬 Demo Features</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    <div>
+                        <h4 style="color: #00ff88; margin-bottom: 10px;">Real-time Simulation</h4>
+                        <p style="color: #8892b0; font-size: 0.9em;">
+                            Watch network incidents occur and resolve in real-time with automated healing processes.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 style="color: #ffa500; margin-bottom: 10px;">Root Cause Analysis</h4>
+                        <p style="color: #8892b0; font-size: 0.9em;">
+                            See detailed incident information with 10 different root cause scenarios and resolution timelines.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 style="color: #7c4dff; margin-bottom: 10px;">Interactive Elements</h4>
+                        <p style="color: #8892b0; font-size: 0.9em;">
+                            Hover tooltips, incident panels, and filtering options demonstrate full functionality.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SaaS Roadmap Tab -->
+        <div class="tab-content" id="roadmap">
+            <div class="roadmap-phase phase-1">
+                <div class="phase-header">
+                    <div class="phase-title">Phase 1: Multi-Tenancy Foundation</div>
+                    <div class="phase-duration">Months 1-3</div>
+                </div>
+                <div class="phase-features">
+                    <div class="feature-group">
+                        <h5>Core Platform</h5>
+                        <ul class="feature-list">
+                            <li>Multi-tenant architecture</li>
+                            <li>User authentication (OAuth2/SAML)</li>
+                            <li>Role-based access control</li>
+                            <li>Organization management</li>
+                        </ul>
+                    </div>
+                    <div class="feature-group">
+                        <h5>API Gateway</h5>
+                        <ul class="feature-list">
+                            <li>RESTful API endpoints</li>
+                            <li>Rate limiting</li>
+                            <li>Data ingestion pipeline</li>
+                            <li>Basic webhook support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="roadmap-phase phase-2">
+                <div class="phase-header">
+                    <div class="phase-title">Phase 2: Data Intelligence & Analytics</div>
+                    <div class="phase-duration">Months 4-6</div>
+                </div>
+                <div class="phase-features">
+                    <div class="feature-group">
+                        <h5>Advanced Analytics</h5>
+                        <ul class="feature-list">
+                            <li>Historical trend analysis</li>
+                            <li>ML-powered predictions</li>
+                            <li>Custom dashboard builder</li>
+                            <li>Automated reporting</li>
+                        </ul>
+                    </div>
+                    <div class="feature-group">
+                        <h5>Business Intelligence</h5>
+                        <ul class="feature-list">
+                            <li>Network health scoring</li>
+                            <li>Capacity planning</li>
+                            <li>Cost optimization</li>
+                            <li>Benchmark comparisons</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="roadmap-phase phase-3">
+                <div class="phase-header">
+                    <div class="phase-title">Phase 3: Integration Ecosystem</div>
+                    <div class="phase-duration">Months 7-9</div>
+                </div>
+                <div class="phase-features">
+                    <div class="feature-group">
+                        <h5>Third-party Integrations</h5>
+                        <ul class="feature-list">
+                            <li>ITSM platforms (ServiceNow, Jira)</li>
+                            <li>Monitoring tools (Nagios, Zabbix)</li>
+                            <li>Cloud providers (AWS, Azure, GCP)</li>
+                            <li>Communication (Slack, Teams)</li>
+                        </ul>
+                    </div>
+                    <div class="feature-group">
+                        <h5>Marketplace</h5>
+                        <ul class="feature-list">
+                            <li>Plugin architecture</li>
+                            <li>Community marketplace</li>
+                            <li>White-label solutions</li>
+                            <li>Partner reseller program</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="roadmap-phase phase-4">
+                <div class="phase-header">
+                    <div class="phase-title">Phase 4: Market Expansion</div>
+                    <div class="phase-duration">Months 10-12</div>
+                </div>
+                <div class="phase-features">
+                    <div class="feature-group">
+                        <h5>Scale & Growth</h5>
+                        <ul class="feature-list">
+                            <li>International expansion</li>
+                            <li>Enterprise sales team</li>
+                            <li>Compliance certifications</li>
+                            <li>Advanced security features</li>
+                        </ul>
+                    </div>
+                    <div class="feature-group">
+                        <h5>Innovation</h5>
+                        <ul class="feature-list">
+                            <li>AI/ML model improvements</li>
+                            <li>IoT platform expansion</li>
+                            <li>AR/VR visualizations</li>
+                            <li>Digital twin technology</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pricing Strategy Tab -->
+        <div class="tab-content" id="pricing">
+            <div class="pricing-grid">
+                <div class="pricing-card starter">
+                    <div class="tier-name">🥉 Starter</div>
+                    <div class="tier-price">$99</div>
+                    <div class="tier-period">per month</div>
+                    <ul class="tier-features">
+                        <li>Up to 50 devices</li>
+                        <li>Basic dashboard</li>
+                        <li>Email support</li>
+                        <li>30-day data retention</li>
+                        <li>Standard alerts</li>
+                    </ul>
+                    <div class="tier-target">
+                        <strong>Target:</strong> Small businesses, branch offices
+                    </div>
+                </div>
+
+                <div class="pricing-card professional">
+                    <div class="tier-name">🥈 Professional</div>
+                    <div class="tier-price">$299</div>
+                    <div class="tier-period">per month</div>
+                    <ul class="tier-features">
+                        <li>Up to 500 devices</li>
+                        <li>Executive dashboard</li>
+                        <li>Root cause analysis</li>
+                        <li>90-day data retention</li>
+                        <li>Phone support</li>
+                        <li>Custom reports</li>
+                    </ul>
+                    <div class="tier-target">
+                        <strong>Target:</strong> Mid-size enterprises
+                    </div>
+                </div>
+
+                <div class="pricing-card enterprise">
+                    <div class="tier-name">🥇 Enterprise</div>
+                    <div class="tier-price">$999</div>
+                    <div class="tier-period">per month</div>
+                    <ul class="tier-features">
+                        <li>Unlimited devices</li>
+                        <li>Custom dashboards</li>
+                        <li>Advanced analytics & ML</li>
+                        <li>1-year data retention</li>
+                        <li>Dedicated success manager</li>
+                        <li>API access</li>
+                        <li>SSO integration</li>
+                    </ul>
+                    <div class="tier-target">
+                        <strong>Target:</strong> Large enterprises, service providers
+                    </div>
+                </div>
+
+                <div class="pricing-card white-label">
+                    <div class="tier-name">💎 White-label</div>
+                    <div class="tier-price">Custom</div>
+                    <div class="tier-period">pricing</div>
+                    <ul class="tier-features">
+                        <li>Full platform customization</li>
+                        <li>Partner branding</li>
+                        <li>Multi-tenant management</li>
+                        <li>Revenue sharing</li>
+                        <li>Technical support</li>
+                        <li>Co-marketing opportunities</li>
+                    </ul>
+                    <div class="tier-target">
+                        <strong>Target:</strong> MSPs, System integrators
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Architecture Tab -->
+        <div class="tab-content" id="architecture">
+            <div class="architecture-diagram">
+                <h3 style="color: #00d4ff; margin-bottom: 30px;">🏗️ SaaS Platform Architecture</h3>
+                
+                <div class="arch-layer frontend-layer">
+                    <h4>Frontend Layer</h4>
+                    <p>React/Vue.js dashboards, Mobile apps, White-label interfaces</p>
+                </div>
+
+                <div class="arch-layer api-layer">
+                    <h4>API Gateway</h4>
+                    <p>Authentication, Rate limiting, Request routing, Load balancing</p>
+                </div>
+
+                <div class="arch-layer service-layer">
+                    <h4>Microservices</h4>
+                    <p>Device management, Analytics, Notifications, Reporting, User management</p>
+                </div>
+
+                <div class="arch-layer data-layer">
+                    <h4>Data Layer</h4>
+                    <p>PostgreSQL (transactional), InfluxDB (time-series), Redis (cache), Elasticsearch (search)</p>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 30px;">
+                <div style="background: rgba(255, 255, 255, 0.05); padding: 25px; border-radius: 16px;">
+                    <h4 style="color: #00ff88; margin-bottom: 15px;">🎯 Scalability Features</h4>
+                    <ul style="list-style: none; color: #ccd6f6;">
+                        <li style="padding: 5px 0;">• Kubernetes orchestration</li>
+                        <li style="padding: 5px 0;">• Auto-scaling based on usage</li>
+                        <li style="padding: 5px 0;">• CDN for global delivery</li>
+                        <li style="padding: 5px 0;">• Edge processing centers</li>
+                    </ul>
+                </div>
+
+                <div style="background: rgba(255, 255, 255, 0.05); padding: 25px; border-radius: 16px;">
+                    <h4 style="color: #ffa500; margin-bottom: 15px;">🔒 Security & Compliance</h4>
+                    <ul style="list-style: none; color: #ccd6f6;">
+                        <li style="padding: 5px 0;">• SOC2 Type II certification</li>
+                        <li style="padding: 5px 0;">• End-to-end encryption</li>
+                        <li style="padding: 5px 0;">• GDPR compliance</li>
+                        <li style="padding: 5px 0;">• Multi-factor authentication</li>
+                    </ul>
+                </div>
+
+                <div style="background: rgba(255, 255, 255, 0.05); padding: 25px; border-radius: 16px;">
+                    <h4 style="color: #7c4dff; margin-bottom: 15px;">📊 Performance Targets</h4>
+                    <ul style="list-style: none; color: #ccd6f6;">
+                        <li style="padding: 5px 0;">• 99.9% uptime SLA</li>
+                        <li style="padding: 5px 0;">• &lt;200ms dashboard load</li>
+                        <li style="padding: 5px 0;">• 10,000+ concurrent users</li>
+                        <li style="padding: 5px 0;">• 99.95% data accuracy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tab functionality
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all tabs and content
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab and corresponding content
+                btn.classList.add('active');
+                const tabId = btn.dataset.tab;
+                document.getElementById(tabId).classList.add('active');
+                
+                // Add fade-in animation
+                document.getElementById(tabId).classList.add('fade-in');
+            });
+        });
+
+        // Demo link handling
+        document.querySelectorAll('.demo-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const href = btn.getAttribute('href');
+                
+                if (href === '/basic') {
+                    // Would redirect to basic dashboard
+                    alert('Basic dashboard demo would open here.\nCurrently showing executive dashboard at http://localhost:8889');
+                } else {
+                    // Redirect to executive dashboard
+                    window.open('http://localhost:8889', '_blank');
+                }
+            });
+        });
+
+        // Add some interactive elements
+        document.querySelectorAll('.version-card, .pricing-card, .demo-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-5px)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
