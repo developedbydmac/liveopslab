@@ -1,0 +1,49 @@
+# Example Terraform variables file for LiveOpsLab Venue Infrastructure
+# Copy this file to terraform.tfvars and customize the values
+
+# Basic Configuration
+aws_region   = "us-east-1"
+environment  = "dev"
+project_name = "liveopslab-venue"
+
+# Network Configuration
+vpc_cidr                  = "10.0.0.0/16"
+fanwifi_subnet_cidr      = "10.0.1.0/24"
+visitorwifi_subnet_cidr  = "10.0.2.0/24"
+backstage_subnet_cidr    = "10.0.3.0/24"
+
+# Security - Add your management IP addresses here
+management_cidrs = [
+  "10.0.3.0/24",     # Backstage subnet
+  "203.0.113.0/24"   # Example: Replace with your office/home IP range
+]
+
+# EC2 Configuration
+ami_id                      = "ami-0c02fb55956c7d316"  # Amazon Linux 2 in us-east-1
+fanwifi_instance_type      = "t3.micro"               # Cost-effective for public WiFi
+visitorwifi_instance_type  = "t3.small"               # Medium capacity for staff
+backstage_instance_type    = "t3.medium"              # Higher capacity for management
+
+# SSH Key - Replace with your public key
+public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC... your-public-key-here"
+
+# Performance Settings
+fan_wifi_bandwidth_limit     = 10    # Mbps per user
+visitor_wifi_bandwidth_limit = 50    # Mbps for staff
+backstage_bandwidth_limit    = 1000  # Mbps for management
+
+# Monitoring and Backup
+enable_cloudwatch_monitoring = true
+enable_flow_logs            = true
+backup_retention_days       = 7
+
+# Chaos Engineering Configuration
+enable_chaos_testing         = false  # Set to true to enable chaos engineering
+chaos_orchestrator_enabled   = false  # Set to true for automated chaos testing
+chaos_webhook_port          = 8888
+chaos_scripts_url           = "https://raw.githubusercontent.com/your-repo/chaos-scripts/main"
+
+# Example deployment with chaos engineering enabled:
+# enable_chaos_testing         = true
+# chaos_orchestrator_enabled   = true
+# chaos_scripts_url           = "https://raw.githubusercontent.com/your-username/liveopslab-chaos/main"

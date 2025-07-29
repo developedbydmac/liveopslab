@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiveOpsLab - Venue Network Status Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .status-indicator {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 25px;
+        }
+
+        .pulse {
+            width: 12px;
+            height: 12px;
+            background: #4CAF50;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(76, 175, 80, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); }
+        }
+
+        .dashboard {
+            padding: 40px;
+        }
+
+        .zones-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .zone-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #4CAF50;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .zone-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .zone-card.degraded {
+            border-left-color: #FF9800;
+        }
+
+        .zone-card.outage {
+            border-left-color: #F44336;
+        }
+
+        .zone-card.maintenance {
+            border-left-color: #9C27B0;
+        }
+
+        .zone-header {
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .zone-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .zone-status {
+            font-size: 2rem;
+            margin-left: auto;
+        }
+
+        .zone-metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .metric {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .metric:hover {
+            background: #e9ecef;
+        }
+
+        .metric-label {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .metric-value {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .metric-value.good { color: #4CAF50; }
+        .metric-value.warning { color: #FF9800; }
+        .metric-value.critical { color: #F44336; }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: #4CAF50;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        .progress-fill.warning { background: #FF9800; }
+        .progress-fill.critical { background: #F44336; }
+
+        .last-incident {
+            background: #fff3e0;
+            border: 1px solid #ffcc02;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        .incident-header {
+            font-weight: 600;
+            color: #e65100;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .incident-summary {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .controls {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+            color: white;
+        }
+
+        .btn-danger:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        .btn-warning {
+            background: linear-gradient(135deg, #feca57 0%, #ff9ff3 100%);
+            color: white;
+        }
+
+        .btn-warning:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(254, 202, 87, 0.4);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            border-top: 1px solid #eee;
+        }
+
+        .last-updated {
+            font-size: 0.9rem;
+            color: #888;
+            font-style: italic;
+        }
+
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin-right: 15px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .error {
+            background: #ffebee;
+            color: #c62828;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .zones-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .zone-metrics {
+                grid-template-columns: 1fr;
+            }
+            
+            .controls {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏟️ LiveOpsLab Dashboard</h1>
+            <p>Real-time venue network monitoring with AI-powered incident analysis</p>
+            <div class="status-indicator">
+                <div class="pulse" id="connectionIndicator"></div>
+                <span id="connectionStatus">Connected</span>
+            </div>
+        </div>
+
+        <div class="dashboard">
+            <div class="controls">
+                <button class="btn btn-primary" onclick="refreshData()">
+                    🔄 Refresh Now
+                </button>
+                <button class="btn btn-danger" onclick="simulateOutage('FanWiFi')">
+                    ⚡ Simulate FanWiFi Outage
+                </button>
+                <button class="btn btn-warning" onclick="simulateOutage('VisitorWiFi')">
+                    ⚠️ Simulate VisitorWiFi Issue
+                </button>
+                <button class="btn btn-primary" onclick="window.open('http://localhost:8000/docs', '_blank')">
+                    📚 API Documentation
+                </button>
+            </div>
+
+            <div id="zonesContainer" class="zones-grid">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    Loading venue network status...
+                </div>
+            </div>
+
+            <div class="footer">
+                <p>Last updated: <span id="lastUpdated" class="last-updated">Never</span></p>
+                <p>Updates every 30 seconds • Powered by FastAPI & AWS Bedrock</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:8000';
+        let updateInterval;
+        let lastIncidents = {};
+
+        // Zone emoji mappings
+        const zoneEmojis = {
+            'FanWiFi': '🟢',
+            'VisitorWiFi': '🟡', 
+            'Backstage': '🔵'
+        };
+
+        const statusEmojis = {
+            'healthy': '🟢',
+            'degraded': '🟡',
+            'outage': '🔴',
+            'maintenance': '🟣'
+        };
+
+        async function fetchZoneStatus() {
+            try {
+                const response = await fetch(`${API_BASE}/status`);
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                const data = await response.json();
+                updateZoneDisplay(data);
+                updateConnectionStatus('connected');
+                document.getElementById('lastUpdated').textContent = new Date().toLocaleString();
+            } catch (error) {
+                console.error('Failed to fetch zone status:', error);
+                updateConnectionStatus('error');
+                showError('Failed to connect to API. Please ensure the FastAPI backend is running.');
+            }
+        }
+
+        function updateZoneDisplay(data) {
+            const container = document.getElementById('zonesContainer');
+            const zones = data.zones;
+            
+            container.innerHTML = '';
+            
+            Object.keys(zones).forEach(zoneName => {
+                const zone = zones[zoneName];
+                const zoneCard = createZoneCard(zoneName, zone);
+                container.appendChild(zoneCard);
+            });
+        }
+
+        function createZoneCard(zoneName, zone) {
+            const card = document.createElement('div');
+            card.className = `zone-card ${zone.status}`;
+            
+            // Determine metric value classes
+            const getMetricClass = (value, thresholds) => {
+                if (value >= thresholds.critical) return 'critical';
+                if (value >= thresholds.warning) return 'warning';
+                return 'good';
+            };
+
+            const latencyClass = getMetricClass(zone.avg_latency_ms, { warning: 50, critical: 100 });
+            const cpuClass = getMetricClass(zone.cpu_usage, { warning: 70, critical: 90 });
+            const memoryClass = getMetricClass(zone.memory_usage, { warning: 80, critical: 95 });
+
+            card.innerHTML = `
+                <div class="zone-header">
+                    <div class="zone-name">${zoneName}</div>
+                    <div class="zone-status">${statusEmojis[zone.status] || '❓'}</div>
+                </div>
+                
+                <div class="zone-metrics">
+                    <div class="metric">
+                        <div class="metric-label">Uptime</div>
+                        <div class="metric-value good">${zone.uptime_percentage.toFixed(2)}%</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: ${zone.uptime_percentage}%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="metric">
+                        <div class="metric-label">Active Users</div>
+                        <div class="metric-value">${zone.active_users}</div>
+                    </div>
+                    
+                    <div class="metric">
+                        <div class="metric-label">Avg Latency</div>
+                        <div class="metric-value ${latencyClass}">${zone.avg_latency_ms.toFixed(1)}ms</div>
+                    </div>
+                    
+                    <div class="metric">
+                        <div class="metric-label">Throughput</div>
+                        <div class="metric-value">${zone.network_throughput_mbps.toFixed(1)} Mbps</div>
+                    </div>
+                    
+                    <div class="metric">
+                        <div class="metric-label">CPU Usage</div>
+                        <div class="metric-value ${cpuClass}">${zone.cpu_usage.toFixed(1)}%</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill ${cpuClass}" style="width: ${zone.cpu_usage}%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="metric">
+                        <div class="metric-label">Memory Usage</div>
+                        <div class="metric-value ${memoryClass}">${zone.memory_usage.toFixed(1)}%</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill ${memoryClass}" style="width: ${zone.memory_usage}%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                ${zone.current_incidents.length > 0 ? createIncidentDisplay(zone.current_incidents) : ''}
+            `;
+            
+            return card;
+        }
+
+        function createIncidentDisplay(incidents) {
+            return `
+                <div class="last-incident">
+                    <div class="incident-header">
+                        🚨 Active Incident${incidents.length > 1 ? 's' : ''}
+                    </div>
+                    <div class="incident-summary">
+                        ${incidents.length} active incident${incidents.length > 1 ? 's' : ''} - 
+                        <a href="#" onclick="viewIncident('${incidents[0]}')">View Details</a>
+                    </div>
+                </div>
+            `;
+        }
+
+        function updateConnectionStatus(status) {
+            const indicator = document.getElementById('connectionIndicator');
+            const statusText = document.getElementById('connectionStatus');
+            
+            if (status === 'connected') {
+                indicator.style.background = '#4CAF50';
+                statusText.textContent = 'Connected';
+            } else {
+                indicator.style.background = '#F44336';
+                statusText.textContent = 'Disconnected';
+            }
+        }
+
+        function showError(message) {
+            const container = document.getElementById('zonesContainer');
+            container.innerHTML = `
+                <div class="error">
+                    <h3>⚠️ Connection Error</h3>
+                    <p>${message}</p>
+                    <button class="btn btn-primary" onclick="refreshData()" style="margin-top: 15px;">
+                        🔄 Retry Connection
+                    </button>
+                </div>
+            `;
+        }
+
+        async function simulateOutage(zone) {
+            try {
+                const outageTypes = ['network_failure', 'high_latency', 'cpu_spike'];
+                const selectedType = outageTypes[Math.floor(Math.random() * outageTypes.length)];
+                
+                const response = await fetch(`${API_BASE}/simulate-outage/${zone}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        outage_type: selectedType,
+                        duration_seconds: 120,
+                        severity: 'medium',
+                        description: `Simulated ${selectedType} for testing`
+                    })
+                });
+                
+                if (!response.ok) {
+                    const error = await response.json();
+                    throw new Error(error.detail || 'Failed to simulate outage');
+                }
+                
+                const result = await response.json();
+                alert(`✅ Simulated outage started in ${zone}\nIncident ID: ${result.incident_id}\nType: ${selectedType}\nDuration: 2 minutes`);
+                
+                // Refresh data immediately
+                setTimeout(fetchZoneStatus, 1000);
+                
+            } catch (error) {
+                console.error('Failed to simulate outage:', error);
+                alert(`❌ Failed to simulate outage: ${error.message}`);
+            }
+        }
+
+        async function viewIncident(incidentId) {
+            try {
+                const response = await fetch(`${API_BASE}/replay/${incidentId}`);
+                if (!response.ok) throw new Error('Failed to fetch incident details');
+                
+                const incident = await response.json();
+                
+                // Create a simple incident details modal (or redirect to detailed view)
+                const details = `
+Incident Details:
+• ID: ${incident.incident.id}
+• Zone: ${incident.incident.zone}
+• Type: ${incident.incident.outage_type}
+• Status: ${incident.incident.status}
+• Started: ${new Date(incident.incident.start_time).toLocaleString()}
+• Duration: ${incident.incident.duration_seconds || 'Ongoing'} seconds
+
+AI Analysis:
+• Root Cause: ${incident.ai_analysis.root_cause || 'Analysis pending...'}
+• Recommended Fix: ${incident.ai_analysis.recommended_fix || 'Analysis pending...'}
+• Confidence: ${(incident.ai_analysis.confidence_level * 100 || 0).toFixed(1)}%
+                `;
+                
+                alert(details);
+                
+            } catch (error) {
+                console.error('Failed to fetch incident details:', error);
+                alert('Failed to fetch incident details');
+            }
+        }
+
+        function refreshData() {
+            fetchZoneStatus();
+        }
+
+        function startAutoRefresh() {
+            // Clear existing interval
+            if (updateInterval) {
+                clearInterval(updateInterval);
+            }
+            
+            // Start new interval for 30-second updates
+            updateInterval = setInterval(fetchZoneStatus, 30000);
+        }
+
+        // Initialize dashboard
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchZoneStatus();
+            startAutoRefresh();
+            
+            // Add keyboard shortcuts
+            document.addEventListener('keydown', (e) => {
+                if (e.ctrlKey || e.metaKey) {
+                    switch (e.key) {
+                        case 'r':
+                            e.preventDefault();
+                            refreshData();
+                            break;
+                        case '1':
+                            e.preventDefault();
+                            simulateOutage('FanWiFi');
+                            break;
+                        case '2':
+                            e.preventDefault();
+                            simulateOutage('VisitorWiFi');
+                            break;
+                    }
+                }
+            });
+        });
+
+        // Cleanup on page unload
+        window.addEventListener('beforeunload', () => {
+            if (updateInterval) {
+                clearInterval(updateInterval);
+            }
+        });
+    </script>
+</body>
+</html>
