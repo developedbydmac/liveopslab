@@ -16,30 +16,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 12,
+          "latency_ms": 20,
           "connected_clients": 7,
           "throughput_mbps": 84.2,
-          "last_updated": "2025-07-29T15:32:43.280655",
+          "last_updated": "2025-07-29T15:34:51.394195",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 17,
+          "latency_ms": 11,
           "connected_clients": 26,
           "throughput_mbps": 74.0,
-          "last_updated": "2025-07-29T15:32:43.280662",
+          "last_updated": "2025-07-29T15:34:51.394208",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 23,
+          "latency_ms": 18,
           "connected_clients": 15,
           "throughput_mbps": 68.2,
-          "last_updated": "2025-07-29T15:32:43.280666",
+          "last_updated": "2025-07-29T15:34:51.394216",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -64,30 +64,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 9,
+          "latency_ms": 10,
           "connected_clients": 5,
           "throughput_mbps": 65.4,
-          "last_updated": "2025-07-29T15:32:43.280670",
+          "last_updated": "2025-07-29T15:34:51.394222",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 10,
+          "latency_ms": 9,
           "connected_clients": 7,
           "throughput_mbps": 56.6,
-          "last_updated": "2025-07-29T15:32:43.280673",
+          "last_updated": "2025-07-29T15:34:51.394227",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 14,
+          "latency_ms": 5,
           "connected_clients": 29,
           "throughput_mbps": 66.5,
-          "last_updated": "2025-07-29T15:32:43.280676",
+          "last_updated": "2025-07-29T15:34:51.394232",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -112,30 +112,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 5,
+          "latency_ms": 10,
           "connected_clients": 5,
           "throughput_mbps": 62.5,
-          "last_updated": "2025-07-29T15:32:43.280679",
+          "last_updated": "2025-07-29T15:34:51.394238",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 26,
+          "latency_ms": 27,
           "connected_clients": 25,
           "throughput_mbps": 65.5,
-          "last_updated": "2025-07-29T15:32:43.280682",
+          "last_updated": "2025-07-29T15:34:51.394242",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 26,
+          "latency_ms": 22,
           "connected_clients": 24,
           "throughput_mbps": 70.6,
-          "last_updated": "2025-07-29T15:32:43.280685",
+          "last_updated": "2025-07-29T15:34:51.394247",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -160,30 +160,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 14,
+          "latency_ms": 18,
           "connected_clients": 23,
           "throughput_mbps": 64.5,
-          "last_updated": "2025-07-29T15:32:43.280688",
+          "last_updated": "2025-07-29T15:34:51.394253",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 13,
+          "latency_ms": 11,
           "connected_clients": 10,
           "throughput_mbps": 50.5,
-          "last_updated": "2025-07-29T15:32:43.280690",
+          "last_updated": "2025-07-29T15:34:51.394257",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 12,
+          "latency_ms": 16,
           "connected_clients": 21,
           "throughput_mbps": 51.0,
-          "last_updated": "2025-07-29T15:32:43.280693",
+          "last_updated": "2025-07-29T15:34:51.394262",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -208,30 +208,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 22,
+          "latency_ms": 25,
           "connected_clients": 28,
           "throughput_mbps": 70.4,
-          "last_updated": "2025-07-29T15:32:43.280696",
+          "last_updated": "2025-07-29T15:34:51.394267",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 24,
+          "latency_ms": 21,
           "connected_clients": 19,
           "throughput_mbps": 54.9,
-          "last_updated": "2025-07-29T15:32:43.280699",
+          "last_updated": "2025-07-29T15:34:51.394272",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 30,
+          "latency_ms": 27,
           "connected_clients": 24,
           "throughput_mbps": 64.4,
-          "last_updated": "2025-07-29T15:32:43.280702",
+          "last_updated": "2025-07-29T15:34:51.394278",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -256,10 +256,10 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 13,
+          "latency_ms": 14,
           "connected_clients": 18,
           "throughput_mbps": 72.9,
-          "last_updated": "2025-07-29T15:32:43.280705",
+          "last_updated": "2025-07-29T15:34:51.394283",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -269,17 +269,17 @@
           "latency_ms": 10,
           "connected_clients": 20,
           "throughput_mbps": 76.3,
-          "last_updated": "2025-07-29T15:32:43.280707",
+          "last_updated": "2025-07-29T15:34:51.394287",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 22,
+          "latency_ms": 25,
           "connected_clients": 14,
           "throughput_mbps": 92.5,
-          "last_updated": "2025-07-29T15:32:43.280710",
+          "last_updated": "2025-07-29T15:34:51.394292",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -304,30 +304,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 20,
+          "latency_ms": 30,
           "connected_clients": 14,
           "throughput_mbps": 71.8,
-          "last_updated": "2025-07-29T15:32:43.280713",
+          "last_updated": "2025-07-29T15:34:51.394297",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 26,
+          "latency_ms": 30,
           "connected_clients": 22,
           "throughput_mbps": 61.5,
-          "last_updated": "2025-07-29T15:32:43.280716",
+          "last_updated": "2025-07-29T15:34:51.394301",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 5,
+          "latency_ms": 10,
           "connected_clients": 29,
           "throughput_mbps": 75.5,
-          "last_updated": "2025-07-29T15:32:43.280718",
+          "last_updated": "2025-07-29T15:34:51.394306",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -352,10 +352,10 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 8,
+          "latency_ms": 7,
           "connected_clients": 26,
           "throughput_mbps": 63.2,
-          "last_updated": "2025-07-29T15:32:43.280721",
+          "last_updated": "2025-07-29T15:34:51.394311",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -365,17 +365,17 @@
           "latency_ms": 30,
           "connected_clients": 8,
           "throughput_mbps": 69.5,
-          "last_updated": "2025-07-29T15:32:43.280724",
+          "last_updated": "2025-07-29T15:34:51.394316",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 15,
+          "latency_ms": 16,
           "connected_clients": 5,
           "throughput_mbps": 80.5,
-          "last_updated": "2025-07-29T15:32:43.280727",
+          "last_updated": "2025-07-29T15:34:51.394320",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -400,30 +400,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 10,
+          "latency_ms": 7,
           "connected_clients": 13,
           "throughput_mbps": 60.3,
-          "last_updated": "2025-07-29T15:32:43.280730",
+          "last_updated": "2025-07-29T15:34:51.394325",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 27,
+          "latency_ms": 28,
           "connected_clients": 14,
           "throughput_mbps": 81.1,
-          "last_updated": "2025-07-29T15:32:43.280732",
+          "last_updated": "2025-07-29T15:34:51.394330",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 26,
+          "latency_ms": 23,
           "connected_clients": 22,
           "throughput_mbps": 87.3,
-          "last_updated": "2025-07-29T15:32:43.280735",
+          "last_updated": "2025-07-29T15:34:51.394335",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -448,30 +448,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 17,
+          "latency_ms": 15,
           "connected_clients": 22,
           "throughput_mbps": 63.9,
-          "last_updated": "2025-07-29T15:32:43.280738",
+          "last_updated": "2025-07-29T15:34:51.394339",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 10,
+          "latency_ms": 5,
           "connected_clients": 26,
           "throughput_mbps": 90.6,
-          "last_updated": "2025-07-29T15:32:43.280741",
+          "last_updated": "2025-07-29T15:34:51.394345",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 20,
+          "latency_ms": 30,
           "connected_clients": 6,
           "throughput_mbps": 91.7,
-          "last_updated": "2025-07-29T15:32:43.280743",
+          "last_updated": "2025-07-29T15:34:51.394349",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -496,30 +496,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 8,
+          "latency_ms": 18,
           "connected_clients": 28,
           "throughput_mbps": 75.1,
-          "last_updated": "2025-07-29T15:32:43.280746",
+          "last_updated": "2025-07-29T15:34:51.394354",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 22,
+          "latency_ms": 26,
           "connected_clients": 27,
           "throughput_mbps": 94.3,
-          "last_updated": "2025-07-29T15:32:43.280749",
+          "last_updated": "2025-07-29T15:34:51.394358",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 13,
+          "latency_ms": 28,
           "connected_clients": 6,
           "throughput_mbps": 77.2,
-          "last_updated": "2025-07-29T15:32:43.280752",
+          "last_updated": "2025-07-29T15:34:51.394363",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -547,27 +547,27 @@
           "latency_ms": 25,
           "connected_clients": 15,
           "throughput_mbps": 63.3,
-          "last_updated": "2025-07-29T15:32:43.280755",
+          "last_updated": "2025-07-29T15:34:51.394367",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 16,
+          "latency_ms": 12,
           "connected_clients": 10,
           "throughput_mbps": 69.1,
-          "last_updated": "2025-07-29T15:32:43.280758",
+          "last_updated": "2025-07-29T15:34:51.394372",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 16,
+          "latency_ms": 11,
           "connected_clients": 16,
           "throughput_mbps": 70.9,
-          "last_updated": "2025-07-29T15:32:43.280760",
+          "last_updated": "2025-07-29T15:34:51.394377",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -595,27 +595,27 @@
           "latency_ms": 14,
           "connected_clients": 14,
           "throughput_mbps": 76.8,
-          "last_updated": "2025-07-29T15:32:43.280763",
+          "last_updated": "2025-07-29T15:34:51.394382",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 10,
+          "latency_ms": 11,
           "connected_clients": 8,
           "throughput_mbps": 92.2,
-          "last_updated": "2025-07-29T15:32:43.280766",
+          "last_updated": "2025-07-29T15:34:51.394386",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 14,
+          "latency_ms": 12,
           "connected_clients": 17,
           "throughput_mbps": 76.7,
-          "last_updated": "2025-07-29T15:32:43.280769",
+          "last_updated": "2025-07-29T15:34:51.394391",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -640,30 +640,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 28,
+          "latency_ms": 25,
           "connected_clients": 30,
           "throughput_mbps": 52.0,
-          "last_updated": "2025-07-29T15:32:43.280772",
+          "last_updated": "2025-07-29T15:34:51.394396",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 24,
+          "latency_ms": 11,
           "connected_clients": 23,
           "throughput_mbps": 75.1,
-          "last_updated": "2025-07-29T15:32:43.280774",
+          "last_updated": "2025-07-29T15:34:51.394400",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 6,
+          "latency_ms": 10,
           "connected_clients": 6,
           "throughput_mbps": 94.2,
-          "last_updated": "2025-07-29T15:32:43.280777",
+          "last_updated": "2025-07-29T15:34:51.394405",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -688,30 +688,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 14,
+          "latency_ms": 10,
           "connected_clients": 8,
           "throughput_mbps": 70.8,
-          "last_updated": "2025-07-29T15:32:43.280780",
+          "last_updated": "2025-07-29T15:34:51.394410",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 30,
+          "latency_ms": 28,
           "connected_clients": 22,
           "throughput_mbps": 77.2,
-          "last_updated": "2025-07-29T15:32:43.280783",
+          "last_updated": "2025-07-29T15:34:51.394414",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 27,
+          "latency_ms": 28,
           "connected_clients": 28,
           "throughput_mbps": 86.6,
-          "last_updated": "2025-07-29T15:32:43.280785",
+          "last_updated": "2025-07-29T15:34:51.394418",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -736,30 +736,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 11,
+          "latency_ms": 6,
           "connected_clients": 17,
           "throughput_mbps": 59.6,
-          "last_updated": "2025-07-29T15:32:43.280788",
+          "last_updated": "2025-07-29T15:34:51.394424",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 13,
+          "latency_ms": 9,
           "connected_clients": 17,
           "throughput_mbps": 87.2,
-          "last_updated": "2025-07-29T15:32:43.280791",
+          "last_updated": "2025-07-29T15:34:51.394428",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 5,
+          "latency_ms": 11,
           "connected_clients": 17,
           "throughput_mbps": 59.3,
-          "last_updated": "2025-07-29T15:32:43.280794",
+          "last_updated": "2025-07-29T15:34:51.394432",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -784,30 +784,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 18,
+          "latency_ms": 14,
           "connected_clients": 16,
           "throughput_mbps": 57.7,
-          "last_updated": "2025-07-29T15:32:43.280797",
+          "last_updated": "2025-07-29T15:34:51.394437",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 12,
+          "latency_ms": 11,
           "connected_clients": 22,
           "throughput_mbps": 67.6,
-          "last_updated": "2025-07-29T15:32:43.280799",
+          "last_updated": "2025-07-29T15:34:51.394442",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 28,
+          "latency_ms": 29,
           "connected_clients": 9,
           "throughput_mbps": 77.4,
-          "last_updated": "2025-07-29T15:32:43.280802",
+          "last_updated": "2025-07-29T15:34:51.394446",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -832,30 +832,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 30,
+          "latency_ms": 22,
           "connected_clients": 25,
           "throughput_mbps": 80.9,
-          "last_updated": "2025-07-29T15:32:43.280805",
+          "last_updated": "2025-07-29T15:34:51.394451",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 21,
+          "latency_ms": 24,
           "connected_clients": 5,
           "throughput_mbps": 51.1,
-          "last_updated": "2025-07-29T15:32:43.280808",
+          "last_updated": "2025-07-29T15:34:51.394456",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 21,
+          "latency_ms": 30,
           "connected_clients": 15,
           "throughput_mbps": 93.8,
-          "last_updated": "2025-07-29T15:32:43.280810",
+          "last_updated": "2025-07-29T15:34:51.394460",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -880,30 +880,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 9,
+          "latency_ms": 21,
           "connected_clients": 23,
           "throughput_mbps": 94.4,
-          "last_updated": "2025-07-29T15:32:43.280813",
+          "last_updated": "2025-07-29T15:34:51.394465",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 21,
+          "latency_ms": 26,
           "connected_clients": 6,
           "throughput_mbps": 54.7,
-          "last_updated": "2025-07-29T15:32:43.280818",
+          "last_updated": "2025-07-29T15:34:51.394470",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 17,
+          "latency_ms": 13,
           "connected_clients": 19,
           "throughput_mbps": 78.0,
-          "last_updated": "2025-07-29T15:32:43.280820",
+          "last_updated": "2025-07-29T15:34:51.394474",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -928,30 +928,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 10,
+          "latency_ms": 16,
           "connected_clients": 27,
           "throughput_mbps": 69.2,
-          "last_updated": "2025-07-29T15:32:43.280823",
+          "last_updated": "2025-07-29T15:34:51.394479",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 22,
+          "latency_ms": 27,
           "connected_clients": 17,
           "throughput_mbps": 74.0,
-          "last_updated": "2025-07-29T15:32:43.280826",
+          "last_updated": "2025-07-29T15:34:51.394483",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 24,
+          "latency_ms": 20,
           "connected_clients": 8,
           "throughput_mbps": 55.8,
-          "last_updated": "2025-07-29T15:32:43.280828",
+          "last_updated": "2025-07-29T15:34:51.394487",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -976,30 +976,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 27,
+          "latency_ms": 26,
           "connected_clients": 21,
           "throughput_mbps": 56.0,
-          "last_updated": "2025-07-29T15:32:43.280832",
+          "last_updated": "2025-07-29T15:34:51.394492",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 16,
+          "latency_ms": 22,
           "connected_clients": 30,
           "throughput_mbps": 59.5,
-          "last_updated": "2025-07-29T15:32:43.280835",
+          "last_updated": "2025-07-29T15:34:51.394496",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 25,
+          "latency_ms": 21,
           "connected_clients": 27,
           "throughput_mbps": 84.3,
-          "last_updated": "2025-07-29T15:32:43.280837",
+          "last_updated": "2025-07-29T15:34:51.394501",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -1024,30 +1024,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 21,
+          "latency_ms": 19,
           "connected_clients": 24,
           "throughput_mbps": 56.7,
-          "last_updated": "2025-07-29T15:32:43.280840",
+          "last_updated": "2025-07-29T15:34:51.394506",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 9,
+          "latency_ms": 7,
           "connected_clients": 18,
           "throughput_mbps": 88.2,
-          "last_updated": "2025-07-29T15:32:43.280843",
+          "last_updated": "2025-07-29T15:34:51.394510",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 13,
+          "latency_ms": 17,
           "connected_clients": 19,
           "throughput_mbps": 68.7,
-          "last_updated": "2025-07-29T15:32:43.280846",
+          "last_updated": "2025-07-29T15:34:51.394515",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -1072,20 +1072,20 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 10,
+          "latency_ms": 7,
           "connected_clients": 16,
           "throughput_mbps": 55.5,
-          "last_updated": "2025-07-29T15:32:43.280849",
+          "last_updated": "2025-07-29T15:34:51.394519",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 27,
+          "latency_ms": 22,
           "connected_clients": 15,
           "throughput_mbps": 85.8,
-          "last_updated": "2025-07-29T15:32:43.280851",
+          "last_updated": "2025-07-29T15:34:51.394524",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -1095,7 +1095,7 @@
           "latency_ms": 11,
           "connected_clients": 29,
           "throughput_mbps": 88.2,
-          "last_updated": "2025-07-29T15:32:43.280854",
+          "last_updated": "2025-07-29T15:34:51.394528",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -1120,30 +1120,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 22,
+          "latency_ms": 30,
           "connected_clients": 17,
           "throughput_mbps": 83.1,
-          "last_updated": "2025-07-29T15:32:43.280857",
+          "last_updated": "2025-07-29T15:34:51.394533",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 26,
+          "latency_ms": 21,
           "connected_clients": 11,
           "throughput_mbps": 72.0,
-          "last_updated": "2025-07-29T15:32:43.280860",
+          "last_updated": "2025-07-29T15:34:51.394537",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 30,
+          "latency_ms": 23,
           "connected_clients": 27,
           "throughput_mbps": 72.1,
-          "last_updated": "2025-07-29T15:32:43.280862",
+          "last_updated": "2025-07-29T15:34:51.394542",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -1168,30 +1168,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 13,
+          "latency_ms": 11,
           "connected_clients": 30,
           "throughput_mbps": 61.1,
-          "last_updated": "2025-07-29T15:32:43.280865",
+          "last_updated": "2025-07-29T15:34:51.394546",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 20,
+          "latency_ms": 16,
           "connected_clients": 16,
           "throughput_mbps": 75.5,
-          "last_updated": "2025-07-29T15:32:43.280868",
+          "last_updated": "2025-07-29T15:34:51.394551",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 11,
+          "latency_ms": 15,
           "connected_clients": 6,
           "throughput_mbps": 65.1,
-          "last_updated": "2025-07-29T15:32:43.280871",
+          "last_updated": "2025-07-29T15:34:51.394555",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -1216,20 +1216,20 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 22,
+          "latency_ms": 30,
           "connected_clients": 14,
           "throughput_mbps": 62.3,
-          "last_updated": "2025-07-29T15:32:43.280873",
+          "last_updated": "2025-07-29T15:34:51.394559",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 27,
+          "latency_ms": 25,
           "connected_clients": 10,
           "throughput_mbps": 53.4,
-          "last_updated": "2025-07-29T15:32:43.280876",
+          "last_updated": "2025-07-29T15:34:51.394564",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -1239,7 +1239,7 @@
           "latency_ms": 19,
           "connected_clients": 20,
           "throughput_mbps": 72.6,
-          "last_updated": "2025-07-29T15:32:43.280879",
+          "last_updated": "2025-07-29T15:34:51.394568",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -1279,30 +1279,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 14,
+          "latency_ms": 16,
           "connected_clients": 14,
           "throughput_mbps": 61.1,
-          "last_updated": "2025-07-29T15:32:43.280882",
+          "last_updated": "2025-07-29T15:34:51.394573",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 27,
+          "latency_ms": 29,
           "connected_clients": 12,
           "throughput_mbps": 83.5,
-          "last_updated": "2025-07-29T15:32:43.280884",
+          "last_updated": "2025-07-29T15:34:51.394577",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 30,
+          "latency_ms": 28,
           "connected_clients": 8,
           "throughput_mbps": 73.3,
-          "last_updated": "2025-07-29T15:32:43.280887",
+          "last_updated": "2025-07-29T15:34:51.394581",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -1330,27 +1330,27 @@
           "latency_ms": 12,
           "connected_clients": 7,
           "throughput_mbps": 67.1,
-          "last_updated": "2025-07-29T15:32:43.280890",
+          "last_updated": "2025-07-29T15:34:51.394586",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 16,
+          "latency_ms": 22,
           "connected_clients": 8,
           "throughput_mbps": 92.8,
-          "last_updated": "2025-07-29T15:32:43.280892",
+          "last_updated": "2025-07-29T15:34:51.394590",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 15,
+          "latency_ms": 24,
           "connected_clients": 14,
           "throughput_mbps": 66.4,
-          "last_updated": "2025-07-29T15:32:43.280896",
+          "last_updated": "2025-07-29T15:34:51.394595",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -1375,20 +1375,20 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 6,
+          "latency_ms": 7,
           "connected_clients": 18,
           "throughput_mbps": 68.6,
-          "last_updated": "2025-07-29T15:32:43.280898",
+          "last_updated": "2025-07-29T15:34:51.394600",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 9,
+          "latency_ms": 6,
           "connected_clients": 18,
           "throughput_mbps": 54.4,
-          "last_updated": "2025-07-29T15:32:43.280901",
+          "last_updated": "2025-07-29T15:34:51.394604",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -1398,7 +1398,7 @@
           "latency_ms": 30,
           "connected_clients": 28,
           "throughput_mbps": 51.3,
-          "last_updated": "2025-07-29T15:32:43.280904",
+          "last_updated": "2025-07-29T15:34:51.394608",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -1423,30 +1423,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 16,
+          "latency_ms": 21,
           "connected_clients": 17,
           "throughput_mbps": 89.0,
-          "last_updated": "2025-07-29T15:32:43.280907",
+          "last_updated": "2025-07-29T15:34:51.394613",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 12,
+          "latency_ms": 9,
           "connected_clients": 10,
           "throughput_mbps": 51.2,
-          "last_updated": "2025-07-29T15:32:43.280909",
+          "last_updated": "2025-07-29T15:34:51.394617",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 20,
+          "latency_ms": 15,
           "connected_clients": 30,
           "throughput_mbps": 73.5,
-          "last_updated": "2025-07-29T15:32:43.280912",
+          "last_updated": "2025-07-29T15:34:51.394621",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -1471,30 +1471,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 5,
+          "latency_ms": 7,
           "connected_clients": 8,
           "throughput_mbps": 51.2,
-          "last_updated": "2025-07-29T15:32:43.280915",
+          "last_updated": "2025-07-29T15:34:51.394626",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 7,
+          "latency_ms": 5,
           "connected_clients": 14,
           "throughput_mbps": 94.6,
-          "last_updated": "2025-07-29T15:32:43.280917",
+          "last_updated": "2025-07-29T15:34:51.394630",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 16,
+          "latency_ms": 18,
           "connected_clients": 10,
           "throughput_mbps": 76.8,
-          "last_updated": "2025-07-29T15:32:43.280920",
+          "last_updated": "2025-07-29T15:34:51.394635",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -1519,30 +1519,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 27,
+          "latency_ms": 21,
           "connected_clients": 24,
           "throughput_mbps": 94.2,
-          "last_updated": "2025-07-29T15:32:43.280923",
+          "last_updated": "2025-07-29T15:34:51.394639",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 24,
+          "latency_ms": 26,
           "connected_clients": 15,
           "throughput_mbps": 95.0,
-          "last_updated": "2025-07-29T15:32:43.280925",
+          "last_updated": "2025-07-29T15:34:51.394643",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 15,
+          "latency_ms": 23,
           "connected_clients": 5,
           "throughput_mbps": 53.1,
-          "last_updated": "2025-07-29T15:32:43.280928",
+          "last_updated": "2025-07-29T15:34:51.394648",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -1570,27 +1570,27 @@
           "latency_ms": 8,
           "connected_clients": 29,
           "throughput_mbps": 61.7,
-          "last_updated": "2025-07-29T15:32:43.280931",
+          "last_updated": "2025-07-29T15:34:51.394652",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 8,
+          "latency_ms": 13,
           "connected_clients": 21,
           "throughput_mbps": 58.1,
-          "last_updated": "2025-07-29T15:32:43.280934",
+          "last_updated": "2025-07-29T15:34:51.394657",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 9,
+          "latency_ms": 5,
           "connected_clients": 20,
           "throughput_mbps": 92.8,
-          "last_updated": "2025-07-29T15:32:43.280936",
+          "last_updated": "2025-07-29T15:34:51.394662",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -1615,30 +1615,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 9,
+          "latency_ms": 12,
           "connected_clients": 11,
           "throughput_mbps": 56.8,
-          "last_updated": "2025-07-29T15:32:43.280939",
+          "last_updated": "2025-07-29T15:34:51.394666",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 29,
+          "latency_ms": 26,
           "connected_clients": 16,
           "throughput_mbps": 79.4,
-          "last_updated": "2025-07-29T15:32:43.280942",
+          "last_updated": "2025-07-29T15:34:51.394671",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 22,
+          "latency_ms": 17,
           "connected_clients": 28,
           "throughput_mbps": 88.3,
-          "last_updated": "2025-07-29T15:32:43.280944",
+          "last_updated": "2025-07-29T15:34:51.394675",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -1663,30 +1663,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 6,
+          "latency_ms": 9,
           "connected_clients": 25,
           "throughput_mbps": 93.0,
-          "last_updated": "2025-07-29T15:32:43.280947",
+          "last_updated": "2025-07-29T15:34:51.394680",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 23,
+          "latency_ms": 28,
           "connected_clients": 11,
           "throughput_mbps": 91.2,
-          "last_updated": "2025-07-29T15:32:43.280950",
+          "last_updated": "2025-07-29T15:34:51.394684",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 8,
+          "latency_ms": 12,
           "connected_clients": 28,
           "throughput_mbps": 57.1,
-          "last_updated": "2025-07-29T15:32:43.280952",
+          "last_updated": "2025-07-29T15:34:51.394688",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -1726,30 +1726,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 18,
+          "latency_ms": 17,
           "connected_clients": 17,
           "throughput_mbps": 88.4,
-          "last_updated": "2025-07-29T15:32:43.280955",
+          "last_updated": "2025-07-29T15:34:51.394693",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 16,
+          "latency_ms": 7,
           "connected_clients": 9,
           "throughput_mbps": 65.3,
-          "last_updated": "2025-07-29T15:32:43.280958",
+          "last_updated": "2025-07-29T15:34:51.394697",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 7,
+          "latency_ms": 11,
           "connected_clients": 19,
           "throughput_mbps": 90.3,
-          "last_updated": "2025-07-29T15:32:43.280960",
+          "last_updated": "2025-07-29T15:34:51.394701",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -1774,30 +1774,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 16,
+          "latency_ms": 14,
           "connected_clients": 5,
           "throughput_mbps": 59.3,
-          "last_updated": "2025-07-29T15:32:43.280963",
+          "last_updated": "2025-07-29T15:34:51.394706",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 19,
+          "latency_ms": 21,
           "connected_clients": 5,
           "throughput_mbps": 70.4,
-          "last_updated": "2025-07-29T15:32:43.280966",
+          "last_updated": "2025-07-29T15:34:51.394710",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 21,
+          "latency_ms": 17,
           "connected_clients": 22,
           "throughput_mbps": 51.5,
-          "last_updated": "2025-07-29T15:32:43.280968",
+          "last_updated": "2025-07-29T15:34:51.394715",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -1822,30 +1822,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 27,
+          "latency_ms": 23,
           "connected_clients": 22,
           "throughput_mbps": 58.2,
-          "last_updated": "2025-07-29T15:32:43.280971",
+          "last_updated": "2025-07-29T15:34:51.394719",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 16,
+          "latency_ms": 9,
           "connected_clients": 17,
           "throughput_mbps": 81.5,
-          "last_updated": "2025-07-29T15:32:43.280974",
+          "last_updated": "2025-07-29T15:34:51.394724",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 23,
+          "latency_ms": 30,
           "connected_clients": 20,
           "throughput_mbps": 90.0,
-          "last_updated": "2025-07-29T15:32:43.280977",
+          "last_updated": "2025-07-29T15:34:51.394728",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -1870,30 +1870,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 19,
+          "latency_ms": 23,
           "connected_clients": 21,
           "throughput_mbps": 74.8,
-          "last_updated": "2025-07-29T15:32:43.280980",
+          "last_updated": "2025-07-29T15:34:51.394733",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 11,
+          "latency_ms": 15,
           "connected_clients": 13,
           "throughput_mbps": 82.6,
-          "last_updated": "2025-07-29T15:32:43.280982",
+          "last_updated": "2025-07-29T15:34:51.394737",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 27,
+          "latency_ms": 26,
           "connected_clients": 17,
           "throughput_mbps": 69.0,
-          "last_updated": "2025-07-29T15:32:43.280985",
+          "last_updated": "2025-07-29T15:34:51.394742",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -1918,37 +1918,52 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 8,
+          "latency_ms": 16,
           "connected_clients": 6,
           "throughput_mbps": 81.2,
-          "last_updated": "2025-07-29T15:32:43.280988",
+          "last_updated": "2025-07-29T15:34:51.394746",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 17,
+          "latency_ms": 15,
           "connected_clients": 17,
           "throughput_mbps": 66.5,
-          "last_updated": "2025-07-29T15:32:43.280991",
+          "last_updated": "2025-07-29T15:34:51.394751",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 24,
-          "connected_clients": 25,
-          "throughput_mbps": 91.1,
-          "last_updated": "2025-07-29T15:32:43.280993",
+          "latency_ms": 21,
+          "connected_clients": 15,
+          "throughput_mbps": 68.9,
+          "last_updated": "2025-07-29T15:34:51.394755",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         }
       },
-      "incidents": [],
-      "last_incident": null
+      "incidents": [
+        {
+          "incident_id": "INC-0003",
+          "ap_id": "AP-40",
+          "zone": "Backstage",
+          "root_cause": "Power fluctuation",
+          "severity": "warning",
+          "start_time": "2025-07-29 15:33:07.300097",
+          "estimated_heal_time": "2025-07-29 15:33:37.300098",
+          "auto_heal_probability": 0.8,
+          "status": "resolved",
+          "description": "Power supply instability detected on AP-40 affecting Backstage network",
+          "end_time": "2025-07-29 15:33:23.313099",
+          "resolution": "Auto-healed by system monitoring"
+        }
+      ],
+      "last_incident": "INC-0003"
     },
     {
       "ap_id": "AP-41",
@@ -1966,30 +1981,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 15,
+          "latency_ms": 22,
           "connected_clients": 7,
           "throughput_mbps": 88.7,
-          "last_updated": "2025-07-29T15:32:43.280996",
+          "last_updated": "2025-07-29T15:34:51.394760",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 21,
+          "latency_ms": 23,
           "connected_clients": 6,
           "throughput_mbps": 76.0,
-          "last_updated": "2025-07-29T15:32:43.280999",
+          "last_updated": "2025-07-29T15:34:51.394764",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 10,
+          "latency_ms": 5,
           "connected_clients": 25,
           "throughput_mbps": 80.7,
-          "last_updated": "2025-07-29T15:32:43.281002",
+          "last_updated": "2025-07-29T15:34:51.394769",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -2014,30 +2029,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 28,
+          "latency_ms": 29,
           "connected_clients": 30,
           "throughput_mbps": 72.7,
-          "last_updated": "2025-07-29T15:32:43.281004",
+          "last_updated": "2025-07-29T15:34:51.394773",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 8,
+          "latency_ms": 5,
           "connected_clients": 20,
           "throughput_mbps": 62.4,
-          "last_updated": "2025-07-29T15:32:43.281007",
+          "last_updated": "2025-07-29T15:34:51.394777",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 11,
+          "latency_ms": 13,
           "connected_clients": 6,
           "throughput_mbps": 61.3,
-          "last_updated": "2025-07-29T15:32:43.281010",
+          "last_updated": "2025-07-29T15:34:51.394782",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -2062,30 +2077,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 27,
+          "latency_ms": 29,
           "connected_clients": 10,
           "throughput_mbps": 95.0,
-          "last_updated": "2025-07-29T15:32:43.281012",
+          "last_updated": "2025-07-29T15:34:51.394786",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 14,
+          "latency_ms": 26,
           "connected_clients": 7,
           "throughput_mbps": 88.0,
-          "last_updated": "2025-07-29T15:32:43.281015",
+          "last_updated": "2025-07-29T15:34:51.394791",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 13,
+          "latency_ms": 10,
           "connected_clients": 13,
           "throughput_mbps": 65.2,
-          "last_updated": "2025-07-29T15:32:43.281018",
+          "last_updated": "2025-07-29T15:34:51.394795",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -2110,30 +2125,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 16,
+          "latency_ms": 15,
           "connected_clients": 21,
           "throughput_mbps": 52.6,
-          "last_updated": "2025-07-29T15:32:43.281021",
+          "last_updated": "2025-07-29T15:34:51.394799",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 12,
+          "latency_ms": 13,
           "connected_clients": 21,
           "throughput_mbps": 54.9,
-          "last_updated": "2025-07-29T15:32:43.281024",
+          "last_updated": "2025-07-29T15:34:51.394803",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 14,
+          "latency_ms": 21,
           "connected_clients": 22,
           "throughput_mbps": 90.5,
-          "last_updated": "2025-07-29T15:32:43.281026",
+          "last_updated": "2025-07-29T15:34:51.394808",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -2158,30 +2173,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 8,
+          "latency_ms": 14,
           "connected_clients": 23,
           "throughput_mbps": 90.5,
-          "last_updated": "2025-07-29T15:32:43.281029",
+          "last_updated": "2025-07-29T15:34:51.394812",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 20,
+          "latency_ms": 24,
           "connected_clients": 25,
           "throughput_mbps": 63.2,
-          "last_updated": "2025-07-29T15:32:43.281032",
+          "last_updated": "2025-07-29T15:34:51.394816",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 18,
+          "latency_ms": 6,
           "connected_clients": 27,
           "throughput_mbps": 82.8,
-          "last_updated": "2025-07-29T15:32:43.281034",
+          "last_updated": "2025-07-29T15:34:51.394821",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -2206,30 +2221,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 19,
+          "latency_ms": 24,
           "connected_clients": 7,
           "throughput_mbps": 70.4,
-          "last_updated": "2025-07-29T15:32:43.281037",
+          "last_updated": "2025-07-29T15:34:51.394825",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 16,
+          "latency_ms": 11,
           "connected_clients": 15,
           "throughput_mbps": 77.9,
-          "last_updated": "2025-07-29T15:32:43.281040",
+          "last_updated": "2025-07-29T15:34:51.394829",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 12,
+          "latency_ms": 9,
           "connected_clients": 7,
           "throughput_mbps": 63.9,
-          "last_updated": "2025-07-29T15:32:43.281043",
+          "last_updated": "2025-07-29T15:34:51.394834",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -2254,30 +2269,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 12,
+          "latency_ms": 16,
           "connected_clients": 23,
           "throughput_mbps": 60.4,
-          "last_updated": "2025-07-29T15:32:43.281046",
+          "last_updated": "2025-07-29T15:34:51.394838",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 19,
+          "latency_ms": 21,
           "connected_clients": 12,
           "throughput_mbps": 89.3,
-          "last_updated": "2025-07-29T15:32:43.281048",
+          "last_updated": "2025-07-29T15:34:51.394842",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 17,
+          "latency_ms": 13,
           "connected_clients": 22,
           "throughput_mbps": 84.5,
-          "last_updated": "2025-07-29T15:32:43.281051",
+          "last_updated": "2025-07-29T15:34:51.394847",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -2302,30 +2317,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 22,
+          "latency_ms": 24,
           "connected_clients": 22,
           "throughput_mbps": 66.7,
-          "last_updated": "2025-07-29T15:32:43.281054",
+          "last_updated": "2025-07-29T15:34:51.394851",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 5,
+          "latency_ms": 7,
           "connected_clients": 20,
           "throughput_mbps": 84.9,
-          "last_updated": "2025-07-29T15:32:43.281056",
+          "last_updated": "2025-07-29T15:34:51.394856",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 12,
+          "latency_ms": 16,
           "connected_clients": 12,
           "throughput_mbps": 52.5,
-          "last_updated": "2025-07-29T15:32:43.281059",
+          "last_updated": "2025-07-29T15:34:51.394860",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -2350,30 +2365,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 26,
+          "latency_ms": 27,
           "connected_clients": 7,
           "throughput_mbps": 76.2,
-          "last_updated": "2025-07-29T15:32:43.281062",
+          "last_updated": "2025-07-29T15:34:51.394864",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 29,
+          "latency_ms": 30,
           "connected_clients": 6,
           "throughput_mbps": 67.2,
-          "last_updated": "2025-07-29T15:32:43.281065",
+          "last_updated": "2025-07-29T15:34:51.394869",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 18,
+          "latency_ms": 22,
           "connected_clients": 8,
           "throughput_mbps": 78.1,
-          "last_updated": "2025-07-29T15:32:43.281067",
+          "last_updated": "2025-07-29T15:34:51.394873",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -2398,30 +2413,30 @@
       "zones": {
         "FanWiFi": {
           "status": "healthy",
-          "latency_ms": 22,
+          "latency_ms": 20,
           "connected_clients": 15,
           "throughput_mbps": 61.9,
-          "last_updated": "2025-07-29T15:32:43.281070",
+          "last_updated": "2025-07-29T15:34:51.394878",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "VisitorWiFi": {
           "status": "healthy",
-          "latency_ms": 8,
+          "latency_ms": 10,
           "connected_clients": 13,
           "throughput_mbps": 64.3,
-          "last_updated": "2025-07-29T15:32:43.281073",
+          "last_updated": "2025-07-29T15:34:51.394882",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
         },
         "Backstage": {
           "status": "healthy",
-          "latency_ms": 17,
+          "latency_ms": 18,
           "connected_clients": 19,
           "throughput_mbps": 72.7,
-          "last_updated": "2025-07-29T15:32:43.281075",
+          "last_updated": "2025-07-29T15:34:51.394886",
           "root_cause": null,
           "incident_id": null,
           "healing_eta": null
@@ -2431,9 +2446,9 @@
       "last_incident": null
     }
   ],
-  "last_updated": "2025-07-29T15:32:43.281078",
+  "last_updated": "2025-07-29T15:34:51.394890",
   "simulation_active": true,
   "active_incidents": 0,
-  "total_incidents": 2,
-  "auto_healed": 2
+  "total_incidents": 3,
+  "auto_healed": 3
 }
