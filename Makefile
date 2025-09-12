@@ -1,201 +1,176 @@
-# LiveOpsLab Venue Infrastructure Makefile
-# Simplifies common Terraform operations
+.PHONY: help setup start stop restart logs status test clean build deploy chaos \
+        monitoring security format lint install docker-build docker-clean
 
-.PHONY: help init plan apply destroy validate fmt check clean status ssh-fan ssh-visitor ssh-backstage logs
+# LiveOps Lab - Monitoring and Observability Platform
+PROJECT_NAME := liveopslab
+DOCKER_COMPOSE := docker-compose
+PYTHON := python3
+PIP := pip3
 
-# Default target
-help:
-	@echo "LiveOpsLab Venue Infrastructure Management"
-	@echo "=========================================="
+# Colors for output
+RED := \033[0;31m
+GREEN := \033[0;32m
+YELLOW := \033[1;33m
+BLUE := \033[0;34m
+NC := \033[0m # No Color
+
+help: ## Show this help message
+	@echo "$(BLUE)LiveOps Lab - NOC Simulation Platform$(NC)"
 	@echo ""
-	@echo "Available commands:"
-	@echo "  init        - Initialize Terraform configuration"
-	@echo "  validate    - Validate Terraform configuration"
-	@echo "  fmt         - Format Terraform files"
-	@echo "  plan        - Create deployment plan"
-	@echo "  apply       - Deploy infrastructure"
-	@echo "  destroy     - Destroy infrastructure"
-	@echo "  status      - Show current infrastructure status"
-	@echo "  check       - Validate configuration and show plan"
+	@echo "$(YELLOW)Available commands:$(NC)"
+	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "  $(GREEN)%-15s$(NC) %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 	@echo ""
-	@echo "SSH Access:"
-	@echo "  ssh-fan     - SSH to FanWiFi instance"
-	@echo "  ssh-visitor - SSH to VisitorWiFi instance"
-	@echo "  ssh-backstage - SSH to Backstage instance"
+	@echo "$(YELLOW)Quick start:$(NC)"
+	@echo "  make setup    # Initialize the project"
+	@echo "  make start    # Start all services"
+	@echo "  make chaos    # Run chaos engineering tests"
+
+setup: ## Initialize the project and install dependencies
+	@echo "$(BLUE)Setting up LiveOps Lab...$(NC)"
+	@cp .env.example .env 2>/dev/null || echo "Environment file already exists"
+	@$(PIP) install -r app/requirements.txt 2>/dev/null || echo "Install app dependencies manually if needed"
+	@$(PIP) install -r tests/requirements.txt 2>/dev/null || echo "Install test dependencies manually if needed"
+	@chmod +x docs/chaos-scripts/*.sh
+	@echo "$(GREEN)Setup completed!$(NC)"
+
+install: setup ## Alias for setup
+
+start: ## Start all services using Docker Compose
+	@echo "$(BLUE)Starting LiveOps Lab services...$(NC)"
+	@$(DOCKER_COMPOSE) up -d
+	@echo "$(GREEN)Services started!$(NC)"
 	@echo ""
-	@echo "Monitoring:"
-	@echo "  logs        - Show recent setup logs from all instances"
-	@echo "  urls        - Display access URLs for all portals"
+	@echo "$(YELLOW)Access your services:$(NC)"
+	@echo "  Application:   http://localhost:8000"
+	@echo "  Grafana:       http://localhost:3000 (admin/admin)"
+	@echo "  Prometheus:    http://localhost:9090"
+	@echo "  Alertmanager:  http://localhost:9093"
+
+stop: ## Stop all services
+	@echo "$(BLUE)Stopping services...$(NC)"
+	@$(DOCKER_COMPOSE) down
+	@echo "$(GREEN)Services stopped$(NC)"
+
+restart: stop start ## Restart all services
+
+status: ## Show service status and health
+	@echo "$(BLUE)Service Status:$(NC)"
+	@$(DOCKER_COMPOSE) ps
 	@echo ""
-	@echo "Utilities:"
-	@echo "  clean       - Clean Terraform cache and lock files"
-	@echo "  backup      - Backup current Terraform state"
+	@echo "$(BLUE)Health Checks:$(NC)"
+	@curl -s http://localhost:8000/health | jq . 2>/dev/null || echo "App: $(RED)Offline$(NC)"
 
-# Terraform Operations
-init:
-	@echo "🚀 Initializing Terraform..."
-	terraform init
-	@echo "✅ Terraform initialized successfully"
+logs: ## Show logs from all services
+	@$(DOCKER_COMPOSE) logs -f --tail=100
 
-validate:
-	@echo "🔍 Validating Terraform configuration..."
-	terraform validate
-	@echo "✅ Configuration is valid"
+logs-app: ## Show application logs only
+	@$(DOCKER_COMPOSE) logs -f sample-app
 
-fmt:
-	@echo "🎨 Formatting Terraform files..."
-	terraform fmt -recursive
-	@echo "✅ Files formatted successfully"
+build: ## Build Docker images
+	@echo "$(BLUE)Building Docker images...$(NC)"
+	@$(DOCKER_COMPOSE) build
+	@echo "$(GREEN)Build completed$(NC)"
 
-plan:
-	@echo "📋 Creating deployment plan..."
-	terraform plan -out=tfplan
-	@echo "✅ Plan created successfully"
+docker-build: build ## Alias for build
 
-apply: 
-	@echo "🏗️  Deploying infrastructure..."
-	@if [ ! -f terraform.tfvars ]; then \
-		echo "❌ terraform.tfvars not found. Please copy from terraform.tfvars.example and configure."; \
-		exit 1; \
-	fi
-	terraform apply tfplan
-	@echo "✅ Infrastructure deployed successfully"
-	@make urls
+test: ## Run tests
+	@echo "$(BLUE)Running tests...$(NC)"
+	@$(PYTHON) -m pytest tests/ -v --tb=short
+	@echo "$(GREEN)Tests completed$(NC)"
 
-destroy:
-	@echo "🧨 WARNING: This will destroy all infrastructure!"
-	@read -p "Are you sure? Type 'yes' to continue: " confirm && [ "$$confirm" = "yes" ]
-	terraform destroy
-	@echo "✅ Infrastructure destroyed"
+test-integration: ## Run integration tests (requires running services)
+	@echo "$(BLUE)Running integration tests...$(NC)"
+	@$(PYTHON) -m pytest tests/test_app.py::TestMonitoringIntegration -v
+	@echo "$(GREEN)Integration tests completed$(NC)"
 
-# Configuration Management
-check: validate fmt plan
-	@echo "✅ All checks passed, ready for deployment"
+chaos: ## Run chaos engineering experiments
+	@echo "$(BLUE)Running chaos engineering tests...$(NC)"
+	@./docs/chaos-scripts/chaos.sh errors
+	@echo "$(GREEN)Chaos tests completed$(NC)"
 
-clean:
-	@echo "🧹 Cleaning Terraform cache..."
-	rm -rf .terraform
-	rm -f .terraform.lock.hcl
-	rm -f tfplan
-	rm -f terraform.tfstate.backup
-	@echo "✅ Cache cleaned"
+chaos-cpu: ## Run CPU stress test
+	@./docs/chaos-scripts/chaos.sh cpu
 
-backup:
-	@echo "💾 Backing up Terraform state..."
-	@mkdir -p backups
-	terraform state pull > backups/terraform-state-$(shell date +%Y%m%d-%H%M%S).json
-	@echo "✅ State backed up to backups/ directory"
+chaos-latency: ## Run latency injection test
+	@./docs/chaos-scripts/chaos.sh latency
 
-# Infrastructure Status
-status:
-	@echo "📊 Infrastructure Status"
-	@echo "======================="
-	@if terraform state list > /dev/null 2>&1; then \
-		echo "Resources deployed:"; \
-		terraform state list | wc -l | xargs echo "  Total resources:"; \
-		echo ""; \
-		echo "Instances:"; \
-		terraform state list | grep aws_instance | sed 's/aws_instance\./  /' | sed 's/_/ /g'; \
-		echo ""; \
-		echo "Public IPs:"; \
-		terraform output -json | jq -r '. | to_entries[] | select(.key | endswith("_public_ip")) | "  \(.key): \(.value.value)"' 2>/dev/null || echo "  Run 'terraform apply' first"; \
-	else \
-		echo "❌ No infrastructure deployed. Run 'make apply' first."; \
-	fi
+chaos-all: ## Run all chaos experiments
+	@./docs/chaos-scripts/chaos.sh all
 
-urls:
-	@echo "🌐 Access URLs"
-	@echo "=============="
-	@terraform output -json 2>/dev/null | jq -r '
-		"FanWiFi Portal:     http://" + (.fanwifi_instance_public_ip.value // "NOT_DEPLOYED"),
-		"Staff Portal:       http://" + (.visitorwifi_instance_public_ip.value // "NOT_DEPLOYED"),
-		"Management Console: http://" + (.backstage_instance_public_ip.value // "NOT_DEPLOYED"),
-		"",
-		"Monitoring Tools:",
-		"  Prometheus:       http://" + (.backstage_instance_public_ip.value // "NOT_DEPLOYED") + "/prometheus/",
-		"  Grafana:          http://" + (.backstage_instance_public_ip.value // "NOT_DEPLOYED") + "/grafana/"
-	' || echo "❌ Infrastructure not deployed. Run 'make apply' first."
+monitoring: ## Start only monitoring stack
+	@echo "$(BLUE)Starting monitoring services...$(NC)"
+	@$(DOCKER_COMPOSE) up -d prometheus grafana alertmanager
+	@echo "$(GREEN)Monitoring stack started$(NC)"
 
-# SSH Access
-ssh-fan:
-	@echo "🔑 Connecting to FanWiFi instance..."
-	@FAN_IP=$$(terraform output -raw fanwifi_instance_public_ip 2>/dev/null); \
-	if [ -n "$$FAN_IP" ]; then \
-		ssh -i ~/.ssh/liveopslab-key ec2-user@$$FAN_IP; \
-	else \
-		echo "❌ FanWiFi instance not found. Deploy infrastructure first."; \
-	fi
+format: ## Format Python code
+	@echo "$(BLUE)Formatting code...$(NC)"
+	@black app/ tests/ --line-length 88
+	@echo "$(GREEN)Code formatted$(NC)"
 
-ssh-visitor:
-	@echo "🔑 Connecting to VisitorWiFi instance..."
-	@VISITOR_IP=$$(terraform output -raw visitorwifi_instance_public_ip 2>/dev/null); \
-	if [ -n "$$VISITOR_IP" ]; then \
-		ssh -i ~/.ssh/liveopslab-key ec2-user@$$VISITOR_IP; \
-	else \
-		echo "❌ VisitorWiFi instance not found. Deploy infrastructure first."; \
-	fi
+lint: ## Run code linting
+	@echo "$(BLUE)Running linting...$(NC)"
+	@flake8 app/ tests/ --max-line-length=88 --extend-ignore=E203,W503
+	@black --check app/ tests/ --line-length 88
+	@echo "$(GREEN)Linting completed$(NC)"
 
-ssh-backstage:
-	@echo "🔑 Connecting to Backstage instance..."
-	@BACKSTAGE_IP=$$(terraform output -raw backstage_instance_public_ip 2>/dev/null); \
-	if [ -n "$$BACKSTAGE_IP" ]; then \
-		ssh -i ~/.ssh/liveopslab-key ec2-user@$$BACKSTAGE_IP; \
-	else \
-		echo "❌ Backstage instance not found. Deploy infrastructure first."; \
-	fi
+security: ## Run security scans
+	@echo "$(BLUE)Running security scans...$(NC)"
+	@safety check --file app/requirements.txt || echo "$(YELLOW)Safety check completed with warnings$(NC)"
+	@bandit -r app/ -f json -o security-report.json || echo "$(YELLOW)Bandit scan completed$(NC)"
+	@echo "$(GREEN)Security scan completed$(NC)"
 
-# Monitoring and Logs
-logs:
-	@echo "📝 Recent Setup Logs"
-	@echo "==================="
-	@for instance in fanwifi visitorwifi backstage; do \
-		echo ""; \
-		echo "=== $$instance ==="; \
-		IP=$$(terraform output -raw $${instance}_instance_public_ip 2>/dev/null); \
-		if [ -n "$$IP" ]; then \
-			ssh -i ~/.ssh/liveopslab-key -o ConnectTimeout=5 ec2-user@$$IP \
-				"tail -10 /var/log/venue-setup.log 2>/dev/null || echo 'Log not available yet'" 2>/dev/null || \
-				echo "Cannot connect to $$instance instance"; \
-		else \
-			echo "Instance not deployed"; \
-		fi; \
-	done
+deploy-terraform: ## Deploy infrastructure using Terraform
+	@echo "$(BLUE)Deploying infrastructure...$(NC)"
+	@cd infra/terraform && terraform init && terraform plan && terraform apply
+	@echo "$(GREEN)Infrastructure deployed$(NC)"
 
-# Development helpers
-dev-setup:
-	@echo "🛠️  Setting up development environment..."
-	@if [ ! -f terraform.tfvars ]; then \
-		cp terraform.tfvars.example terraform.tfvars; \
-		echo "📝 Created terraform.tfvars from example"; \
-		echo "⚠️  Please edit terraform.tfvars with your configuration"; \
-	fi
-	@if [ ! -f ~/.ssh/liveopslab-key ]; then \
-		echo "🔐 Generating SSH key pair..."; \
-		ssh-keygen -t rsa -b 4096 -f ~/.ssh/liveopslab-key -N ""; \
-		echo "📝 Add this public key to your terraform.tfvars:"; \
-		echo ""; \
-		cat ~/.ssh/liveopslab-key.pub; \
-		echo ""; \
-	fi
-	@echo "✅ Development environment ready"
+deploy: deploy-terraform ## Deploy to cloud (alias for deploy-terraform)
 
-# All-in-one deployment
-deploy: init check apply
-	@echo "🎉 Deployment completed successfully!"
+clean: ## Clean up Docker resources
+	@echo "$(BLUE)Cleaning up...$(NC)"
+	@$(DOCKER_COMPOSE) down -v --remove-orphans
+	@docker system prune -f
+	@find . -name "*.pyc" -delete
+	@find . -name "__pycache__" -delete
+	@rm -rf .pytest_cache/
+	@echo "$(GREEN)Cleanup completed$(NC)"
+
+docker-clean: clean ## Alias for clean
+
+validate: ## Validate configurations
+	@echo "$(BLUE)Validating configurations...$(NC)"
+	@$(DOCKER_COMPOSE) config > /dev/null && echo "Docker Compose: $(GREEN)Valid$(NC)" || echo "Docker Compose: $(RED)Invalid$(NC)"
+	@cd infra/terraform && terraform validate && echo "Terraform: $(GREEN)Valid$(NC)" || echo "Terraform: $(RED)Invalid$(NC)"
+
+demo: ## Run a complete demonstration
+	@echo "$(BLUE)Starting LiveOps Lab demonstration...$(NC)"
+	@make start
+	@sleep 30  # Wait for services to start
+	@echo "$(YELLOW)Generating some traffic...$(NC)"
+	@for i in {1..10}; do curl -s http://localhost:8000/api/users > /dev/null; done
+	@echo "$(YELLOW)Running chaos experiment...$(NC)"
+	@./docs/chaos-scripts/chaos.sh --duration 30 errors
+	@echo "$(GREEN)Demo completed! Check Grafana dashboards$(NC)"
+
+dev: ## Start development environment
+	@make setup
+	@make start
+	@echo "$(GREEN)Development environment ready!$(NC)"
+
+urls: ## Show important URLs
+	@echo "$(YELLOW)LiveOps Lab URLs:$(NC)"
+	@echo "  Application:   http://localhost:8000"
+	@echo "  Health Check:  http://localhost:8000/health"
+	@echo "  Metrics:       http://localhost:8000/metrics"
+	@echo "  Grafana:       http://localhost:3000 (admin/admin)"
+	@echo "  Prometheus:    http://localhost:9090"
+	@echo "  Alertmanager:  http://localhost:9093"
+
+version: ## Show version information
+	@echo "$(BLUE)LiveOps Lab v1.0$(NC)"
+	@echo "NOC Simulation and Monitoring Platform"
 	@echo ""
-	@make urls
-
-# Quick status check
-quick-check:
-	@echo "⚡ Quick Status Check"
-	@echo "===================="
-	@echo "Terraform: $$(terraform version --json | jq -r '.terraform_version' 2>/dev/null || echo 'Not installed')"
-	@echo "AWS CLI: $$(aws --version 2>/dev/null | cut -d' ' -f1 || echo 'Not installed')"
-	@echo "Config file: $$([ -f terraform.tfvars ] && echo '✅ Found' || echo '❌ Missing')"
-	@echo "SSH key: $$([ -f ~/.ssh/liveopslab-key ] && echo '✅ Found' || echo '❌ Missing')"
-	@echo ""
-	@if [ -f terraform.tfvars ] && [ -f ~/.ssh/liveopslab-key ]; then \
-		echo "🚀 Ready for deployment!"; \
-	else \
-		echo "⚠️  Run 'make dev-setup' to configure your environment"; \
-	fi
+	@echo "$(YELLOW)Dependencies:$(NC)"
+	@docker --version 2>/dev/null || echo "Docker: $(RED)Not installed$(NC)"
+	@docker-compose --version 2>/dev/null || echo "Docker Compose: $(RED)Not installed$(NC)"
+	@$(PYTHON) --version 2>/dev/null || echo "Python: $(RED)Not installed$(NC)"

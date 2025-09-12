@@ -357,10 +357,10 @@ resource "aws_instance" "fanwifi_instance" {
   subnet_id              = aws_subnet.fanwifi_subnet.id
   iam_instance_profile   = aws_iam_instance_profile.ec2_monitoring_profile.name
 
-  user_data = base64encode(templatefile("${path.module}/user_data/fanwifi_init_enhanced.sh", {
+  user_data = base64encode(templatefile("${path.module}/../user_data/fanwifi_init_enhanced.sh", {
     hostname           = "fanwifi-server"
     enable_chaos       = var.enable_chaos_testing
-    chaos_scripts_url  = "https://raw.githubusercontent.com/developedbydmac/liveopslab/main/chaos-scripts"
+    chaos_scripts_url  = "https://raw.githubusercontent.com/developedbydmac/liveopslab/main/docs/chaos-scripts"
     log_bucket         = aws_s3_bucket.venue_logs.bucket
     zone_name          = "FanWiFi"
   }))
@@ -383,7 +383,7 @@ resource "aws_instance" "visitorwifi_instance" {
   subnet_id              = aws_subnet.visitorwifi_subnet.id
   iam_instance_profile   = aws_iam_instance_profile.ec2_monitoring_profile.name
 
-  user_data = base64encode(templatefile("${path.module}/user_data/visitorwifi_init.sh", {
+  user_data = base64encode(templatefile("${path.module}/../user_data/visitorwifi_init.sh", {
     hostname          = "visitorwifi-server"
     enable_chaos      = var.enable_chaos_testing
     chaos_scripts_url = var.chaos_scripts_url
@@ -409,7 +409,7 @@ resource "aws_instance" "backstage_instance" {
   subnet_id              = aws_subnet.backstage_subnet.id
   iam_instance_profile   = aws_iam_instance_profile.ec2_monitoring_profile.name
 
-  user_data = base64encode(templatefile("${path.module}/user_data/backstage_init_small.sh", {
+  user_data = base64encode(templatefile("${path.module}/../user_data/backstage_init_small.sh", {
     hostname          = "backstage-mgmt"
     enable_chaos      = var.enable_chaos_testing
     chaos_scripts_url = var.chaos_scripts_url
